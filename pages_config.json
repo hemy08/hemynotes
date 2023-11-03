@@ -1,0 +1,266 @@
+{
+    "site name": "HEMY Skills",
+    "site description": "HEMY's Personal Skills Notes",
+    "copyright": "Copyright &copy; 2021-2029 JunWei Zhao",
+    "HOME": "https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/",
+    "repo url": "https://szv-y.codehub.huawei.com/hemyzhao/pages/hemyskills.git",
+    "ignore dirs": ".git;.idea;.vscode;images;image;resource;.gitignore;.obsidian;public_resources;figures;public_sys-resources;themes;docs;site;vx_notebook;document;logo",
+    "ignore file types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
+    "ignore files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
+    "chapter infos": {
+        "Windows": "\\docs\\Windows"
+    },
+    "file name convert": {
+        "00 README": "总览",
+        "00-README": "总览",
+        "00_README": "总览",
+        "000 README": "总览",
+        "000-README": "总览",
+        "000_README": "总览",
+        "00 SUMMARY": "总览",
+        "00-SUMMARY": "总览",
+        "00_SUMMARY": "总览",
+        "000 SUMMARY": "总览",
+        "000-SUMMARY": "总览",
+        "000_SUMMARY": "总览",
+        "Windows": "Windows"
+    },
+    "external links": {
+        "HEMY_NOTES": "https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/"
+    },
+    "theme": {
+        "favicon": "themes/images/lvye.png",
+        "feature": {
+            "tabs": "true"
+        },
+        "features": [
+            "navigation.tracking",
+            "navigation.tabs",
+            "navigation.indexes",
+            "navigation.prune",
+            "navigation.top",
+            "toc.follow",
+            "header.autohide",
+            "search.share",
+            "search.suggest",
+            "search.highlight"
+        ],
+        "icon": {
+            "logo": "material/library",
+            "note": "octicons/tag-16",
+            "abstract": "octicons/checklist-16",
+            "info": "octicons/info-16",
+            "tip": "octicons/squirrel-16",
+            "success": "octicons/check-16",
+            "question": "octicons/question-16",
+            "warning": "octicons/alert-16",
+            "failure": "octicons/x-circle-16",
+            "danger": "octicons/zap-16",
+            "bug": "octicons/bug-16",
+            "example": "octicons/beaker-16",
+            "quote": "octicons/quote-16"
+        },
+        "language": "zh",
+        "name": "material",
+        "palette": {
+            "scheme": "default"
+        }
+    },
+    "plugins": {
+        "search": {
+            "lang": [
+                "en",
+                "ru",
+                "zh",
+                "ja"
+            ],
+            "separator": "[\\s\\u200b\\-]"
+        }
+    },
+    "extra": {
+        "generator": false,
+        "search": {
+            "language": "en, jp, zh"
+        },
+        "social": [
+            {
+                "icon": "fontawesome/solid/book-open",
+                "link": "https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/",
+                "name": "HEMY SKILLS"
+            },
+            {
+                "icon": "fontawesome/solid/book-open",
+                "link": "https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/",
+                "name": "HEMY NOTES"
+            },
+            {
+                "icon": "fontawesome/solid/book",
+                "link": "https://wiki.huawei.com/domains/4356/wiki",
+                "name": "MSE WIKI"
+            },
+            {
+                "icon": "fontawesome/solid/chalkboard",
+                "link": "https://www.w3cschool.cn/",
+                "name": "编程狮W3C"
+            },
+            {
+                "icon": "fontawesome/solid/dove",
+                "link": "https://www.runoob.com/",
+                "name": "菜鸟教程"
+            },
+            {
+                "icon": "fontawesome/solid/laptop-code",
+                "link": "https://leetcode.cn/",
+                "name": "力扣"
+            },
+            {
+                "icon": "fontawesome/solid/file-code",
+                "link": "http://www.verysource.com/",
+                "name": "源码查询"
+            },
+            {
+                "icon": "fontawesome/solid/toolbox",
+                "link": "https://c.runoob.com/",
+                "name": "菜鸟工具"
+            },
+            {
+                "icon": "fontawesome/solid/pen-nib",
+                "link": "https://hdesign.ucd.huawei.com/assemble/designcloud",
+                "name": "DesignCloud"
+            },
+            {
+                "icon": "fontawesome/solid/at",
+                "link": "mailto:<junwei.zhao@huawei.com>",
+                "name": "Email"
+            },
+            {
+                "icon": "fontawesome/solid/comment",
+                "link": "https://openx.huawei.com/HemyDocs/comment",
+                "name": "评论"
+            },
+            {
+                "icon": "fontawesome/solid/bug",
+                "link": "https://codehub-y.huawei.com/hemyzhao/pages/HemyDocs/issues",
+                "name": "issues"
+            }
+        ]
+    },
+    "extra_css": [
+        "themes/css/custom.css",
+        "themes/css/simpleLightbox.min.css"
+    ],
+    "extra_javascript": [
+        "themes/js/custom.js",
+        "themes/js/simpleLightbox.min.js",
+        "themes/js/optionalConfig.js",
+        "themes/js/mermaidloader.js",
+        "themes/js/umlconvert.js",
+        "https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs",
+        "https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js",
+        "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs"
+    ],
+    "markdown_extensions": [
+        "admonition",
+        "footnotes",
+        "meta",
+        "def_list",
+        "pymdownx.caret",
+        "pymdownx.critic",
+        "pymdownx.details",
+        "pymdownx.snippets",
+        "tables",
+        "pymdownx.mark",
+        "pymdownx.inlinehilite",
+        "pymdownx.smartsymbols",
+        "pymdownx.tilde",
+        "attr_list",
+        "md_in_html",
+        {
+            "pymdownx.arithmatex": {
+                "generic": true
+            }
+        },
+        {
+            "pymdownx.emoji": {
+                "emoji_generator": "!!python/name:materialx.emoji.to_svg",
+                "emoji_index": "!!python/name:materialx.emoji.twemoji"
+            }
+        },
+        {
+            "pymdownx.highlight": {
+                "anchor_linenums": true,
+                "line_spans": "__span",
+                "pygments_lang_class": true,
+                "linenums": true,
+                "auto_title": true
+            }
+        },
+        {
+            "pymdownx.magiclink": {
+                "repo_url_shorthand": true,
+                "user": "squidfunk",
+                "repo": "mkdocs-material"
+            }
+        },
+        {
+            "pymdownx.tabbed": {
+                "alternate_style": true
+            }
+        },
+        {
+            "pymdownx.tasklist": {
+                "custom_checkbox": true
+            }
+        },
+        {
+            "codehilite": {
+                "guess_lang": false,
+                "linenums": false
+            }
+        },
+        {
+            "toc": {
+                "permalink": true
+            }
+        },
+        {
+            "pymdownx.betterem": {
+                "smart_enable": "all"
+            }
+        },
+        {
+            "pymdownx.emoji": {
+                "emoji_generator": "!!python/name:pymdownx.emoji.to_png"
+            }
+        },
+        {
+            "pymdownx.superfences": {
+                "custom_fences": [
+                    {
+                        "name": "mermaid",
+                        "class": "mermaid",
+                        "format": "!!python/name:pymdownx.superfences.fence_code_format"
+                    },
+                    {
+                        "name": "uml-flowchart",
+                        "class": "flow",
+                        "format": "!!python/name:pymdownx.superfences.fence_code_format"
+                    },
+                    {
+                        "name": "sequence",
+                        "class": "sequence",
+                        "format": "!!python/name:pymdownx.superfences.fence_code_format"
+                    }
+                ],
+                "preserve_tabs": true
+            }
+        },
+        {
+            "pymdownx.highlight": {
+                "anchor_linenums": true
+            }
+        }
+    ]
+}
