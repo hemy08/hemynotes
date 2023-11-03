@@ -1,10 +1,4 @@
-# <center> HEMY SKILLS BOOKS  </center>
-
-
-项目地址： [https://codehub-y.huawei.com/hemyzhao/pages/hemyskills/home](https://codehub-y.huawei.com/hemyzhao/pages/hemyskills/home)
-
-------------------------
-![images](images/00321141_2.jpg)
+# <center> HEMY NOTES BOOKS  </center>
 
 -----------------
 ## 一、文档开发须知

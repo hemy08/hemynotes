@@ -1,9 +1,9 @@
 {
-    "site name": "HEMY Skills",
-    "site description": "HEMY's Personal Skills Notes",
-    "copyright": "Copyright &copy; 2021-2029 JunWei Zhao",
-    "HOME": "https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/",
-    "repo url": "https://szv-y.codehub.huawei.com/hemyzhao/pages/hemyskills.git",
+    "site name": "HEMY MOTES",
+    "site description": "HEMY's Personal Notes",
+    "copyright": "Copyright &copy; 2021-2029 HEMY08",
+    "HOME": "https://hemy08.github.io/hemynotes/",
+    "repo url": "https://github.com/hemy08/hemynotes",
     "ignore dirs": ".git;.idea;.vscode;images;image;resource;.gitignore;.obsidian;public_resources;figures;public_sys-resources;themes;docs;site;vx_notebook;document;logo",
     "ignore file types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
     "ignore files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
@@ -11,22 +11,7 @@
         "Windows": "\\docs\\Windows"
     },
     "file name convert": {
-        "00 README": "总览",
-        "00-README": "总览",
-        "00_README": "总览",
-        "000 README": "总览",
-        "000-README": "总览",
-        "000_README": "总览",
-        "00 SUMMARY": "总览",
-        "00-SUMMARY": "总览",
-        "00_SUMMARY": "总览",
-        "000 SUMMARY": "总览",
-        "000-SUMMARY": "总览",
-        "000_SUMMARY": "总览",
         "Windows": "Windows"
-    },
-    "external links": {
-        "HEMY_NOTES": "https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/"
     },
     "theme": {
         "favicon": "themes/images/lvye.png",
@@ -84,21 +69,6 @@
         },
         "social": [
             {
-                "icon": "fontawesome/solid/book-open",
-                "link": "https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/",
-                "name": "HEMY SKILLS"
-            },
-            {
-                "icon": "fontawesome/solid/book-open",
-                "link": "https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/",
-                "name": "HEMY NOTES"
-            },
-            {
-                "icon": "fontawesome/solid/book",
-                "link": "https://wiki.huawei.com/domains/4356/wiki",
-                "name": "MSE WIKI"
-            },
-            {
                 "icon": "fontawesome/solid/chalkboard",
                 "link": "https://www.w3cschool.cn/",
                 "name": "编程狮W3C"
@@ -130,18 +100,8 @@
             },
             {
                 "icon": "fontawesome/solid/at",
-                "link": "mailto:<junwei.zhao@huawei.com>",
+                "link": "mailto:<zhaojunwei008@yeah.net>",
                 "name": "Email"
-            },
-            {
-                "icon": "fontawesome/solid/comment",
-                "link": "https://openx.huawei.com/HemyDocs/comment",
-                "name": "评论"
-            },
-            {
-                "icon": "fontawesome/solid/bug",
-                "link": "https://codehub-y.huawei.com/hemyzhao/pages/HemyDocs/issues",
-                "name": "issues"
             }
         ]
     },
