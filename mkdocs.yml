@@ -1,0 +1,187 @@
+site_name: HEMY Skills
+
+site_description: HEMY's Personal Skills Notes
+
+repo_url: https://szv-y.codehub.huawei.com/hemyzhao/pages/hemyskills.git
+
+copyright: Copyright &copy; 2021-2029 JunWei Zhao
+
+
+nav:
+  - HOME: https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/
+  - Windows:
+    - mstsc副屏全屏显示: docs/Windows/01-mstsc副屏全屏显示.md
+    - 右键菜单添加新建记事本: docs/Windows/02-右键菜单添加新建记事本.md
+    - windows常用cmd命令: docs/Windows/03-windows常用cmd命令.md
+    - 让任务栏在屏幕左侧变窄: docs/Windows/04-让任务栏在屏幕左侧变窄.md
+    - 计算云鼠标飘的解决办法: docs/Windows/05-计算云鼠标飘的解决办法.md
+    - 鼠标右键菜单排序: docs/Windows/06-鼠标右键菜单排序.md
+    - windows.edb文件: docs/Windows/07-windows.edb文件.md
+    - 找到文件被哪个进程引用: docs/Windows/08-找到文件被哪个进程引用.md
+  - HEMY_NOTES: https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/
+
+
+theme:
+  favicon: themes/images/lvye.png
+  feature:
+    tabs: 'true'
+  features:
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.indexes
+  - navigation.prune
+  - navigation.top
+  - toc.follow
+  - header.autohide
+  - search.share
+  - search.suggest
+  - search.highlight
+  icon:
+    abstract: octicons/checklist-16
+    bug: octicons/bug-16
+    danger: octicons/zap-16
+    example: octicons/beaker-16
+    failure: octicons/x-circle-16
+    info: octicons/info-16
+    logo: material/library
+    note: octicons/tag-16
+    question: octicons/question-16
+    quote: octicons/quote-16
+    success: octicons/check-16
+    tip: octicons/squirrel-16
+    warning: octicons/alert-16
+  language: zh
+  name: material
+  palette:
+    scheme: default
+
+
+plugins:
+  search:
+    lang:
+    - en
+    - ru
+    - zh
+    - ja
+    separator: '[\s\u200b\-]'
+
+
+extra:
+  generator: false
+  search:
+    language: en, jp, zh
+  social:
+  - icon: fontawesome/solid/book-open
+    link: https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/
+    name: HEMY SKILLS
+  - icon: fontawesome/solid/book-open
+    link: https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/
+    name: HEMY NOTES
+  - icon: fontawesome/solid/book
+    link: https://wiki.huawei.com/domains/4356/wiki
+    name: MSE WIKI
+  - icon: fontawesome/solid/chalkboard
+    link: https://www.w3cschool.cn/
+    name: 编程狮W3C
+  - icon: fontawesome/solid/dove
+    link: https://www.runoob.com/
+    name: 菜鸟教程
+  - icon: fontawesome/solid/laptop-code
+    link: https://leetcode.cn/
+    name: 力扣
+  - icon: fontawesome/solid/file-code
+    link: http://www.verysource.com/
+    name: 源码查询
+  - icon: fontawesome/solid/toolbox
+    link: https://c.runoob.com/
+    name: 菜鸟工具
+  - icon: fontawesome/solid/pen-nib
+    link: https://hdesign.ucd.huawei.com/assemble/designcloud
+    name: DesignCloud
+  - icon: fontawesome/solid/at
+    link: mailto:<junwei.zhao@huawei.com>
+    name: Email
+  - icon: fontawesome/solid/comment
+    link: https://openx.huawei.com/HemyDocs/comment
+    name: 评论
+  - icon: fontawesome/solid/bug
+    link: https://codehub-y.huawei.com/hemyzhao/pages/HemyDocs/issues
+    name: issues
+
+
+extra_css:
+- themes/css/custom.css
+- themes/css/simpleLightbox.min.css
+
+
+extra_javascript:
+- themes/js/custom.js
+- themes/js/simpleLightbox.min.js
+- themes/js/optionalConfig.js
+- themes/js/mermaidloader.js
+- themes/js/umlconvert.js
+- https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs
+- https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
+- https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs
+
+
+markdown_extensions:
+- admonition
+- footnotes
+- meta
+- def_list
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.snippets
+- tables
+- pymdownx.mark
+- pymdownx.inlinehilite
+- pymdownx.smartsymbols
+- pymdownx.tilde
+- attr_list
+- md_in_html
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.emoji:
+    emoji_generator: !!python/name:materialx.emoji.to_svg
+    emoji_index: !!python/name:materialx.emoji.twemoji
+- pymdownx.highlight:
+    anchor_linenums: true
+    auto_title: true
+    line_spans: __span
+    linenums: true
+    pygments_lang_class: true
+- pymdownx.magiclink:
+    repo: mkdocs-material
+    repo_url_shorthand: true
+    user: squidfunk
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- codehilite:
+    guess_lang: false
+    linenums: false
+- toc:
+    permalink: true
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.emoji:
+    emoji_generator: !!python/name:pymdownx.emoji.to_png
+- pymdownx.superfences:
+    custom_fences:
+    - class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+      name: mermaid
+    - class: flow
+      format: !!python/name:pymdownx.superfences.fence_code_format
+      name: uml-flowchart
+    - class: sequence
+      format: !!python/name:pymdownx.superfences.fence_code_format
+      name: sequence
+    preserve_tabs: true
+- pymdownx.highlight:
+    anchor_linenums: true
