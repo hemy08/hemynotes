@@ -6,11 +6,12 @@ repo_url: https://github.com/hemy08/hemynotes
 
 copyright: Copyright &copy; 2021-2029 HEMY08
 
+docs_dir: docs
 
 nav:
   - HOME: https://hemy08.github.io/hemynotes/
-  - Windows:
-    - mstsc副屏全屏显示: docs/Windows/01-mstsc副屏全屏显示.md
+  - Windows: Windows/01-mstsc副屏全屏显示.md
+    - mstsc副屏全屏显示: Windows/01-mstsc副屏全屏显示.md
   - 百度: https://www.baidu.com
 
 
