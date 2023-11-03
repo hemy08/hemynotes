@@ -1,38 +1,8 @@
 # <center> HEMY NOTES BOOKS  </center>
 
 -----------------
-## 一、文档开发须知
 
-1、文档统一使用markdown进行开发，开发工具可以使用markdown pad、VSCode Huawei、JetBrains IDEA、Notpad++、MdStorm（我司自研的，用着还行）
-
-2、文档中涉及的所有图片，需放在同级目录的images文件夹下，并以文档名进行划分
-
-3、mkdocs.yml文件无需手动修改，有新增目录或文件后，执行下仓库下的`mkdocsyaml.exe`脚本即可
-
-4、`pages_config.json`是配置文件，内部配置各个章节信息，忽略文件，忽略目录，以及各个子文档的路径等信息.
-
-
-## 二、文档配置说明
-
-本工具模板是针对在openx上开启mkdocs制作个人网站使用。
-
-[内源openx介绍：https://openx.huawei.com/aboutUs/aboutOpenx](https://openx.huawei.com/aboutUs/aboutOpenx)
-
-[内源openx上配置个人网站参考：https://openx.huawei.com/OpenX/dynamicDetail/1047](https://openx.huawei.com/OpenX/dynamicDetail/1047)
-
-[内源openx上配置个人网站FAQ：https://openx.huawei.com/OpenX/dynamicDetail/4453](https://openx.huawei.com/OpenX/dynamicDetail/4453)
-
-### 2.1 建立项目
-
-参考上面的连接，建立一个内源项目。
-
-然后还需要再Codehub上创建一个新的git仓库，把openx添加为项目的管理员。
-
-![将openx添加为本项目的管理员](images/add_openx_to_cur_project.png)
-
-将本模板中的所有文档拷贝至新添加的git仓库中。
-
-### 2.2 配置pages\_config.json
+## 一、配置pages\_config.json
 
 这个是自定义的配置文件，在python脚本中会读取，文件名不可更改。
 
@@ -142,19 +112,8 @@ markdown_extensions markdown扩展配置，比如支持emoji、mermaid
 
 如果实在不会，可以参考本案例实现。
 
-### 2.3 执行mkdocsyaml.exe生成mkdocs.yml
 
-mkdocsyaml.exe会读取pages_config.json，运行后会生成mkdocs.yml。
-
-模板和主题都是固定的，当前不可更改，后续可以考虑扩展。
-
-规则：
-
-- 脚本会将数字+下划线/中划线类的文件或者文件名，去掉数字+下划线在网站上显示，即：如果本地有01_xxx或者01-xxx的文件/文件夹，在网上只会显示xxx。
-- README文件在目录中不显示。
-- 生成mkdocs.yml时，只处理.md后缀的文件。
-
-## 三、pages_config.json 参考
+## 二、pages_config.json 参考
 
 <details>
 <summary style="color:rgb(0,0,255);font-weight:bold">pages_config.json 参考</summary>

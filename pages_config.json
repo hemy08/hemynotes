@@ -13,6 +13,9 @@
     "file name convert": {
         "Windows": "Windows"
     },
+    "external links": {
+        "百度": "https://www.baidu.com"
+    },
     "theme": {
         "favicon": "themes/images/lvye.png",
         "feature": {

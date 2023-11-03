@@ -1,24 +1,17 @@
-site_name: HEMY Skills
+site_name: HEMY MOTES
 
-site_description: HEMY's Personal Skills Notes
+site_description: HEMY's Personal Notes
 
-repo_url: https://szv-y.codehub.huawei.com/hemyzhao/pages/hemyskills.git
+repo_url: https://github.com/hemy08/hemynotes
 
-copyright: Copyright &copy; 2021-2029 JunWei Zhao
+copyright: Copyright &copy; 2021-2029 HEMY08
 
 
 nav:
-  - HOME: https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/
+  - HOME: https://hemy08.github.io/hemynotes/
   - Windows:
     - mstsc副屏全屏显示: docs/Windows/01-mstsc副屏全屏显示.md
-    - 右键菜单添加新建记事本: docs/Windows/02-右键菜单添加新建记事本.md
-    - windows常用cmd命令: docs/Windows/03-windows常用cmd命令.md
-    - 让任务栏在屏幕左侧变窄: docs/Windows/04-让任务栏在屏幕左侧变窄.md
-    - 计算云鼠标飘的解决办法: docs/Windows/05-计算云鼠标飘的解决办法.md
-    - 鼠标右键菜单排序: docs/Windows/06-鼠标右键菜单排序.md
-    - windows.edb文件: docs/Windows/07-windows.edb文件.md
-    - 找到文件被哪个进程引用: docs/Windows/08-找到文件被哪个进程引用.md
-  - HEMY_NOTES: https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/
+  - 百度: https://www.baidu.com
 
 
 theme:
@@ -71,15 +64,6 @@ extra:
   search:
     language: en, jp, zh
   social:
-  - icon: fontawesome/solid/book-open
-    link: https://openx.huawei.com/mkdocs/project/1186/hemyskills/docs/site/
-    name: HEMY SKILLS
-  - icon: fontawesome/solid/book-open
-    link: https://openx.huawei.com/mkdocs/project/1186/hemynotes/docs/site/
-    name: HEMY NOTES
-  - icon: fontawesome/solid/book
-    link: https://wiki.huawei.com/domains/4356/wiki
-    name: MSE WIKI
   - icon: fontawesome/solid/chalkboard
     link: https://www.w3cschool.cn/
     name: 编程狮W3C
@@ -99,14 +83,8 @@ extra:
     link: https://hdesign.ucd.huawei.com/assemble/designcloud
     name: DesignCloud
   - icon: fontawesome/solid/at
-    link: mailto:<junwei.zhao@huawei.com>
+    link: mailto:<zhaojunwei008@yeah.net>
     name: Email
-  - icon: fontawesome/solid/comment
-    link: https://openx.huawei.com/HemyDocs/comment
-    name: 评论
-  - icon: fontawesome/solid/bug
-    link: https://codehub-y.huawei.com/hemyzhao/pages/HemyDocs/issues
-    name: issues
 
 
 extra_css:
