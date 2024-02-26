@@ -278,6 +278,8 @@ def create_chapter_mkdocs():
         yaml_dump_key_values(f, 'repo_url', JSON_STR_REPO_URL)
         yaml_dump_key_values(f, 'copyright', JSON_STR_COPYRIGHT)
         yaml_dump_key_values(f, 'docs_dir', JSON_STR_DOCS_DIR)
+        
+        write_mkdocs_themes(f)
 
         f.write("\nnav:\n")
 
@@ -290,8 +292,6 @@ def create_chapter_mkdocs():
         for name in external_links:
             fields = "  - " + name + ": " + external_links.get(name) + "\n"
             f.write(fields)
-
-        write_mkdocs_themes(f)
 
         f.close()
     return
