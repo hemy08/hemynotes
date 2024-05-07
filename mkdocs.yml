@@ -6,6 +6,7 @@ repo_url: https://github.com/hemy08/hemynotes
 
 copyright: Copyright &copy; 2021-2029 HEMY08
 
+docs_dir: notes/
 
 nav:
   - Windows:
