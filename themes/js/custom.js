@@ -21,12 +21,12 @@ function clickAction(img) {
 
 window.onload = function () {
     for (let item of document.getElementsByTagName('img')) {
-        if (item.classList.contains('pass') === false) {
-            item.setAttribute('onclick', 'clickAction(this)');
-        }
+        // if (item.classList.contains('pass') === false) {
+            // item.setAttribute('onclick', 'clickAction(this)');
+        // }
     }
 }
-/*
+
 $(document).ready(function () {
   let productImageGroups = []
   $('.img-fluid').each(function () {
@@ -50,4 +50,4 @@ $(document).ready(function () {
   function productImageGroupsSet (value) {
     $(value).simpleLightbox()
   }
-})*/
+})

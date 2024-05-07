@@ -8,16 +8,16 @@ copyright: Copyright &copy; 2021-2029 HEMY08
 
 
 nav:
-  - HOME: https://hemy08.github.io/hemynotes/
+  - HOME: index.md
   - Windows:
-    - mstsc副屏全屏显示: /docs/Windows/01-mstsc副屏全屏显示.md
-    - 右键菜单添加新建记事本: /docs/Windows/02-右键菜单添加新建记事本.md
-    - windows常用cmd命令: /docs/Windows/03-windows常用cmd命令.md
-    - 让任务栏在屏幕左侧变窄: /docs/Windows/04-让任务栏在屏幕左侧变窄.md
-    - 计算云鼠标飘的解决办法: /docs/Windows/05-计算云鼠标飘的解决办法.md
-    - 鼠标右键菜单排序: /docs/Windows/06-鼠标右键菜单排序.md
-    - windows.edb文件: /docs/Windows/07-windows.edb文件.md
-    - 找到文件被哪个进程引用: /docs/Windows/08-找到文件被哪个进程引用.md
+    - mstsc副屏全屏显示: Windows/01-mstsc副屏全屏显示.md
+    - 右键菜单添加新建记事本: Windows/02-右键菜单添加新建记事本.md
+    - windows常用cmd命令: Windows/03-windows常用cmd命令.md
+    - 让任务栏在屏幕左侧变窄: Windows/04-让任务栏在屏幕左侧变窄.md
+    - 计算云鼠标飘的解决办法: Windows/05-计算云鼠标飘的解决办法.md
+    - 鼠标右键菜单排序: Windows/06-鼠标右键菜单排序.md
+    - windows.edb文件: Windows/07-windows.edb文件.md
+    - 找到文件被哪个进程引用: Windows/08-找到文件被哪个进程引用.md
   - 百度: https://www.baidu.com
 
 
@@ -36,6 +36,7 @@ theme:
   - search.share
   - search.suggest
   - search.highlight
+  - content.tabs.link
   icon:
     admonition:
       abstract: octicons/checklist-16
@@ -100,7 +101,6 @@ extra_css:
 - themes/css/simpleLightbox.min.css
 - themes/css/pied_piper.css
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
-
 
 extra_javascript:
 - themes/js/custom.js
