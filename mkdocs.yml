@@ -6,16 +6,6 @@ repo_url: https://github.com/hemy08/hemynotes
 
 copyright: Copyright &copy; 2021-2029 HEMY08
 
-nav:
-  - Windows:
-    - mstsc副屏全屏显示: Windows/01-mstsc副屏全屏显示.md
-    - 右键菜单添加新建记事本: Windows/02-右键菜单添加新建记事本.md
-    - windows常用cmd命令: Windows/03-windows常用cmd命令.md
-    - 让任务栏在屏幕左侧变窄: Windows/04-让任务栏在屏幕左侧变窄.md
-    - 计算云鼠标飘的解决办法: Windows/05-计算云鼠标飘的解决办法.md
-    - 鼠标右键菜单排序: Windows/06-鼠标右键菜单排序.md
-    - windows.edb文件: Windows/07-windows.edb文件.md
-    - 找到文件被哪个进程引用: Windows/08-找到文件被哪个进程引用.md
 
 
 theme:
@@ -28,8 +18,6 @@ theme:
   - navigation.indexes
   - navigation.prune
   - navigation.top
-  - navigation.path
-  - navigation.expand
   - toc.follow
   - header.autohide
   - search.share
@@ -93,11 +81,13 @@ extra:
     link: mailto:<zhaojunwei008@yeah.net>
     name: Email
 
+
 extra_css:
 - themes/css/custom.css
 - themes/css/simpleLightbox.min.css
 - themes/css/pied_piper.css
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
+
 
 extra_javascript:
 - themes/js/custom.js
@@ -107,12 +97,12 @@ extra_javascript:
 - themes/js/umlconvert.js
 - themes/js/mathjax.js
 - themes/js/katex.js
-- https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
+- https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs
 - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
 - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
 - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
-- https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js
-- https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js
+- https://unpkg.com/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs
+- https://unpkg.com/@markspec/markdown-it-plantuml@1.1.4/index.js
 - https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
 - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
 - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
@@ -141,8 +131,8 @@ markdown_extensions:
 - pymdownx.arithmatex:
     generic: true
 - pymdownx.emoji:
-    emoji_generator: '!!python/name:materialx.emoji.to_svg'
-    emoji_index: '!!python/name:materialx.emoji.twemoji'
+    emoji_generator: !!python/name:materialx.emoji.to_svg
+    emoji_index: !!python/name:materialx.emoji.twemoji
 - pymdownx.highlight:
     anchor_linenums: true
     auto_title: true
@@ -178,3 +168,18 @@ markdown_extensions:
       format: !!python/name:pymdownx.superfences.fence_code_format
       name: sequence
     preserve_tabs: true
+
+nav:
+  - HOME: https://hemy08.github.io/hemynotes/
+  - Windows:
+    - mstsc副屏全屏显示: Windows/01-mstsc副屏全屏显示.md
+    - 右键菜单添加新建记事本: Windows/02-右键菜单添加新建记事本.md
+    - windows常用cmd命令: Windows/03-windows常用cmd命令.md
+    - 让任务栏在屏幕左侧变窄: Windows/04-让任务栏在屏幕左侧变窄.md
+    - 计算云鼠标飘的解决办法: Windows/05-计算云鼠标飘的解决办法.md
+    - 鼠标右键菜单排序: Windows/06-鼠标右键菜单排序.md
+    - windows.edb文件: Windows/07-windows.edb文件.md
+    - 找到文件被哪个进程引用: Windows/08-找到文件被哪个进程引用.md
+    - Win11修改bat默认打开方式: Windows/09-Win11修改bat默认打开方式.md
+    - win11上临时文件清理: Windows/10-win11上临时文件清理.md
+  - 百度: https://www.baidu.com

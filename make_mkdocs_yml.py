@@ -107,7 +107,7 @@ def write_files_info(root_dir, obs_path, name, level, fp):
             path = obs_path[pos + len(root_dir + "/") :]
         else:
             path = obs_path[pos + len(root_dir + "/") + len(docs_dir + "/"):]
-        path = path.replace("\\", "/")
+        path = path.replace("\\", "/").replace("docs/","")
 
         # 文件名自定义转换
         file_name = file_name_cvt(file_name)
