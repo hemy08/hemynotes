@@ -12,7 +12,9 @@
     height: 2.4rem;
     padding-left: .3rem;
     padding-right: .3rem;
+    color: white;
     font-weight: bold;
+    background: linear-gradient(179deg, #00daff, #003dff);
 }
 
 
@@ -24,7 +26,7 @@
 }
 
 .md-grid {
-  max-width: 84rem;
+  max-width: 100%;
   margin-right: 2rem;
   margin-left: 2rem;
 }
