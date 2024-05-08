@@ -6,8 +6,6 @@ repo_url: https://github.com/hemy08/hemynotes
 
 copyright: Copyright &copy; 2021-2029 HEMY08
 
-docs_dir: notes/
-
 nav:
   - Windows:
     - mstsc副屏全屏显示: Windows/01-mstsc副屏全屏显示.md
@@ -18,7 +16,6 @@ nav:
     - 鼠标右键菜单排序: Windows/06-鼠标右键菜单排序.md
     - windows.edb文件: Windows/07-windows.edb文件.md
     - 找到文件被哪个进程引用: Windows/08-找到文件被哪个进程引用.md
-  - 百度: https://www.baidu.com
 
 
 theme:
