@@ -172,14 +172,14 @@ markdown_extensions:
 nav:
   - HOME: https://hemy08.github.io/hemynotes/
   - Windows:
-    - mstsc副屏全屏显示: Windows/01-mstsc副屏全屏显示.md
-    - 右键菜单添加新建记事本: Windows/02-右键菜单添加新建记事本.md
-    - windows常用cmd命令: Windows/03-windows常用cmd命令.md
-    - 让任务栏在屏幕左侧变窄: Windows/04-让任务栏在屏幕左侧变窄.md
-    - 计算云鼠标飘的解决办法: Windows/05-计算云鼠标飘的解决办法.md
-    - 鼠标右键菜单排序: Windows/06-鼠标右键菜单排序.md
-    - windows.edb文件: Windows/07-windows.edb文件.md
-    - 找到文件被哪个进程引用: Windows/08-找到文件被哪个进程引用.md
-    - Win11修改bat默认打开方式: Windows/09-Win11修改bat默认打开方式.md
-    - win11上临时文件清理: Windows/10-win11上临时文件清理.md
+    - mstsc副屏全屏显示: 操作系统/Windows/01-mstsc副屏全屏显示.md
+    - 右键菜单添加新建记事本: 操作系统/Windows/02-右键菜单添加新建记事本.md
+    - windows常用cmd命令: 操作系统/Windows/03-windows常用cmd命令.md
+    - 让任务栏在屏幕左侧变窄: 操作系统/Windows/04-让任务栏在屏幕左侧变窄.md
+    - 计算云鼠标飘的解决办法: 操作系统/Windows/05-计算云鼠标飘的解决办法.md
+    - 鼠标右键菜单排序: 操作系统/Windows/06-鼠标右键菜单排序.md
+    - windows.edb文件: 操作系统/Windows/07-windows.edb文件.md
+    - 找到文件被哪个进程引用: 操作系统/Windows/08-找到文件被哪个进程引用.md
+    - Win11修改bat默认打开方式: 操作系统/Windows/09-Win11修改bat默认打开方式.md
+    - win11上临时文件清理: 操作系统/Windows/10-win11上临时文件清理.md
   - 百度: https://www.baidu.com

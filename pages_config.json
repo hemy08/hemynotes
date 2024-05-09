@@ -8,10 +8,10 @@
     "ignore file types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
     "ignore files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
     "chapter infos": {
-        "Windows": "\\docs\\Windows"
+        "操作系统": "\\docs\\操作系统"
     },
     "file name convert": {
-        "Windows": "Windows"
+        "操作系统": "操作系统"
     },
     "external links": {
         "百度": "https://www.baidu.com"
