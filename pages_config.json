@@ -1,19 +1,19 @@
 {
-    "site name": "HEMY MOTES",
-    "site description": "HEMY's Personal Notes",
+    "site_name": "HEMY MOTES",
+    "site_description": "HEMY's Personal Notes",
     "copyright": "Copyright &copy; 2021-2029 HEMY08",
     "HOME": "https://hemy08.github.io/hemynotes/",
-    "repo url": "https://github.com/hemy08/hemynotes",
-    "ignore dirs": ".git;.idea;.vscode;images;image;resource;.gitignore;.obsidian;public_resources;figures;public_sys-resources;themes;docs;site;vx_notebook;document;logo",
-    "ignore file types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
-    "ignore files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
-    "chapter infos": {
+    "repo_url": "https://github.com/hemy08/hemynotes",
+    "ignore_dirs": ".git;.idea;.vscode;images;image;resource;.gitignore;.obsidian;public_resources;figures;public_sys-resources;themes;docs;site;vx_notebook;document;logo",
+    "ignore_file_types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
+    "ignore_files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
+    "chapter_infos": {
         "操作系统": "\\docs\\操作系统"
     },
-    "file name convert": {
+    "file_name_convert": {
         "操作系统": "操作系统"
     },
-    "external links": {
+    "external_links": {
         "百度": "https://www.baidu.com"
     },
     "theme": {
@@ -22,6 +22,14 @@
             "tabs": "true"
         },
         "features": [
+            "announce.dismiss",
+            "content.code.annotate",
+            "content.code.copy",
+            "content.tooltips",
+            "navigation.footer",
+            "navigation.indexes",
+            "navigation.sections",
+            "navigation.tabs",
             "navigation.tracking",
             "navigation.tabs",
             "navigation.indexes",
@@ -31,7 +39,8 @@
             "header.autohide",
             "search.share",
             "search.suggest",
-            "search.highlight"
+            "search.highlight",
+            "toc.follow"
         ],
         "icon": {
             "logo": "material/library",
@@ -54,6 +63,10 @@
         "name": "material",
         "palette": {
             "scheme": "default"
+        },
+        "font" : {
+            "text": "Roboto",
+            "code": "Roboto Mono"
         }
     },
     "plugins": {
@@ -64,7 +77,7 @@
                 "zh",
                 "ja"
             ],
-            "separator": "[\\s\\u200b\\-]"
+            "separator": "[\\s\\u200b\\-_,:!=\\[\\]()\"`/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
         }
     },
     "extra": {
@@ -139,6 +152,8 @@
         "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
     ],
     "markdown_extensions": [
+        "abbr",
+        "attr_list",
         "admonition",
         "footnotes",
         "meta",
