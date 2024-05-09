@@ -1,4 +1,4 @@
-# mstsc副屏全屏显示<a name="ZH-CN_TOPIC_0192207964"></a>
+# mstsc副屏全屏显示
 
 <span style="color:rgb(100,180,246);font-size:11pt">最后更新：2017-08-12</span>
 
