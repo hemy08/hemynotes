@@ -8,10 +8,12 @@
     "ignore_file_types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
     "ignore_files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
     "chapter_infos": {
-        "操作系统": "\\docs\\操作系统"
+        "操作系统": "\\docs\\操作系统",
+        "代码库": "\\docs\\代码库"
     },
     "file_name_convert": {
-        "操作系统": "操作系统"
+        "操作系统": "操作系统",
+        "代码库": "代码库"
     },
     "external_links": {
         "百度": "https://www.baidu.com"
@@ -26,21 +28,17 @@
             "content.code.annotate",
             "content.code.copy",
             "content.tooltips",
-            "navigation.footer",
-            "navigation.indexes",
-            "navigation.sections",
-            "navigation.tabs",
+            "content.tabs.link",
             "navigation.tracking",
-            "navigation.tabs",
             "navigation.indexes",
             "navigation.prune",
             "navigation.top",
+            "navigation.tabs",
             "toc.follow",
             "header.autohide",
             "search.share",
             "search.suggest",
-            "search.highlight",
-            "toc.follow"
+            "search.highlight"
         ],
         "icon": {
             "logo": "material/library",
@@ -137,12 +135,12 @@
         "themes/js/umlconvert.js",
         "themes/js/mathjax.js",
         "themes/js/katex.js",
-        "https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs",
+        "https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js",
         "https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js",
         "https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js",
         "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js",
-        "https://unpkg.com/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs",
-        "https://unpkg.com/@markspec/markdown-it-plantuml@1.1.4/index.js",
+        "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js",
+        "https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js",
         "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js",
         "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js",
         "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js",
