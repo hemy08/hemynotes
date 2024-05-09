@@ -20,7 +20,6 @@ $ sudo zypper install lsof [在OpenSUSE上]
 ```shell
 $ lsof -i :22
 ```
-![](./images/image.png)
 
 ## 一、help
 

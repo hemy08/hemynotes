@@ -19,7 +19,6 @@ $ sudo zypper install psmisc [在OpenSUSE上]
 ```shell
 $ fuser 80/tcp
 ```
-![](./images/1693897457259_image.png)
 
 然后像这样使用ps 命令使用 PID号查找进程名称。
 

@@ -74,7 +74,7 @@ copyright声明，这个是显示在网页的左下方的。
 
 这个配置文件就是专门干这个事情的，把长文件名转换为短文件名。
 
-![file_name_convert](images/fine_name_convert.png)
+![file_name_cvt](vx_images/558014719240550.png)
 
 如图这种的文件名，我们可以配置转换成短文件名，这样在网页上显示就不会换行了。
 

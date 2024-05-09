@@ -18,7 +18,7 @@ go get github.com/astaxie/beego
 go get github.com/beego/bee
 ```
 
-> ![](public_resources/icon-warning.gif) **注意**：
+> **注意**：
 > beege和bee是两个概念。beego是框架，bee是工具，是命令。
 > 在安装Beego前，先确认是否将$GOPATH/bin写入GO环境中。
 
