@@ -1,0 +1,41 @@
+{
+    "created_time": "2024-04-29T09:13:11Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2024-04-29T09:13:11Z",
+            "id": "2498",
+            "modified_time": "2024-04-29T09:13:11Z",
+            "name": "custom.css",
+            "signature": "14661861221644330151",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2024-04-29T09:13:11Z",
+            "id": "2499",
+            "modified_time": "2024-04-29T09:13:11Z",
+            "name": "pied_piper.css",
+            "signature": "13058357867699987623",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2024-04-29T09:13:11Z",
+            "id": "2500",
+            "modified_time": "2024-04-29T09:13:11Z",
+            "name": "simpleLightbox.min.css",
+            "signature": "5039560076737602727",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "2497",
+    "modified_time": "2024-04-29T09:13:11Z",
+    "signature": "8788704864129475751",
+    "version": 3
+}
