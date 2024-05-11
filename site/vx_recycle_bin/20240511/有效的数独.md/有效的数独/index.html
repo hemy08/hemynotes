@@ -18,7 +18,7 @@
     
     
       
-        <title>最长连续序列 - HEMY MOTES</title>
+        <title>36.有效的数独 - HEMY MOTES</title>
       
     
     
@@ -117,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#36" class="md-skip">
           跳转至
         </a>
       
@@ -151,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              最长连续序列
+              36.有效的数独
             
           </span>
         </div>
@@ -487,6 +487,8 @@
       
         
       
+        
+      
     
     
       
@@ -643,7 +645,95 @@
   
 
 
-<h1 id="_1">最长连续序列<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="36">36.有效的数独<a class="headerlink" href="#36" title="Permanent link">&para;</a></h1>
+<p><span style="color:rgb(100,180,246);font-size:11pt">最后更新：2024-05-10-22</span></p>
+<p>链接：<a href="https://leetcode.cn/problems/valid-sudoku/description/">https://leetcode.cn/problems/valid-sudoku/description/</a></p>
+<div class="admonition question">
+<p class="admonition-title">题目描述</p>
+<p>请你判断一个 <code>9 x 9</code> 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。</p>
+<ul>
+<li>数字 <code>1-9</code> 在每一行只能出现一次。</li>
+<li>数字 <code>1-9</code> 在每一列只能出现一次。</li>
+<li>数字 <code>1-9</code> 在每一个以粗实线分隔的 <code>3x3</code> 宫内只能出现一次。（请参考示例图）</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<ul>
+<li>一个有效的数独（部分已被填充）不一定是可解的。</li>
+<li>只需要根据以上规则，验证已经填入的数字是否有效即可。</li>
+<li>空白格用 '.' 表示。</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">题目示例</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">示例 1：</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="vx_images/9153622269214.png" /></p>
+<p><strong>输入：</strong> `board = </p>
+</div>
+</div>
+</div>
+<p>[["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]`</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>**输出：** `true`
+</code></pre></div></td></tr></table></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">示例 2：</label><label for="__tabbed_2_2">示例 3：</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>输入：</strong> <code>board = 
+[["8","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]</code></p>
+<p><strong>输出：</strong> ``</p>
+<p><strong>解释：</strong> </p>
+</div>
+<div class="tabbed-block">
+<p><strong>输入：</strong> ``</p>
+<p><strong>输出：</strong> ``</p>
+<p><strong>解释：</strong> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">提示：</p>
+<ul>
+<li><span class="arithmatex">\(2 &lt;= nums.length &lt;= 10^4\)</span></li>
+<li><span class="arithmatex">\(-10^9 &lt;= nums[i] &lt;= 10^9\)</span></li>
+<li><span class="arithmatex">\(-10^9 &lt;= target &lt;= 10^9\)</span></li>
+<li><strong>只会存在一个有效答案</strong></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">进阶</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C</label><label for="__tabbed_3_2">Golang暴力解法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-go highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 
 
 

@@ -14,7 +14,7 @@
         <link rel="prev" href="../%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/">
       
       
-        <link rel="next" href="../%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
+        <link rel="next" href="../%E5%8A%A0%E6%B2%B9%E7%AB%99/">
       
       
       <link rel="icon" href="../../../../themes/images/lvye.png">
@@ -497,6 +497,8 @@
       
         
       
+        
+      
     
     
       
@@ -782,6 +784,8 @@
       
         
       
+        
+      
     
     
       
@@ -958,6 +962,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../%E5%8A%A0%E6%B2%B9%E7%AB%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    加油站
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/" class="md-nav__link">
         
   
@@ -1035,27 +1060,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E6%9C%89%E6%95%88%E7%9A%84%E6%95%B0%E7%8B%AC/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    有效的数独
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1114,6 +1118,53 @@
   
   <span class="md-ellipsis">
     求和
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    滑动窗口
   </span>
   
 
@@ -1355,6 +1406,12 @@
 <li><span class="arithmatex">\(1 &lt;= digits.length &lt;= 100\)</span></li>
 <li><span class="arithmatex">\(0 &lt;= digits[i] &lt;= 9\)</span></li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">解题思路</p>
+<p>1、加1后，位数增加的只有一种情况，就是全是9的情况，这个单独处理，重新申请内存。</p>
+<p>2、不增加位数的，直接对原数组处理，从后往前，如果是9，则值修改为0，置个标志位，直到找到第一个不为0的数字，加1后，跳出循环，返回原数组。</p>
+<p>第二种也可以分一下，最后一位不是9，直接加一返回，是9的话再走循环</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:7"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C解法一</label><label for="__tabbed_2_2">C解法二</label><label for="__tabbed_2_3">C解法三</label><label for="__tabbed_2_4">C解法四</label><label for="__tabbed_2_5">Golang直接解题</label><label for="__tabbed_2_6">Golang判断</label><label for="__tabbed_2_7">Golang</label></div>
 <div class="tabbed-content">

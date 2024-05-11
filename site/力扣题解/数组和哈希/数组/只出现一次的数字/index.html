@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../%E5%8A%A0%E4%B8%80/">
+        <link rel="prev" href="../%E5%8A%A0%E6%B2%B9%E7%AB%99/">
       
       
         <link rel="next" href="../%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/">
@@ -497,6 +497,8 @@
       
         
       
+        
+      
     
     
       
@@ -782,6 +784,8 @@
       
         
       
+        
+      
     
     
       
@@ -945,6 +949,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8A%A0%E6%B2%B9%E7%AB%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    加油站
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1035,27 +1060,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E6%9C%89%E6%95%88%E7%9A%84%E6%95%B0%E7%8B%AC/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    有效的数独
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1114,6 +1118,53 @@
   
   <span class="md-ellipsis">
     求和
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    滑动窗口
   </span>
   
 
@@ -1353,6 +1404,13 @@
 <li><span class="arithmatex">\(-3 * 10^4 &lt;= nums[i] &lt;= 3 * 10^4\)</span></li>
 <li>除了某个元素只出现一次以外，其余每个元素均出现两次。</li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">思路</p>
+<p>先排序，然后把数组分成两块，偶数位的一起，奇数位的一起，分别计算和。</p>
+<p>因为题目中只有一个元素只出现一次，其他的元素都是出现两次。</p>
+<p>那么先排输入个数是偶数的，这样只处理输入个数是奇数的。</p>
+<p>分别计算和之后，奇数位肯定是比偶数位是要多计算一个数的，这样用奇数位的和-偶数位的和，就是我们需要的结果，防止有负数，千万不要取绝对值。</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C语言快排</label><label for="__tabbed_2_2">C语言按位亦或</label><label for="__tabbed_2_3">Golang普通解法</label><label for="__tabbed_2_4">Golang排序一</label><label for="__tabbed_2_5">Golang排序二</label><label for="__tabbed_2_6">Golang按位亦或</label></div>
 <div class="tabbed-content">
