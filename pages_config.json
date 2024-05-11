@@ -9,10 +9,12 @@
     "ignore_files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
     "chapter_infos": {
         "操作系统": "\\docs\\操作系统",
+        "力扣题解": "\\docs\\力扣题解",
         "代码库": "\\docs\\代码库"
     },
     "file_name_convert": {
         "操作系统": "操作系统",
+        "力扣题解": "力扣题解",
         "代码库": "代码库"
     },
     "external_links": {
