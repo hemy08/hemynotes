@@ -1337,17 +1337,29 @@
 <li>numsSize &lt;= K的情况，直接快速排序，降序，然后返回nums[0]就可以</li>
 <li>下标从1开始</li>
 </ol>
-<p>滑动窗口的位置                          最大值
----------------                         -----
-[1  3  -1] -3  5  3  6  2  1  2  7       3
-1 [3  -1  -3] 5  3  6  2  1  2  7        3
-1  3 [-1  -3  5] 3  6  2  1  2  7        5
-1  3  -1 [-3  5  3] 6  2  1  2  7        5
-1  3  -1  -3 [5  3  6] 2  1  2  7        6
-1  3  -1  -3  5 [3  6  2] 1  2  7        6
-1  3  -1  -3  5  3 [6  2  1] 2  7        6
-1  3  -1  -3  5  3  6 [2  1  2] 7        2
-1  3  -1  -3  5  3  6  2 [1  2  7]       7</p>
+<p>过程示例</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>滑动窗口的位置                          最大值   
+---------------                         -----   
+[1  3  -1] -3  5  3  6  2  1  2  7       3   
+1 [3  -1  -3] 5  3  6  2  1  2  7        3   
+1  3 [-1  -3  5] 3  6  2  1  2  7        5   
+1  3  -1 [-3  5  3] 6  2  1  2  7        5   
+1  3  -1  -3 [5  3  6] 2  1  2  7        6   
+1  3  -1  -3  5 [3  6  2] 1  2  7        6   
+1  3  -1  -3  5  3 [6  2  1] 2  7        6   
+1  3  -1  -3  5  3  6 [2  1  2] 7        2   
+1  3  -1  -3  5  3  6  2 [1  2  7]       7
+</code></pre></div></td></tr></table></div>
 <p>每次的滑动，都是前面少了一个值a，后面多了一个值b；</p>
 <p>我们假设以值a开始的区间，最大值为maxa；</p>
 <p><strong>那么必然有条件：</strong></p>
