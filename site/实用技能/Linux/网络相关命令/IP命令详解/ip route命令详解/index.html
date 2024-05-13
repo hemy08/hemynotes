@@ -1,0 +1,2162 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HEMY's Personal Notes">
+      
+      
+      
+      
+        <link rel="prev" href="../ip%20link%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/">
+      
+      
+        <link rel="next" href="../ip%20rule%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/">
+      
+      
+      <link rel="icon" href="../../../../../themes/images/lvye.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+    
+    
+      
+        <title>ip route命令详解 - HEMY MOTES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../themes/css/custom.css">
+    
+      <link rel="stylesheet" href="../../../../../themes/css/simpleLightbox.min.css">
+    
+      <link rel="stylesheet" href="../../../../../themes/css/pied_piper.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ip-route" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../.." title="HEMY MOTES" class="md-header__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEMY MOTES
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ip route命令详解
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hemy08/hemynotes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://hemy08.github.io/hemynotes/" class="md-tabs__link">
+        
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/000_%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../06-linux%E7%B3%BB%E7%BB%9FErrorid%E7%9A%84%E5%90%AB%E4%B9%89/" class="md-tabs__link">
+          
+  
+    
+  
+  实用技能
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" class="md-tabs__link">
+          
+  
+    
+  
+  算法思想
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII/" class="md-tabs__link">
+          
+  
+    
+  
+  力扣题解
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-tabs__link">
+          
+  
+    
+  
+  代码库
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://www.baidu.com" class="md-tabs__link">
+        
+  
+    
+  
+  百度
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="HEMY MOTES" class="md-nav__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    HEMY MOTES
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hemy08/hemynotes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://hemy08.github.io/hemynotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HOME
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/000_%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    实用技能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            实用技能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06-linux%E7%B3%BB%E7%BB%9FErrorid%E7%9A%84%E5%90%AB%E4%B9%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux系统Errorid的含义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07-linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E8%A7%A3%E8%AF%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux系统文件权限解读
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08-openssl%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6%E6%AD%A5%E9%AA%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openssl生成证书步骤
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../16-zypper-help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zypper-help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/12-tar%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    压缩与解压相关命令
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/03-grep%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    目录与文件操作命令
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_7" id="__nav_3_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络相关命令
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            网络相关命令
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../curl%E5%91%BD%E4%BB%A4/curl-%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    curl命令
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_7_2" id="__nav_3_1_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    IP命令详解
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            IP命令详解
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip%20address%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ip address命令详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip%20link%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ip link命令详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ip route命令详解
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ip route命令详解
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route 命令格式说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-addchangereplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route add/change/replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route delete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route save
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route restore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-flush" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route flush
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route type 解释:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      运行实例：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip%20rule%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ip rule命令详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ip%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ip命令格式详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nslookup%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nslookup命令详解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tcpdump%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tcpdump命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../%E8%BF%9B%E7%A8%8B%E7%AB%AF%E5%8F%A3%E7%9B%B8%E5%85%B3/fuser%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    进程端口相关
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Windows/01-mstsc%E5%89%AF%E5%B1%8F%E5%85%A8%E5%B1%8F%E6%98%BE%E7%A4%BA/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    算法思想
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    力扣题解
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    代码库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.baidu.com" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    百度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route 命令格式说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-addchangereplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route add/change/replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route get
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route delete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route save
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route restore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-route-flush" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip route flush
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route type 解释:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      运行实例：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ip-route">ip route命令详解<a class="headerlink" href="#ip-route" title="Permanent link">&para;</a></h1>
+<p><span style="color:rgb(100,180,246);font-size:11pt">最后更新：2023-06-27</span></p>
+<p>原文链接 <a href="https://www.kancloud.cn/chunyu/php_basic_knowledge/2137339">https://www.kancloud.cn/chunyu/php_basic_knowledge/2137339</a></p>
+<p>ip route：用于管理静态路由表。
+linux 系统中，可以自定义从 1－252个路由表。其中，linux系统维护了4个路由表：</p>
+<ul>
+<li>0#表： 系统保留表</li>
+<li>253#表： defulte table 没特别指定的默认路由都放在改表</li>
+<li>254#表： main table 没指明路由表的所有路由放在该表</li>
+<li>255#表： local table 保存本地接口地址，广播地址、NAT地址 由系统维护，用户不得更改</li>
+</ul>
+<p>路由表的查看可以通过<code>ip route list table table_number [table_name]</code>命令。路由表序号和表名的对应关系在 <code>/etc/iproute2/rt_tables</code> 文件中，可手动编辑，路由表添加完毕即时生效。</p>
+<h2 id="ip-route_1">ip route 命令格式说明<a class="headerlink" href="#ip-route_1" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Usage: ip route { list | flush } SELECTOR
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>       ip route save SELECTOR
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>       ip route restore
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>       ip route showdump
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>       ip route get ADDRESS [ from ADDRESS iif STRING ]
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>                            [ oif STRING ]  [ tos TOS ]
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>                            [ mark NUMBER ]
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>       ip route { add | del | change | append | replace } ROUTE
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>SELECTOR := [ root PREFIX ] [ match PREFIX ] [ exact PREFIX ]
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>            [ table TABLE_ID ] [ proto RTPROTO ]
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>            [ type TYPE ] [ scope SCOPE ]
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>ROUTE := NODE_SPEC [ INFO_SPEC ]
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>NODE_SPEC := [ TYPE ] PREFIX [ tos TOS ]
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>             [ table TABLE_ID ] [ proto RTPROTO ]
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>             [ scope SCOPE ] [ metric METRIC ]
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>INFO_SPEC := NH OPTIONS FLAGS [ nexthop NH ]...
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>NH := [ via ADDRESS ] [ dev STRING ] [ weight NUMBER ] NHFLAGS
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>OPTIONS := FLAGS [ mtu NUMBER ] [ advmss NUMBER ]
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>           [ rtt TIME ] [ rttvar TIME ] [reordering NUMBER ]
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>           [ window NUMBER ] [ cwnd NUMBER ] [ initcwnd NUMBER ]
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>           [ ssthresh NUMBER ] [ realms REALM ] [ src ADDRESS ]
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>           [ rto_min TIME ] [ hoplimit NUMBER ] [ initrwnd NUMBER ]
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>           [ features FEATURES ] [ quickack BOOL ] [ congctl NAME ]
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>           [ expires TIME ]
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>TYPE := { unicast | local | broadcast | multicast | throw |
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>          unreachable | prohibit | blackhole | nat }
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>TABLE_ID := [ local | main | default | all | NUMBER ]
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>SCOPE := [ host | link | global | NUMBER ]
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>NHFLAGS := [ onlink | pervasive ]
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>RTPROTO := [ kernel | boot | static | NUMBER ]
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>TIME := NUMBER[s|ms]
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>BOOL := [1|0]
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>FEATURES := ecn
+</span></code></pre></div></td></tr></table></div>
+<h2 id="ip-route-addchangereplace">ip route add/change/replace<a class="headerlink" href="#ip-route-addchangereplace" title="Permanent link">&para;</a></h2>
+<p><strong>option：</strong></p>
+<ul>
+<li>to TYPE PREFIX (default)：路由的目标前缀。如果省略TYPE，则ip采用unicast类型。上面列出了其他类型的值。前缀是一个IP或IPv6地址，后跟斜杠和前缀长度。如果前缀的长度丢失，ip将采用全长主机路由。还有一个特殊的前缀默认值-相当于IP 0/0或IPv6:：/0。</li>
+<li>tos TOS：服务类型（TOS）密钥。这个密钥没有相关的掩码，最长的匹配被理解为：首先，比较路由和包的TOS。如果它们不相等，则分组仍然可以匹配具有零TOS的路由。TOS是8位十六进制数或/etc/iproute2/rt_dsfield中的标识符。</li>
+<li>metric ：跳数，该条路由记录的质量，一般情况下，如果有多条到达相同目的地的路由记录，路由器会采用metric值小的那条路由</li>
+<li>table TABLEID：要将此路由添加到的表。TABLEID可以是文件/etc/iproute2/rt_tables中的数字或字符串。如果省略此参数，ip将采用主表，但本地、广播和nat路由除外，默认情况下，这些路由将放入本地表中</li>
+<li>dev NAME：输出设备名称</li>
+<li>via ADDRESS：下一跳路由器的地址。 实际上，此字段的含义取决于路由类型。 对于普通的单播路由，它要么是真正的下一跳路由器，要么是以BSD兼容模式安装的直接路由，它可以是接口的本地地址。 对于NAT路由，它是已转换IP目标块的第一个地址</li>
+<li>src ADDRESS：发送到路由前缀所覆盖的目的地时首选的源地址</li>
+<li>realm REALMID：此路由被分配到的领域。REALMID可以是/etc/iproute2/rt_realms文件中的数字或字符串。</li>
+<li>mtu MTU/mtu lock MTU：到达目的地的路径上的MTU。 如果未使用修饰符锁定，则由于路径MTU发现，内核可能会更新MTU。 如果使用了修饰符锁定，则将不尝试任何路径MTU发现，在IPv4情况下，所有数据包将在没有DF位的情况下发送，或者将其分片到IPv6的MTU</li>
+<li>window NUMBER：TCP播发到这些目的地的最大窗口，以字节为单位。它限制了允许TCP对等方发送给我们的最大数据突发</li>
+<li>rtt TIME：初始RTT（“往返时间”）估算值。 如果未指定后缀，则这些单位是直接传递到路由代码的原始值，以保持与先前版本的兼容性。 否则，如果使用后缀s，sec或secs来指定秒数，而使用ms，msec或msecs的后缀来指定毫秒。</li>
+<li>rttvar TIME (2.3.15+ only)：初始RTT方差估算值。 与上面的rtt一样指定值</li>
+<li>rto_min TIME (2.6.23+ only)：与此目标通信时要使用的最小TCP重新传输超时。值的指定与上面的rtt相同</li>
+<li>ssthresh NUMBER (2.3.15+ only)：初始慢启动阈值的估计值</li>
+<li>cwnd NUMBER (2.3.15+ only)：锁定标志，如果不使用锁定标志，则忽略该选项</li>
+<li>initcwnd NUMBER (2.5.70+ only)：到此目标的连接的初始拥塞窗口大小。 实际窗口大小是该值乘以相同连接的MSS（``最大段大小''）。 默认值为零，表示使用RFC2414中指定的值。</li>
+<li>initrwnd NUMBER (2.6.33+ only)：到此目标的连接的初始接收窗口大小。 实际窗口大小是此值乘以连接的MSS。 默认值为零，表示使用慢启动值。</li>
+<li>features FEATURES (3.18+only)：启用或禁用每路由功能。此时唯一可用的特性是ecn，它可以在启动到给定目标网络的连接时启用显式拥塞通知。当响应来自给定网络的连接请求时，即使net.ipv4.tcp_ecn sysctl设置为0</li>
+<li>congctl NAME/congctl lock NAME (3.20+ only)：仅针对给定的目的地设置特定的TCP拥塞控制算法。 如果未指定，Linux将保留当前的全局默认TCP拥塞控制算法或应用程序中的一种。 如果未使用修饰符锁定，则应用程序仍可能会覆盖该目的地的建议拥塞控制算法。 如果使用了修饰符锁，则不允许应用程序覆盖该目的地的指定拥塞控制算法，因此将强制/保证使用建议的算法</li>
+<li>advmss NUMBER (2.3.15+ only)：在建立TCP连接时向这些目标播发的MSS（“最大段大小”）。如果没有给定，Linux将使用从第一跳设备MTU计算的默认值</li>
+<li>reordering NUMBER (2.3.15+ only)：到此目的地的路径上的最大重新排序。 如果未给出，则Linux使用通过sysctl变量net/ipv4/tcp_reordering选择的值</li>
+<li>nexthop NEXTHOP：多路径路由的下一跳。 NEXTHOP是一个复杂值，其语法类似于顶级参数列表：<ul>
+<li>via ADDRESS：下一跳路由</li>
+<li>dev NAME：输出设备名称</li>
+<li>weight NUMBER：是多路径路由的此元素的权重，反映其相对带宽或质量</li>
+</ul>
+</li>
+<li>scope SCOPE_VAL：路由前缀所覆盖的目的地范围。 SCOPE_VAL可以是数字/etc/iproute2/rt_scopes中的字符串。 如果省略此参数，则ip假定所有网关单播路由的作用域是全局范围，直接单播和广播路由的作用域链接以及本地路由的作用域主机</li>
+<li>protocol RTPROTO：该路由的路由协议标识符。 RTPROTO可以是文件/ etc / iproute2 / rt_protos中的数字或字符串。如果未提供路由协议ID，则ip会采用协议引导方式（即假定路由是由不了解自己在做什么的人添加的）。 几个协议值具有固定的解释。<ul>
+<li>redirect： 路由是由于ICMP重定向而安装的</li>
+<li>kernel：路由是在自动配置期间由内核安装的</li>
+<li>boot：路由是在启动过程中安装的。如果路由守护进程启动，它将清除所有这些守护进程</li>
+<li>static：该路由由管理员安装，以覆盖动态路由。 路由守护程序将尊重它们，甚至可能将它们通告给其对等端。</li>
+<li>ra：路由是通过路由器发现协议安装的</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ip route add default via 192.168.1.1</td>
+<td style="text-align: left;">设置系统默认路由</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route add 192.168.4.0/24 via 192.168.0.254 dev eth0</td>
+<td style="text-align: left;">设置192.168.4.0网段的网关为192.168.0.254,数据走eth0接口</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route add default via 192.168.0.254 dev eth0</td>
+<td style="text-align: left;">设置默认网关为192.168.0.254</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route add default via 192.168.1.1 table 1</td>
+<td style="text-align: left;">在一号表中添加默认路由为192.168.1.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route add 192.168.0.0/24 via 192.168.1.2 table 1</td>
+<td style="text-align: left;">在一号表中添加一条到192.168.0.0网段的路由为192.168.1.2</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route add prohibit 209.10.26.51</td>
+<td style="text-align: left;">设置请求的目的地不可达的路由</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route add prohibit 209.10.26.51 from 192.168.99.35</td>
+<td style="text-align: left;">假设您不想阻止所有用户访问此特定主机，则可以使用该from选项，阻止了源IP 192.168.99.35到达209.10.26.51</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route change default via 192.168.99.113 dev eth0</td>
+<td style="text-align: left;">更改默认路由。此操作等同于先删除，后新增</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ip-route-get">ip route get<a class="headerlink" href="#ip-route-get" title="Permanent link">&para;</a></h2>
+<p>此命令获取到目标的单个路由，并按照内核所看到的方式打印其内容。
+此操作不等同于ip route show。 ip routeshow会显示现有路线，而get解析它们并在必要时创建新克隆。基本上，get相当于沿着此路径发送数据包。如果没有给出iif参数，内核将创建一个路由，以将数据包输出到请求的目的地。这相当于用后续的ip路由ls缓存ping目标，但是实际上没有发送任何数据包。使用iif参数，内核假装一个数据包从这个接口到达，并搜索一条路径来转发数据包</p>
+<p><strong>option：</strong></p>
+<ul>
+<li>to ADDRESS (default)：目的地址</li>
+<li>from ADDRESS：源地址</li>
+<li>tos TOS：服务类型</li>
+<li>iif NAME：此数据包预期从中到达的设备</li>
+<li>oif NAME：强制将此数据包路由到的输出设备</li>
+<li>connected：如果未给出源地址（选项from），则重新查找源设置为从第一次查找收到的首选地址的路由。 如果使用策略路由，则可能是其他路由</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">查看命令</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ip route get 169.254.0.0/16</td>
+<td style="text-align: left;">获取到目标的单个路由，并按照内核所看到的方式打印其内容</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ip-route-delete">ip route delete<a class="headerlink" href="#ip-route-delete" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">查看命令</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ip route del 192.168.4.0/24</td>
+<td style="text-align: left;">删除192.168.4.0网段的网关</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route del default</td>
+<td style="text-align: left;">删除默认路由</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route delete 192.168.1.0/24 dev eth0</td>
+<td style="text-align: left;">删除路由</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ip-route-save">ip route save<a class="headerlink" href="#ip-route-save" title="Permanent link">&para;</a></h2>
+<p>将路由表信息保存到标准输出。该命令的行为类似于ip route show，除了输出是适合传递给ip route restore的原始数据外。</p>
+<h2 id="ip-route-restore">ip route restore<a class="headerlink" href="#ip-route-restore" title="Permanent link">&para;</a></h2>
+<p>从stdin恢复路由表信息 该命令希望读取从ip route save返回的数据流。 它将尝试完全还原保存时的路由表信息，因此必须先完成流中信息的任何转换（例如设备索引）。 任何现有路线均保持不变。 表中已经存在的数据流中指定的任何路由都将被忽略。
+ip route restore</p>
+<h2 id="ip-route-flush">ip route flush<a class="headerlink" href="#ip-route-flush" title="Permanent link">&para;</a></h2>
+<p>该flush选项与ip route一起使用时，将清空路由表或删除特定目标的路由</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ip route flush 10.38.0.0/16</td>
+<td style="text-align: left;">删除特定路由</td>
+</tr>
+<tr>
+<td style="text-align: left;">ip route flush table main</td>
+<td style="text-align: left;">清空路由表</td>
+</tr>
+</tbody>
+</table>
+<h2 id="route-type">Route type 解释:<a class="headerlink" href="#route-type" title="Permanent link">&para;</a></h2>
+<ul>
+<li>unicast：由路由前缀覆盖的目的地址的真实路径</li>
+<li>unreachable：目的路由无法到达。丢弃数据包并生成ICMP消息主机不可访问。本地发件人收到一个EHOSTUNREACH错误。</li>
+<li>blackhole：目的路由无法到达。数据包被悄悄丢弃。本地发件人收到EINVAL错误。</li>
+<li>prohibit：目的路由无法到达。数据包将被丢弃，并生成管理上禁止的ICMP消息通信。 本地发件人收到EACCES错误。</li>
+<li>local：目的地已分配给此主机。数据包被环回并在本地传递</li>
+<li>broadcast：目的路由是广播地址。数据包作为链接广播发送</li>
+<li>throw：与策略规则一起使用的特殊控制路径。 如果选择了这样的路由，则会在未找到路由的情况下终止此表中的查找。 如果没有策略路由，则等同于路由表中没有路由。 数据包被丢弃，并生成ICMP消息net unreachable。 本地发件人收到ENETUNREACH错误</li>
+<li>nat：一条特殊的NAT路由。 前缀所覆盖的目的地被认为是虚拟（或外部）地址，在转发之前需要将其转换为真实（或内部）地址。 使用属性via选择要转换为的地址</li>
+<li>anycast：未分配给此主机的路由地址，它们主要等效于本地，只是有一个区别：这些地址用作任何数据包的源地址时都是无效的。</li>
+<li>multicast：一种用于多播路由的特殊类型。 它在常规路由表中不存在。</li>
+</ul>
+<h2 id="_1">运行实例：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>// 查看本地路由表
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>// 此输出中的第一个字段告诉我们该路由是针对该计算机本地托管的广播地址还是IP地址或范围。
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>//随后的字段会通知我们目标可通过哪个设备到达，并且特别是（在此表中）内核已添加了这些路由，作为建立IP层接口的一部分
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>[root@izwz91quxhnlkan8kjak5hz net]# ip route show table local
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>broadcast 127.0.0.0 dev lo proto kernel scope link src 127.0.0.1 
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>local 127.0.0.0/8 dev lo proto kernel scope host src 127.0.0.1 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>local 127.0.0.1 dev lo proto kernel scope host src 127.0.0.1 
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>broadcast 127.255.255.255 dev lo proto kernel scope link src 127.0.0.1 
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>// 添加请求目的不可达的路由
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>[root@masq-gw]# ip route add prohibit 209.10.26.51
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>[root@tristan]# ssh 209.10.26.51
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>ssh: connect to address 209.10.26.51 port 22: No route to host
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>[root@masq-gw]# tcpdump -nnq -i eth2
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>tcpdump: listening on eth2
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>22:13:13.740406 192.168.99.35.51973 &amp;gt; 209.10.26.51.22: tcp 0 (DF)
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a>22:13:13.740714 192.168.99.254 &amp;gt; 192.168.99.35: icmp: host 209.10.26.51 unreachable - admin prohibited filter [tos 0xc0]
+</span></code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021-2029 HEMY08
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.w3cschool.cn/" target="_blank" rel="noopener" title="编程狮W3C" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M96 32c-35.3 0-64 28.7-64 64v288h64V96h384v288h64V96c0-35.3-28.7-64-64-64H96zm128 352v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32H416v-32c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.runoob.com/" target="_blank" rel="noopener" title="菜鸟教程" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M160.8 96.5c14 17 31 30.9 49.5 42.2 25.9 15.8 53.7 25.9 77.7 31.6v-31.5c-22.2-30.3-38-67.3-39.4-110.8-.4-11.3-7.5-21.5-18.4-24.4-7.6-2-15.8-.2-21 5.8-13.3 15.4-32.7 44.6-48.4 87.2zM320 144v64c-60.8-5.1-185-43.8-219.3-157.2C97.4 40 87.9 32 76.6 32c-7.9 0-15.3 3.9-18.8 11C46.8 65.9 32 112.1 32 176c0 116.9 80.1 180.5 118.4 202.8L11.8 416.6C6.7 418 2.6 421.8.9 426.8s-.8 10.6 2.3 14.8C21.7 466.2 77.3 512 160 512c3.6 0 7.2-1.2 10-3.5l75.6-60.5H320c88.4 0 160-71.6 160-160V128l29.9-44.9c1.3-2 2.1-4.4 2.1-6.8 0-6.8-5.5-12.3-12.3-12.3H400c-44.2 0-80 35.8-80 80zm80-16a16 16 0 1 1 0 32 16 16 0 1 1 0-32z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://leetcode.cn/" target="_blank" rel="noopener" title="力扣" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256h-64V96H128v256H64V96zM0 403.2C0 392.6 8.6 384 19.2 384h601.6c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="http://www.verysource.com/" target="_blank" rel="noopener" title="源码查询" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://c.runoob.com/" target="_blank" rel="noopener" title="菜鸟工具" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M176 88v40h160V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56h144c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V320H384v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32H192v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32H0v-92.1C0 215.2 5.1 203 14.1 194L66 142.1c9-9 21.2-14.1 33.9-14.1H128zM0 416v-64h128c0 17.7 14.3 32 32 32s32-14.3 32-32h128c0 17.7 14.3 32 32 32s32-14.3 32-32h128v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://hdesign.ucd.huawei.com/assemble/designcloud" target="_blank" rel="noopener" title="DesignCloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m368.4 18.3-55.7 55.8 125.2 125.2 55.7-55.7c21.9-21.9 21.9-57.3 0-79.2l-46-46.1c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8-144.1 43.2c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4l153.6-153.5c-3-6.3-4.7-13.3-4.7-20.7 0-26.5 21.5-48 48-48s48 21.5 48 48-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.8-9.2L288 94.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<zhaojunwei008@yeah.net>" target="_blank" rel="noopener" title="Email" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0s256 114.6 256 256v32c0 53-43 96-96 96-29.3 0-55.6-13.2-73.2-33.9-22.8 21-53.3 33.9-86.8 33.9-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1 5.7-5 13.1-8.1 21.3-8.1 17.7 0 32 14.3 32 32v112c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-106-86-192-192-192zm64 192a64 64 0 1 0-128 0 64 64 0 1 0 128 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "content.tabs.link", "navigation.tracking", "navigation.indexes", "navigation.prune", "navigation.top", "navigation.tabs", "toc.follow", "header.autohide", "search.share", "search.suggest", "search.highlight"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      
+        <script src="../../../../../themes/js/custom.js"></script>
+      
+        <script src="../../../../../themes/js/simpleLightbox.min.js"></script>
+      
+        <script src="../../../../../themes/js/optionalConfig.js"></script>
+      
+        <script src="../../../../../themes/js/mermaidloader.js"></script>
+      
+        <script src="../../../../../themes/js/umlconvert.js"></script>
+      
+        <script src="../../../../../themes/js/mathjax.js"></script>
+      
+        <script src="../../../../../themes/js/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
