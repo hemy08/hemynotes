@@ -6,8 +6,6 @@ repo_url: https://github.com/hemy08/hemynotes
 
 copyright: Copyright &copy; 2021-2029 HEMY08
 
-
-
 theme:
   favicon: themes/images/lvye.png
   feature:
@@ -51,7 +49,6 @@ theme:
   palette:
     scheme: default
 
-
 plugins:
   search:
     lang:
@@ -60,7 +57,6 @@ plugins:
     - zh
     - ja
     separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-
 
 extra:
   generator: false
@@ -89,13 +85,11 @@ extra:
     link: mailto:<zhaojunwei008@yeah.net>
     name: Email
 
-
 extra_css:
 - themes/css/custom.css
 - themes/css/simpleLightbox.min.css
 - themes/css/pied_piper.css
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
-
 
 extra_javascript:
 - themes/js/custom.js
@@ -118,7 +112,6 @@ extra_javascript:
 - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
-
 
 markdown_extensions:
 - abbr
@@ -179,54 +172,67 @@ markdown_extensions:
       name: sequence
     preserve_tabs: true
 
+
 nav:
   - HOME: https://hemy08.github.io/hemynotes/
-  - 操作系统:
+  - 计算机系统:
+    - 计算机发展历程:
+    - 计算机的分类与发展方向:
+    - 计算机系统的组成:
+    - 计算机工作过程:
+    - 计算机软件系统:
+    - 计算机编程语言:
+    - 计算机系统的层次结构:
+    - 冯诺依曼计算机:
+    - 存储器:
+    - 计算机性能指标:
+    - 计算机系统层次结构: 计算机系统/计算机系统层次结构.md
+  - 实用技能:
     - Linux:
-      - linux系统Errorid的含义: 操作系统/Linux/06-linux系统Errorid的含义.md
-      - linux系统文件权限解读: 操作系统/Linux/07-linux系统文件权限解读.md
-      - openssl生成证书步骤: 操作系统/Linux/08-openssl生成证书步骤.md
-      - zypper-help: 操作系统/Linux/16-zypper-help.md
+      - linux系统Errorid的含义: 实用技能/Linux/06-linux系统Errorid的含义.md
+      - linux系统文件权限解读: 实用技能/Linux/07-linux系统文件权限解读.md
+      - openssl生成证书步骤: 实用技能/Linux/08-openssl生成证书步骤.md
+      - zypper-help: 实用技能/Linux/16-zypper-help.md
       - 压缩与解压相关命令:
-        - tar命令: 操作系统/Linux/压缩与解压相关命令/12-tar命令.md
-        - zip命令: 操作系统/Linux/压缩与解压相关命令/15-zip命令.md
+        - tar命令: 实用技能/Linux/压缩与解压相关命令/12-tar命令.md
+        - zip命令: 实用技能/Linux/压缩与解压相关命令/15-zip命令.md
       - 目录与文件操作命令:
-        - grep命令: 操作系统/Linux/目录与文件操作命令/03-grep命令.md
-        - rsync命令: 操作系统/Linux/目录与文件操作命令/09-rsync命令.md
-        - sed命令: 操作系统/Linux/目录与文件操作命令/10-sed命令.md
-        - sync命令: 操作系统/Linux/目录与文件操作命令/11-sync命令.md
-        - diff命令文件内容比较: 操作系统/Linux/目录与文件操作命令/18-diff命令文件内容比较.md
-        - cp复制命令: 操作系统/Linux/目录与文件操作命令/cp复制命令.md
-        - setfacl设置文件访问控制列表: 操作系统/Linux/目录与文件操作命令/setfacl设置文件访问控制列表.md
+        - grep命令: 实用技能/Linux/目录与文件操作命令/03-grep命令.md
+        - rsync命令: 实用技能/Linux/目录与文件操作命令/09-rsync命令.md
+        - sed命令: 实用技能/Linux/目录与文件操作命令/10-sed命令.md
+        - sync命令: 实用技能/Linux/目录与文件操作命令/11-sync命令.md
+        - diff命令文件内容比较: 实用技能/Linux/目录与文件操作命令/18-diff命令文件内容比较.md
+        - cp复制命令: 实用技能/Linux/目录与文件操作命令/cp复制命令.md
+        - setfacl设置文件访问控制列表: 实用技能/Linux/目录与文件操作命令/setfacl设置文件访问控制列表.md
       - 网络相关命令:
         - curl命令:
-          - curl-命令参数: 操作系统/Linux/网络相关命令/curl命令/curl-命令参数.md
-          - curl-常用实例: 操作系统/Linux/网络相关命令/curl命令/curl-常用实例.md
-          - curl-错误码解释: 操作系统/Linux/网络相关命令/curl命令/curl-错误码解释.md
+          - curl-命令参数: 实用技能/Linux/网络相关命令/curl命令/curl-命令参数.md
+          - curl-常用实例: 实用技能/Linux/网络相关命令/curl命令/curl-常用实例.md
+          - curl-错误码解释: 实用技能/Linux/网络相关命令/curl命令/curl-错误码解释.md
         - IP命令详解:
-          - ip address命令详解: 操作系统/Linux/网络相关命令/IP命令详解/ip address命令详解.md
-          - ip link命令详解: 操作系统/Linux/网络相关命令/IP命令详解/ip link命令详解.md
-          - ip route命令详解: 操作系统/Linux/网络相关命令/IP命令详解/ip route命令详解.md
-          - ip rule命令详解: 操作系统/Linux/网络相关命令/IP命令详解/ip rule命令详解.md
-          - ip命令格式详解: 操作系统/Linux/网络相关命令/IP命令详解/ip命令格式详解.md
-        - nslookup命令详解: 操作系统/Linux/网络相关命令/nslookup命令详解.md
-        - tcpdump命令: 操作系统/Linux/网络相关命令/tcpdump命令.md
+          - ip address命令详解: 实用技能/Linux/网络相关命令/IP命令详解/ip address命令详解.md
+          - ip link命令详解: 实用技能/Linux/网络相关命令/IP命令详解/ip link命令详解.md
+          - ip route命令详解: 实用技能/Linux/网络相关命令/IP命令详解/ip route命令详解.md
+          - ip rule命令详解: 实用技能/Linux/网络相关命令/IP命令详解/ip rule命令详解.md
+          - ip命令格式详解: 实用技能/Linux/网络相关命令/IP命令详解/ip命令格式详解.md
+        - nslookup命令详解: 实用技能/Linux/网络相关命令/nslookup命令详解.md
+        - tcpdump命令: 实用技能/Linux/网络相关命令/tcpdump命令.md
         - 进程端口相关:
-          - fuser命令: 操作系统/Linux/网络相关命令/进程端口相关/fuser命令.md
-          - lsof命令: 操作系统/Linux/网络相关命令/进程端口相关/lsof命令.md
-          - netstat命令详解: 操作系统/Linux/网络相关命令/进程端口相关/netstat命令详解.md
-          - ss命令: 操作系统/Linux/网络相关命令/进程端口相关/ss命令.md
+          - fuser命令: 实用技能/Linux/网络相关命令/进程端口相关/fuser命令.md
+          - lsof命令: 实用技能/Linux/网络相关命令/进程端口相关/lsof命令.md
+          - netstat命令详解: 实用技能/Linux/网络相关命令/进程端口相关/netstat命令详解.md
+          - ss命令: 实用技能/Linux/网络相关命令/进程端口相关/ss命令.md
     - Windows:
-      - mstsc副屏全屏显示: 操作系统/Windows/01-mstsc副屏全屏显示.md
-      - 右键菜单添加新建记事本: 操作系统/Windows/02-右键菜单添加新建记事本.md
-      - windows常用cmd命令: 操作系统/Windows/03-windows常用cmd命令.md
-      - 让任务栏在屏幕左侧变窄: 操作系统/Windows/04-让任务栏在屏幕左侧变窄.md
-      - 鼠标飘的解决办法: 操作系统/Windows/05-鼠标飘的解决办法.md
-      - 鼠标右键菜单排序: 操作系统/Windows/06-鼠标右键菜单排序.md
-      - windows.edb文件: 操作系统/Windows/07-windows.edb文件.md
-      - 找到文件被哪个进程引用: 操作系统/Windows/08-找到文件被哪个进程引用.md
-      - Win11修改bat默认打开方式: 操作系统/Windows/09-Win11修改bat默认打开方式.md
-      - win11上临时文件清理: 操作系统/Windows/10-win11上临时文件清理.md
+      - mstsc副屏全屏显示: 实用技能/Windows/01-mstsc副屏全屏显示.md
+      - 右键菜单添加新建记事本: 实用技能/Windows/02-右键菜单添加新建记事本.md
+      - windows常用cmd命令: 实用技能/Windows/03-windows常用cmd命令.md
+      - 让任务栏在屏幕左侧变窄: 实用技能/Windows/04-让任务栏在屏幕左侧变窄.md
+      - 鼠标飘的解决办法: 实用技能/Windows/05-鼠标飘的解决办法.md
+      - 鼠标右键菜单排序: 实用技能/Windows/06-鼠标右键菜单排序.md
+      - windows.edb文件: 实用技能/Windows/07-windows.edb文件.md
+      - 找到文件被哪个进程引用: 实用技能/Windows/08-找到文件被哪个进程引用.md
+      - Win11修改bat默认打开方式: 实用技能/Windows/09-Win11修改bat默认打开方式.md
+      - win11上临时文件清理: 实用技能/Windows/10-win11上临时文件清理.md
   - 算法思想:
     - 滑动窗口: 算法思想/滑动窗口.md
   - 力扣题解:
