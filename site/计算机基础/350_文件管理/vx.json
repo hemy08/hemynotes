@@ -1,21 +1,11 @@
 {
-    "created_time": "2024-05-13T09:33:06Z",
+    "created_time": "2024-05-13T13:24:02Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2024-05-13T08:55:38Z",
-            "id": "0",
-            "modified_time": "2024-05-13T09:22:35Z",
-            "name": "000-导读.md",
-            "signature": "18401459134257028710",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "2779",
-    "modified_time": "2024-05-13T09:33:06Z",
-    "signature": "12034003387306597970",
+    "id": "2796",
+    "modified_time": "2024-05-13T13:24:02Z",
+    "signature": "115802623841394",
     "version": 3
 }
