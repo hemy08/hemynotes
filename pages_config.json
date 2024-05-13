@@ -8,13 +8,15 @@
     "ignore_file_types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
     "ignore_files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
     "chapter_infos": {
-        "操作系统": "\\docs\\操作系统",
+        "计算机系统": "\\docs\\计算机系统",
+        "实用技能": "\\docs\\实用技能",
         "算法思想": "\\docs\\算法思想",
         "力扣题解": "\\docs\\力扣题解",
         "代码库": "\\docs\\代码库"
     },
     "file_name_convert": {
-        "操作系统": "操作系统",
+        "计算机系统": "计算机系统",
+        "实用技能": "实用技能",
         "力扣题解": "力扣题解",
         "算法思想": "算法思想",
         "代码库": "代码库"
