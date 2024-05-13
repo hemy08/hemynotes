@@ -22,7 +22,8 @@
         "代码库": "代码库"
     },
     "external_links": {
-        "百度": "https://www.baidu.com"
+        "百度": "https://www.baidu.com",
+        "评论": "https://github.com/hemy08/hemynotes/issues",
     },
     "theme": {
         "favicon": "themes/images/lvye.png",
@@ -117,8 +118,8 @@
             },
             {
                 "icon": "fontawesome/solid/pen-nib",
-                "link": "https://hdesign.ucd.huawei.com/assemble/designcloud",
-                "name": "DesignCloud"
+                "link": "https://github.com/hemy08/hemynotes/issues",
+                "name": "issues"
             },
             {
                 "icon": "fontawesome/solid/at",
