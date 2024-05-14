@@ -4,7 +4,7 @@
     "copyright": "Copyright &copy; 2021-2029 HEMY08",
     "HOME": "https://hemy08.github.io/hemynotes/",
     "repo_url": "https://github.com/hemy08/hemynotes",
-    "ignore_dirs": ".git;.idea;.vscode;images;image;resource;.gitignore;.obsidian;public_resources;figures;public_sys-resources;themes;docs;site;vx_notebook;vx_recycle_bin;document;logo;vx_images",
+    "ignore_dirs": ".git;.idea;.vscode;images;image;resource;.gitignore;.obsidian;public_resources;figures;public_sys-resources;themes;docs;site;vx_notebook;vx_recycle_bin;vx_attachments;document;logo;vx_images",
     "ignore_file_types": ".git;.png;.gif;.txt;.yml;.yaml;.json",
     "ignore_files": "Contents.md;SUMMARY.md;vx.json;.gitignore",
     "chapter_infos": {
