@@ -14,11 +14,11 @@ drwxrwxr-x 2 zc zc 4.0K 1月  10 13:59 ceshi02/
 ```
 以上展示命令的意思：
 
-![file-llls22](vx_images/494481206013615.jpg)
+![file-llls22](images/494481206013615.jpg)
 
 每个文件的属性由左边第一部分的 10 个字符来确定（如下图）。
 
-![](vx_images/1692332057823_image.png)
+![](images/1692332057823_image.png)
 
 从左至右用**0-9**这些数字来表示。
 

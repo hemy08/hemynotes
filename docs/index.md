@@ -58,33 +58,33 @@ https://hemy08.github.io/hemynotes/
 
 **<font color="red">注意文件必须是UTF-8编码的。</font>**
 
-![2024508211853](vx_images/572411821264901.png)
+![2024508211853](images/572411821264901.png)
 
 
 #### 1) site\_name
 
 网站名称，可以中文或者英文。这个是显示在文档的上方的。
 
-![2024508212959](vx_images/132673021244056.png)
+![2024508212959](images/132673021244056.png)
 
 #### 2) site\_description
 
 网站描述，当鼠标停留在图标上的时候，会显示出来。
 
-![2024508213037](vx_images/403373021260137.png)
+![2024508213037](images/403373021260137.png)
 
 
 #### 3) repo\_url
 
 pages仓库地址，这个在文档右上方显示，是个按钮，鼠标点击可以跳转到仓库。
 
-![2024508213059](vx_images/45513121253131.png)
+![2024508213059](images/45513121253131.png)
 
 #### 4) copyright
 
 copyright声明，这个是显示在网页的左下方的。
 
-![2024508213127_copyright](vx_images/339323121264592.png)
+![2024508213127_copyright](images/339323121264592.png)
 
 #### 5) ignore\_dirs
 
@@ -112,7 +112,7 @@ copyright声明，这个是显示在网页的左下方的。
 
 生成的mkdoc.yml会以这里定义的章节顺序，生成nav信息。这里的路径是mkdocs.yml的同级路径。
 
-![2024508213206_filename](vx_images/140293221260462.png)
+![2024508213206_filename](images/140293221260462.png)
 
 #### 9）file name convert
 
@@ -124,7 +124,7 @@ copyright声明，这个是显示在网页的左下方的。
 
 这个配置文件就是专门干这个事情的，把长文件名转换为短文件名。
 
-![file_name_cvt](vx_images/558014719240550.png)
+![file_name_cvt](images/558014719240550.png)
 
 如图这种的文件名，我们可以配置转换成短文件名，这样在网页上显示就不会换行了。
 
@@ -132,7 +132,7 @@ copyright声明，这个是显示在网页的左下方的。
 
 外部链接，这里是与本地文件作为导航一起显示在导航栏的，所以不建议设置太多。
 
-![2024508213250_extlinks](vx_images/10503321259264.png)
+![2024508213250_extlinks](images/10503321259264.png)
 
 如图，这俩再本仓库实际是不存在的
 
@@ -142,7 +142,7 @@ copyright声明，这个是显示在网页的左下方的。
 
 可以去[https://fontawesome.com/icons](https://fontawesome.com/icons)上进行查询
 
-![2024508213327_extsocial](vx_images/390193321252348.png)
+![2024508213327_extsocial](images/390193321252348.png)
 
 #### 12) mkdocs配置 theme、plugins、extra、extra_css、extra_javascript、markdown_extensions
 
