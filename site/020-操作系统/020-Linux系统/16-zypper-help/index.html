@@ -1303,6 +1303,8 @@
       
         
       
+        
+      
     
     
       
@@ -1751,7 +1753,8 @@
 <span class="normal"><a href="#__codelineno-0-107">107</a></span>
 <span class="normal"><a href="#__codelineno-0-108">108</a></span>
 <span class="normal"><a href="#__codelineno-0-109">109</a></span>
-<span class="normal"><a href="#__codelineno-0-110">110</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>zypper help 
+<span class="normal"><a href="#__codelineno-0-110">110</a></span>
+<span class="normal"><a href="#__codelineno-0-111">111</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>zypper help 
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>  Usage: 
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        zypper [--global-options] &lt;command&gt; [--command-options] [arguments] 
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
@@ -1763,104 +1766,105 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>        --userdata &lt;string&gt;     User defined transaction id used in history and plugins. 
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>        --quiet, -q             Suppress normal output, print only error 
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>                                messages. 
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>        --verbose, -v           Increase verbosity. 
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>        --no-abbrev, -A         Do not abbreviate text in tables. 
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>        --table-style, -s       Table style (integer). 
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>        --rug-compatible, -r    Turn on rug compatibility. 
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>        --non-interactive, -n   Do not ask anything, use default answers 
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>                                automatically. 
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>        --non-interactive-include-reboot-patches 
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>                                Do not treat patches as interactive, which have 
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>                                the rebootSuggested-flag set. 
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>        --xmlout, -x            Switch to XML output. 
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>        --reposd-dir, -D &lt;dir&gt;  Use alternative repository definition file 
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>                                directory. 
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>        --cache-dir, -C &lt;dir&gt;   Use alternative directory for all caches. 
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>        --raw-cache-dir &lt;dir&gt;   Use alternative raw meta-data cache directory. 
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>        --solv-cache-dir &lt;dir&gt;  Use alternative solv file cache directory. 
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>        --pkg-cache-dir &lt;dir&gt;   Use alternative package cache directory. 
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>     Repository Options: 
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>        --no-gpg-checks         Ignore GPG check failures and continue. 
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>        --gpg-auto-import-keys  Automatically trust and import new repository 
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>                                signing keys. 
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>        --plus-repo, -p &lt;URI&gt;   Use an additional repository. 
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>        --disable-repositories  Do not read meta-data from repositories. 
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>        --no-refresh            Do not refresh the repositories. 
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>        --no-cd                 Ignore CD/DVD repositories. 
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>        --no-remote             Ignore remote repositories. 
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>     Target Options: 
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>        --root, -R &lt;dir&gt;        Operate on a different root directory. 
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>        --disable-system-resolvables 
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>                                Do not read installed packages. 
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>  Commands: 
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>        help, ?                 Print help. 
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>        shell, sh               Accept multiple commands at once. 
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>     Repository Management: 
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>        repos, lr               List all defined repositories. 
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>        addrepo, ar             Add a new repository. 
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>        removerepo, rr          Remove specified repository. 
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>        renamerepo, nr          Rename specified repository. 
-</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>        modifyrepo, mr          Modify specified repository. 
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a>        refresh, ref            Refresh all repositories. 
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a>        clean                   Clean local caches. 
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a>
-</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a>     Service Management: 
-</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a>        services, ls            List all defined services. 
-</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>        addservice, as          Add a new service. 
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a>        modifyservice, ms       Modify specified service. 
-</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a>        removeservice, rs       Remove specified service. 
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>        refresh-services, refs  Refresh all services. 
-</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a>
-</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66"></a>     Software Management: 
-</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67"></a>        install, in             Install packages. 
-</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68"></a>        remove, rm              Remove packages. 
-</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a>        verify, ve              Verify integrity of package dependencies. 
-</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70"></a>        source-install, si      Install source packages and their build 
-</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71"></a>                                dependencies. 
-</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72"></a>        install-new-recommends, inr 
-</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73"></a>                                Install newly added packages recommended 
-</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74"></a>                                by installed packages. 
-</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75"></a>
-</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76"></a>     Update Management: 
-</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77"></a>        update, up              Update installed packages with newer versions. 
-</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78"></a>        list-updates, lu        List available updates. 
-</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79"></a>        patch                   Install needed patches. 
-</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80"></a>        list-patches, lp        List needed patches. 
-</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81"></a>        dist-upgrade, dup       Perform a distribution upgrade. 
-</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82"></a>        patch-check, pchk       Check for patches. 
-</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83"></a>
-</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84"></a>     Querying: 
-</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85"></a>        search, se              Search for packages matching a pattern. 
-</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86"></a>        info, if                Show full information for specified packages. 
-</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87"></a>        patch-info              Show full information for specified patches. 
-</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88"></a>        pattern-info            Show full information for specified patterns. 
-</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89"></a>        product-info            Show full information for specified products. 
-</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90"></a>        patches, pch            List all available patches. 
-</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91"></a>        packages, pa            List all available packages. 
-</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92"></a>        patterns, pt            List all available patterns. 
-</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93"></a>        products, pd            List all available products. 
-</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94"></a>        what-provides, wp       List packages providing specified capability. 
-</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95"></a>
-</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96"></a>     Package Locks: 
-</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97"></a>        addlock, al             Add a package lock. 
-</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98"></a>        removelock, rl          Remove a package lock. 
-</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99"></a>        locks, ll               List current package locks. 
-</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100"></a>        cleanlocks, cl          Remove unused locks. 
-</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101"></a>
-</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102"></a>     Other Commands: 
-</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103"></a>        versioncmp, vcmp        Compare two version strings. 
-</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104"></a>        targetos, tos           Print the target operating system ID string. 
-</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105"></a>        licenses                Print report about licenses and EULAs of 
-</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106"></a>                                installed packages. 
-</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107"></a>        source-download         Download source rpms for all installed packages 
-</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108"></a>                                to a local directory. 
-</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109"></a>
-</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110"></a>Type &#39;zypper help &lt;command&gt;&#39; to get command-specific help.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>                                
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>        --verbose, -v           Increase verbosity. 
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>        --no-abbrev, -A         Do not abbreviate text in tables. 
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>        --table-style, -s       Table style (integer). 
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>        --rug-compatible, -r    Turn on rug compatibility. 
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>        --non-interactive, -n   Do not ask anything, use default answers 
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>                                automatically. 
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>        --non-interactive-include-reboot-patches 
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>                                Do not treat patches as interactive, which have 
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>                                the rebootSuggested-flag set. 
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>        --xmlout, -x            Switch to XML output. 
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>        --reposd-dir, -D &lt;dir&gt;  Use alternative repository definition file 
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>                                directory. 
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>        --cache-dir, -C &lt;dir&gt;   Use alternative directory for all caches. 
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>        --raw-cache-dir &lt;dir&gt;   Use alternative raw meta-data cache directory. 
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>        --solv-cache-dir &lt;dir&gt;  Use alternative solv file cache directory. 
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>        --pkg-cache-dir &lt;dir&gt;   Use alternative package cache directory. 
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>     Repository Options: 
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>        --no-gpg-checks         Ignore GPG check failures and continue. 
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>        --gpg-auto-import-keys  Automatically trust and import new repository 
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>                                signing keys. 
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>        --plus-repo, -p &lt;URI&gt;   Use an additional repository. 
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>        --disable-repositories  Do not read meta-data from repositories. 
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>        --no-refresh            Do not refresh the repositories. 
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>        --no-cd                 Ignore CD/DVD repositories. 
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>        --no-remote             Ignore remote repositories. 
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>     Target Options: 
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>        --root, -R &lt;dir&gt;        Operate on a different root directory. 
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>        --disable-system-resolvables 
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>                                Do not read installed packages. 
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>  Commands: 
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>        help, ?                 Print help. 
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>        shell, sh               Accept multiple commands at once. 
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>     Repository Management: 
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>        repos, lr               List all defined repositories. 
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>        addrepo, ar             Add a new repository. 
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>        removerepo, rr          Remove specified repository. 
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>        renamerepo, nr          Rename specified repository. 
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a>        modifyrepo, mr          Modify specified repository. 
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a>        refresh, ref            Refresh all repositories. 
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a>        clean                   Clean local caches. 
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a>     Service Management: 
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>        services, ls            List all defined services. 
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a>        addservice, as          Add a new service. 
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a>        modifyservice, ms       Modify specified service. 
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a>        removeservice, rs       Remove specified service. 
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a>        refresh-services, refs  Refresh all services. 
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66"></a>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67"></a>     Software Management: 
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68"></a>        install, in             Install packages. 
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a>        remove, rm              Remove packages. 
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70"></a>        verify, ve              Verify integrity of package dependencies. 
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71"></a>        source-install, si      Install source packages and their build 
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72"></a>                                dependencies. 
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73"></a>        install-new-recommends, inr 
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74"></a>                                Install newly added packages recommended 
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75"></a>                                by installed packages. 
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76"></a>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77"></a>     Update Management: 
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78"></a>        update, up              Update installed packages with newer versions. 
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79"></a>        list-updates, lu        List available updates. 
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80"></a>        patch                   Install needed patches. 
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81"></a>        list-patches, lp        List needed patches. 
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82"></a>        dist-upgrade, dup       Perform a distribution upgrade. 
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83"></a>        patch-check, pchk       Check for patches. 
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84"></a>
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85"></a>     Querying: 
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86"></a>        search, se              Search for packages matching a pattern. 
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87"></a>        info, if                Show full information for specified packages. 
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88"></a>        patch-info              Show full information for specified patches. 
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89"></a>        pattern-info            Show full information for specified patterns. 
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90"></a>        product-info            Show full information for specified products. 
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91"></a>        patches, pch            List all available patches. 
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92"></a>        packages, pa            List all available packages. 
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93"></a>        patterns, pt            List all available patterns. 
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94"></a>        products, pd            List all available products. 
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95"></a>        what-provides, wp       List packages providing specified capability. 
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96"></a>
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97"></a>     Package Locks: 
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98"></a>        addlock, al             Add a package lock. 
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99"></a>        removelock, rl          Remove a package lock. 
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100"></a>        locks, ll               List current package locks. 
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101"></a>        cleanlocks, cl          Remove unused locks. 
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102"></a>
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103"></a>     Other Commands: 
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104"></a>        versioncmp, vcmp        Compare two version strings. 
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105"></a>        targetos, tos           Print the target operating system ID string. 
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106"></a>        licenses                Print report about licenses and EULAs of 
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107"></a>                                installed packages. 
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108"></a>        source-download         Download source rpms for all installed packages 
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109"></a>                                to a local directory. 
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110"></a>
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111"></a>Type &#39;zypper help &lt;command&gt;&#39; to get command-specific help.
 </span></code></pre></div></td></tr></table></div>
 
 

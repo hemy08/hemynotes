@@ -1303,6 +1303,8 @@
       
         
       
+        
+      
     
     
       
@@ -1642,541 +1644,558 @@
 
 <h1 id="linuxerrorid">linux系统Errorid的含义<a class="headerlink" href="#linuxerrorid" title="Permanent link">&para;</a></h1>
 <p><span style="color:rgb(100,180,246);font-size:11pt">最后更新：2017-06-27</span></p>
+<style>
+    .s5 {color:rgb(255,0,0);font-weight:bold;}
+    .s4 {color:rgb(255,0,255);font-weight:bold;}
+    .s3 {color:rgb(0,0,255);font-weight:bold;}
+    .s2 {color:rgb(0,255,255);font-weight:bold;}
+    .s1 {color:rgb(0,255,0);font-weight:bold;}
+    .Red {color:rgb(255,0,0);font-weight:bold;}
+    .Orange {color:rgb(255,128,0);font-weight:bold;}
+    .Yellow {color:rgb(255,255,0);font-weight:bold;}
+    .Green {color:rgb(0,160,0);font-weight:bold;}
+    .Cyan {color:rgb(0,255,255);font-weight:bold;}
+    .Blue {color:rgb(0,0,255);font-weight:bold;}
+    .Purple {color:rgb(128,0,128);font-weight:bold;}
+    table th {background-color:#2195f3;font-size:13pt}
+    table th:nth-of-type(1) {width:80pt}
+</style>
+
 <table>
 <thead>
 <tr>
-<th>错误码</th>
-<th>解释</th>
+<th style="text-align: left;">错误码</th>
+<th style="text-align: left;">解释</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>Success</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">Success</td>
 </tr>
 <tr>
-<td>1</td>
-<td>Operation not permitted</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Operation not permitted</td>
 </tr>
 <tr>
-<td>2</td>
-<td>No such file or directory</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">No such file or directory</td>
 </tr>
 <tr>
-<td>3</td>
-<td>No such process</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">No such process</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Interrupted system call</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Interrupted system call</td>
 </tr>
 <tr>
-<td>5</td>
-<td>Input/output error</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Input/output error</td>
 </tr>
 <tr>
-<td>6</td>
-<td>No such device or address</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">No such device or address</td>
 </tr>
 <tr>
-<td>7</td>
-<td>Argument list too long</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Argument list too long</td>
 </tr>
 <tr>
-<td>8</td>
-<td>Exec format error</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Exec format error</td>
 </tr>
 <tr>
-<td>9</td>
-<td>Bad file descriptor</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Bad file descriptor</td>
 </tr>
 <tr>
-<td>10</td>
-<td>No child processes</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">No child processes</td>
 </tr>
 <tr>
-<td>11</td>
-<td>Resource temporarily unavailable 资源临时不可用(连续发送数据时候回出此错)</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">Resource temporarily unavailable 资源临时不可用(连续发送数据时候回出此错)</td>
 </tr>
 <tr>
-<td>12</td>
-<td>Cannot allocate memory</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Cannot allocate memory</td>
 </tr>
 <tr>
-<td>13</td>
-<td>Permission denied</td>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Permission denied</td>
 </tr>
 <tr>
-<td>14</td>
-<td>Bad address</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">Bad address</td>
 </tr>
 <tr>
-<td>15</td>
-<td>Block device required</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Block device required</td>
 </tr>
 <tr>
-<td>16</td>
-<td>Device or resource busy</td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">Device or resource busy</td>
 </tr>
 <tr>
-<td>17</td>
-<td>File exists</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">File exists</td>
 </tr>
 <tr>
-<td>18</td>
-<td>Invalid cross-device link</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">Invalid cross-device link</td>
 </tr>
 <tr>
-<td>19</td>
-<td>No such device</td>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">No such device</td>
 </tr>
 <tr>
-<td>20</td>
-<td>Not a directory</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Not a directory</td>
 </tr>
 <tr>
-<td>21</td>
-<td>Is a directory</td>
+<td style="text-align: left;">21</td>
+<td style="text-align: left;">Is a directory</td>
 </tr>
 <tr>
-<td>22</td>
-<td>Invalid argument</td>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">Invalid argument</td>
 </tr>
 <tr>
-<td>23</td>
-<td>Too many open files in system</td>
+<td style="text-align: left;">23</td>
+<td style="text-align: left;">Too many open files in system</td>
 </tr>
 <tr>
-<td>24</td>
-<td>Too many open files</td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">Too many open files</td>
 </tr>
 <tr>
-<td>25</td>
-<td>Inappropriate ioctl for device</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">Inappropriate ioctl for device</td>
 </tr>
 <tr>
-<td>26</td>
-<td>Text file busy</td>
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">Text file busy</td>
 </tr>
 <tr>
-<td>27</td>
-<td>File too large</td>
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">File too large</td>
 </tr>
 <tr>
-<td>28</td>
-<td>No space left on device</td>
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">No space left on device</td>
 </tr>
 <tr>
-<td>29</td>
-<td>Illegal seek</td>
+<td style="text-align: left;">29</td>
+<td style="text-align: left;">Illegal seek</td>
 </tr>
 <tr>
-<td>30</td>
-<td>Read-only file system</td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">Read-only file system</td>
 </tr>
 <tr>
-<td>31</td>
-<td>Too many links</td>
+<td style="text-align: left;">31</td>
+<td style="text-align: left;">Too many links</td>
 </tr>
 <tr>
-<td>32</td>
-<td>Broken pipe 断开的管道(原因：the broken pipe error occurs if one end of the TCP socket closes connection(using disconnect) or gets killed and the other end tries to still write to it. An indication of a closed/terminated connection is a return value of 0 when you try to read from that socket using recv. After receiving such an error, if you try to still write to the socket, your process gets sent the SIGPIPE signal which kills it. )</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">Broken pipe 断开的管道(原因：the broken pipe error occurs if one end of the TCP socket closes connection(using disconnect) or gets killed and the other end tries to still write to it. An indication of a closed/terminated connection is a return value of 0 when you try to read from that socket using recv. After receiving such an error, if you try to still write to the socket, your process gets sent the SIGPIPE signal which kills it. )</td>
 </tr>
 <tr>
-<td>33</td>
-<td>Numerical argument out of domain</td>
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">Numerical argument out of domain</td>
 </tr>
 <tr>
-<td>34</td>
-<td>Numerical result out of range</td>
+<td style="text-align: left;">34</td>
+<td style="text-align: left;">Numerical result out of range</td>
 </tr>
 <tr>
-<td>35</td>
-<td>Resource deadlock avoided</td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">Resource deadlock avoided</td>
 </tr>
 <tr>
-<td>36</td>
-<td>File name too long</td>
+<td style="text-align: left;">36</td>
+<td style="text-align: left;">File name too long</td>
 </tr>
 <tr>
-<td>37</td>
-<td>No locks available</td>
+<td style="text-align: left;">37</td>
+<td style="text-align: left;">No locks available</td>
 </tr>
 <tr>
-<td>38</td>
-<td>Function not implemented</td>
+<td style="text-align: left;">38</td>
+<td style="text-align: left;">Function not implemented</td>
 </tr>
 <tr>
-<td>39</td>
-<td>Directory not empty</td>
+<td style="text-align: left;">39</td>
+<td style="text-align: left;">Directory not empty</td>
 </tr>
 <tr>
-<td>40</td>
-<td>Too many levels of symbolic links</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">Too many levels of symbolic links</td>
 </tr>
 <tr>
-<td>41</td>
-<td>Unknown error 41</td>
+<td style="text-align: left;">41</td>
+<td style="text-align: left;">Unknown error 41</td>
 </tr>
 <tr>
-<td>43</td>
-<td>Identifier removed</td>
+<td style="text-align: left;">43</td>
+<td style="text-align: left;">Identifier removed</td>
 </tr>
 <tr>
-<td>44</td>
-<td>Channel number out of range</td>
+<td style="text-align: left;">44</td>
+<td style="text-align: left;">Channel number out of range</td>
 </tr>
 <tr>
-<td>45</td>
-<td>Level 2 not synchronized</td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">Level 2 not synchronized</td>
 </tr>
 <tr>
-<td>46</td>
-<td>Level 3 halted</td>
+<td style="text-align: left;">46</td>
+<td style="text-align: left;">Level 3 halted</td>
 </tr>
 <tr>
-<td>47</td>
-<td>Level 3 reset</td>
+<td style="text-align: left;">47</td>
+<td style="text-align: left;">Level 3 reset</td>
 </tr>
 <tr>
-<td>48</td>
-<td>Link number out of range</td>
+<td style="text-align: left;">48</td>
+<td style="text-align: left;">Link number out of range</td>
 </tr>
 <tr>
-<td>49</td>
-<td>Protocol driver not attached</td>
+<td style="text-align: left;">49</td>
+<td style="text-align: left;">Protocol driver not attached</td>
 </tr>
 <tr>
-<td>50</td>
-<td>No CSI structure available</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">No CSI structure available</td>
 </tr>
 <tr>
-<td>51</td>
-<td>Level 2 halted</td>
+<td style="text-align: left;">51</td>
+<td style="text-align: left;">Level 2 halted</td>
 </tr>
 <tr>
-<td>52</td>
-<td>Invalid exchange</td>
+<td style="text-align: left;">52</td>
+<td style="text-align: left;">Invalid exchange</td>
 </tr>
 <tr>
-<td>53</td>
-<td>Invalid request descriptor</td>
+<td style="text-align: left;">53</td>
+<td style="text-align: left;">Invalid request descriptor</td>
 </tr>
 <tr>
-<td>54</td>
-<td>Exchange full</td>
+<td style="text-align: left;">54</td>
+<td style="text-align: left;">Exchange full</td>
 </tr>
 <tr>
-<td>55</td>
-<td>No anode</td>
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">No anode</td>
 </tr>
 <tr>
-<td>56</td>
-<td>Invalid request code</td>
+<td style="text-align: left;">56</td>
+<td style="text-align: left;">Invalid request code</td>
 </tr>
 <tr>
-<td>57</td>
-<td>Invalid slot</td>
+<td style="text-align: left;">57</td>
+<td style="text-align: left;">Invalid slot</td>
 </tr>
 <tr>
-<td>58</td>
-<td>Unknown error 58</td>
+<td style="text-align: left;">58</td>
+<td style="text-align: left;">Unknown error 58</td>
 </tr>
 <tr>
-<td>60</td>
-<td>Device not a stream</td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;">Device not a stream</td>
 </tr>
 <tr>
-<td>61</td>
-<td>No data available</td>
+<td style="text-align: left;">61</td>
+<td style="text-align: left;">No data available</td>
 </tr>
 <tr>
-<td>62</td>
-<td>Timer expired</td>
+<td style="text-align: left;">62</td>
+<td style="text-align: left;">Timer expired</td>
 </tr>
 <tr>
-<td>63</td>
-<td>Out of streams resources</td>
+<td style="text-align: left;">63</td>
+<td style="text-align: left;">Out of streams resources</td>
 </tr>
 <tr>
-<td>64</td>
-<td>Machine is not on the network</td>
+<td style="text-align: left;">64</td>
+<td style="text-align: left;">Machine is not on the network</td>
 </tr>
 <tr>
-<td>65</td>
-<td>Package not installed</td>
+<td style="text-align: left;">65</td>
+<td style="text-align: left;">Package not installed</td>
 </tr>
 <tr>
-<td>66</td>
-<td>Object is remote</td>
+<td style="text-align: left;">66</td>
+<td style="text-align: left;">Object is remote</td>
 </tr>
 <tr>
-<td>67</td>
-<td>Link has been severed</td>
+<td style="text-align: left;">67</td>
+<td style="text-align: left;">Link has been severed</td>
 </tr>
 <tr>
-<td>68</td>
-<td>Advertise error</td>
+<td style="text-align: left;">68</td>
+<td style="text-align: left;">Advertise error</td>
 </tr>
 <tr>
-<td>69</td>
-<td>Srmount error</td>
+<td style="text-align: left;">69</td>
+<td style="text-align: left;">Srmount error</td>
 </tr>
 <tr>
-<td>70</td>
-<td>Communication error on send</td>
+<td style="text-align: left;">70</td>
+<td style="text-align: left;">Communication error on send</td>
 </tr>
 <tr>
-<td>71</td>
-<td>Protocol error</td>
+<td style="text-align: left;">71</td>
+<td style="text-align: left;">Protocol error</td>
 </tr>
 <tr>
-<td>72</td>
-<td>Multihop attempted</td>
+<td style="text-align: left;">72</td>
+<td style="text-align: left;">Multihop attempted</td>
 </tr>
 <tr>
-<td>73</td>
-<td>RFS specific error</td>
+<td style="text-align: left;">73</td>
+<td style="text-align: left;">RFS specific error</td>
 </tr>
 <tr>
-<td>74</td>
-<td>Bad message</td>
+<td style="text-align: left;">74</td>
+<td style="text-align: left;">Bad message</td>
 </tr>
 <tr>
-<td>75</td>
-<td>Value too large for defined data type</td>
+<td style="text-align: left;">75</td>
+<td style="text-align: left;">Value too large for defined data type</td>
 </tr>
 <tr>
-<td>76</td>
-<td>Name not unique on network</td>
+<td style="text-align: left;">76</td>
+<td style="text-align: left;">Name not unique on network</td>
 </tr>
 <tr>
-<td>77</td>
-<td>File descriptor in bad state</td>
+<td style="text-align: left;">77</td>
+<td style="text-align: left;">File descriptor in bad state</td>
 </tr>
 <tr>
-<td>78</td>
-<td>Remote address changed</td>
+<td style="text-align: left;">78</td>
+<td style="text-align: left;">Remote address changed</td>
 </tr>
 <tr>
-<td>79</td>
-<td>Can not access a needed shared library</td>
+<td style="text-align: left;">79</td>
+<td style="text-align: left;">Can not access a needed shared library</td>
 </tr>
 <tr>
-<td>80</td>
-<td>Accessing a corrupted shared library</td>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">Accessing a corrupted shared library</td>
 </tr>
 <tr>
-<td>81</td>
-<td>.lib section in a.out corrupted</td>
+<td style="text-align: left;">81</td>
+<td style="text-align: left;">.lib section in a.out corrupted</td>
 </tr>
 <tr>
-<td>82</td>
-<td>Attempting to link in too many shared libraries</td>
+<td style="text-align: left;">82</td>
+<td style="text-align: left;">Attempting to link in too many shared libraries</td>
 </tr>
 <tr>
-<td>83</td>
-<td>Cannot exec a shared library directly</td>
+<td style="text-align: left;">83</td>
+<td style="text-align: left;">Cannot exec a shared library directly</td>
 </tr>
 <tr>
-<td>84</td>
-<td>Invalid or incomplete multibyte or wide character</td>
+<td style="text-align: left;">84</td>
+<td style="text-align: left;">Invalid or incomplete multibyte or wide character</td>
 </tr>
 <tr>
-<td>85</td>
-<td>Interrupted system call should be restarted</td>
+<td style="text-align: left;">85</td>
+<td style="text-align: left;">Interrupted system call should be restarted</td>
 </tr>
 <tr>
-<td>86</td>
-<td>Streams pipe error</td>
+<td style="text-align: left;">86</td>
+<td style="text-align: left;">Streams pipe error</td>
 </tr>
 <tr>
-<td>87</td>
-<td>Too many users</td>
+<td style="text-align: left;">87</td>
+<td style="text-align: left;">Too many users</td>
 </tr>
 <tr>
-<td>88</td>
-<td>Socket operation on non-socket</td>
+<td style="text-align: left;">88</td>
+<td style="text-align: left;">Socket operation on non-socket</td>
 </tr>
 <tr>
-<td>89</td>
-<td>Destination address required</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">Destination address required</td>
 </tr>
 <tr>
-<td>90</td>
-<td>Message too long</td>
+<td style="text-align: left;">90</td>
+<td style="text-align: left;">Message too long</td>
 </tr>
 <tr>
-<td>91</td>
-<td>Protocol wrong type for socket</td>
+<td style="text-align: left;">91</td>
+<td style="text-align: left;">Protocol wrong type for socket</td>
 </tr>
 <tr>
-<td>92</td>
-<td>Protocol not available</td>
+<td style="text-align: left;">92</td>
+<td style="text-align: left;">Protocol not available</td>
 </tr>
 <tr>
-<td>93</td>
-<td>Protocol not supported</td>
+<td style="text-align: left;">93</td>
+<td style="text-align: left;">Protocol not supported</td>
 </tr>
 <tr>
-<td>94</td>
-<td>Socket type not supported</td>
+<td style="text-align: left;">94</td>
+<td style="text-align: left;">Socket type not supported</td>
 </tr>
 <tr>
-<td>95</td>
-<td>Operation not supported</td>
+<td style="text-align: left;">95</td>
+<td style="text-align: left;">Operation not supported</td>
 </tr>
 <tr>
-<td>96</td>
-<td>Protocol family not supported</td>
+<td style="text-align: left;">96</td>
+<td style="text-align: left;">Protocol family not supported</td>
 </tr>
 <tr>
-<td>97</td>
-<td>Address family not supported by protocol</td>
+<td style="text-align: left;">97</td>
+<td style="text-align: left;">Address family not supported by protocol</td>
 </tr>
 <tr>
-<td>98</td>
-<td>Address already in use</td>
+<td style="text-align: left;">98</td>
+<td style="text-align: left;">Address already in use</td>
 </tr>
 <tr>
-<td>99</td>
-<td>Cannot assign requested address</td>
+<td style="text-align: left;">99</td>
+<td style="text-align: left;">Cannot assign requested address</td>
 </tr>
 <tr>
-<td>100</td>
-<td>Network is down</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">Network is down</td>
 </tr>
 <tr>
-<td>101</td>
-<td>Network is unreachable</td>
+<td style="text-align: left;">101</td>
+<td style="text-align: left;">Network is unreachable</td>
 </tr>
 <tr>
-<td>102</td>
-<td>Network dropped connection on reset</td>
+<td style="text-align: left;">102</td>
+<td style="text-align: left;">Network dropped connection on reset</td>
 </tr>
 <tr>
-<td>103</td>
-<td>Software caused connection abort</td>
+<td style="text-align: left;">103</td>
+<td style="text-align: left;">Software caused connection abort</td>
 </tr>
 <tr>
-<td>104</td>
-<td>Connection reset by peer[l连接被对端重置]</td>
+<td style="text-align: left;">104</td>
+<td style="text-align: left;">Connection reset by peer[l连接被对端重置]</td>
 </tr>
 <tr>
-<td>105</td>
-<td>No buffer space available</td>
+<td style="text-align: left;">105</td>
+<td style="text-align: left;">No buffer space available</td>
 </tr>
 <tr>
-<td>106</td>
-<td>Transport endpoint is already connected</td>
+<td style="text-align: left;">106</td>
+<td style="text-align: left;">Transport endpoint is already connected</td>
 </tr>
 <tr>
-<td>107</td>
-<td>Transport endpoint is not connected</td>
+<td style="text-align: left;">107</td>
+<td style="text-align: left;">Transport endpoint is not connected</td>
 </tr>
 <tr>
-<td>108</td>
-<td>Cannot send after transport endpoint shutdown</td>
+<td style="text-align: left;">108</td>
+<td style="text-align: left;">Cannot send after transport endpoint shutdown</td>
 </tr>
 <tr>
-<td>109</td>
-<td>Too many references: cannot splice</td>
+<td style="text-align: left;">109</td>
+<td style="text-align: left;">Too many references: cannot splice</td>
 </tr>
 <tr>
-<td>110</td>
-<td>Connection timed out</td>
+<td style="text-align: left;">110</td>
+<td style="text-align: left;">Connection timed out</td>
 </tr>
 <tr>
-<td>111</td>
-<td>Connection refused</td>
+<td style="text-align: left;">111</td>
+<td style="text-align: left;">Connection refused</td>
 </tr>
 <tr>
-<td>112</td>
-<td>Host is down</td>
+<td style="text-align: left;">112</td>
+<td style="text-align: left;">Host is down</td>
 </tr>
 <tr>
-<td>113</td>
-<td>No route to host</td>
+<td style="text-align: left;">113</td>
+<td style="text-align: left;">No route to host</td>
 </tr>
 <tr>
-<td>114</td>
-<td>Operation already in progress</td>
+<td style="text-align: left;">114</td>
+<td style="text-align: left;">Operation already in progress</td>
 </tr>
 <tr>
-<td>115</td>
-<td>Operation now in progress</td>
+<td style="text-align: left;">115</td>
+<td style="text-align: left;">Operation now in progress</td>
 </tr>
 <tr>
-<td>116</td>
-<td>Stale NFS file handle</td>
+<td style="text-align: left;">116</td>
+<td style="text-align: left;">Stale NFS file handle</td>
 </tr>
 <tr>
-<td>117</td>
-<td>Structure needs cleaning</td>
+<td style="text-align: left;">117</td>
+<td style="text-align: left;">Structure needs cleaning</td>
 </tr>
 <tr>
-<td>118</td>
-<td>Not a XENIX named type file</td>
+<td style="text-align: left;">118</td>
+<td style="text-align: left;">Not a XENIX named type file</td>
 </tr>
 <tr>
-<td>119</td>
-<td>No XENIX semaphores available</td>
+<td style="text-align: left;">119</td>
+<td style="text-align: left;">No XENIX semaphores available</td>
 </tr>
 <tr>
-<td>120</td>
-<td>Is a named type file</td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">Is a named type file</td>
 </tr>
 <tr>
-<td>121</td>
-<td>Remote I/O error</td>
+<td style="text-align: left;">121</td>
+<td style="text-align: left;">Remote I/O error</td>
 </tr>
 <tr>
-<td>122</td>
-<td>Disk quota exceeded</td>
+<td style="text-align: left;">122</td>
+<td style="text-align: left;">Disk quota exceeded</td>
 </tr>
 <tr>
-<td>123</td>
-<td>No medium found</td>
+<td style="text-align: left;">123</td>
+<td style="text-align: left;">No medium found</td>
 </tr>
 <tr>
-<td>124</td>
-<td>Wrong medium type</td>
+<td style="text-align: left;">124</td>
+<td style="text-align: left;">Wrong medium type</td>
 </tr>
 <tr>
-<td>125</td>
-<td>Operation canceled</td>
+<td style="text-align: left;">125</td>
+<td style="text-align: left;">Operation canceled</td>
 </tr>
 <tr>
-<td>126</td>
-<td>Required key not available</td>
+<td style="text-align: left;">126</td>
+<td style="text-align: left;">Required key not available</td>
 </tr>
 <tr>
-<td>127</td>
-<td>Key has expired</td>
+<td style="text-align: left;">127</td>
+<td style="text-align: left;">Key has expired</td>
 </tr>
 <tr>
-<td>128</td>
-<td>Key has been revoked</td>
+<td style="text-align: left;">128</td>
+<td style="text-align: left;">Key has been revoked</td>
 </tr>
 <tr>
-<td>129</td>
-<td>Key was rejected by service</td>
+<td style="text-align: left;">129</td>
+<td style="text-align: left;">Key was rejected by service</td>
 </tr>
 <tr>
-<td>130</td>
-<td>Owner died</td>
+<td style="text-align: left;">130</td>
+<td style="text-align: left;">Owner died</td>
 </tr>
 <tr>
-<td>131</td>
-<td>State not recoverable</td>
+<td style="text-align: left;">131</td>
+<td style="text-align: left;">State not recoverable</td>
 </tr>
 <tr>
-<td>132</td>
-<td></td>
+<td style="text-align: left;">132</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td>132-255</td>
-<td>全是Unknown error</td>
+<td style="text-align: left;">132-255</td>
+<td style="text-align: left;">全是Unknown error</td>
 </tr>
 </tbody>
 </table>
