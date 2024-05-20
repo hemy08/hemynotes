@@ -15,6 +15,7 @@ zypper help
         --userdata <string>     User defined transaction id used in history and plugins. 
         --quiet, -q             Suppress normal output, print only error 
                                 messages. 
+                                
         --verbose, -v           Increase verbosity. 
         --no-abbrev, -A         Do not abbreviate text in tables. 
         --table-style, -s       Table style (integer). 
