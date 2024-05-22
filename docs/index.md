@@ -1,5 +1,16 @@
 # <center> HEMY NOTES BOOKS  </center>
 
+<style>
+    .Red {color:rgb(255,0,0);font-weight:bold;}
+    .Orange {color:rgb(255,128,0);font-weight:bold;}
+    .Yellow {color:rgb(255,255,0);font-weight:bold;}
+    .Green {color:rgb(0,160,0);font-weight:bold;}
+    .Cyan {color:rgb(0,255,255);font-weight:bold;}
+    .Blue {color:rgb(0,0,255);font-weight:bold;}
+    .Purple {color:rgb(128,0,128);font-weight:bold;}
+    table th {background-color:#2195f3;font-size:13pt}
+    table th:nth-of-type(1) {width:80pt}
+</style>
 
 -----------------
 
