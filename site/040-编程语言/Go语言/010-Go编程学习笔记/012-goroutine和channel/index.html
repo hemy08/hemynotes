@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../../C%E5%92%8CC%2B%2B/04-%E6%8F%90%E7%A4%BA%E5%87%BD%E6%95%B0%E6%9C%AA%E5%AE%9A%E4%B9%89/">
+        <link rel="prev" href="../011-Go%20Test/">
       
       
-        <link rel="next" href="../001-Go%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/00-Golang%E5%AE%89%E8%A3%85/">
+        <link rel="next" href="../013-%E5%8F%8D%E5%B0%84/">
       
       
-      <link rel="icon" href="../../../themes/images/lvye.png">
+      <link rel="icon" href="../../../../themes/images/lvye.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
     
     
       
-        <title>导读 - HEMY MOTES</title>
+        <title>goroutine和channel - HEMY MOTES</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -89,15 +89,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../themes/css/custom.css">
+      <link rel="stylesheet" href="../../../../themes/css/custom.css">
     
-      <link rel="stylesheet" href="../../../themes/css/simpleLightbox.min.css">
+      <link rel="stylesheet" href="../../../../themes/css/simpleLightbox.min.css">
     
-      <link rel="stylesheet" href="../../../themes/css/pied_piper.css">
+      <link rel="stylesheet" href="../../../../themes/css/pied_piper.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -121,7 +121,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#goroutinechannel" class="md-skip">
           跳转至
         </a>
       
@@ -135,7 +135,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="HEMY MOTES" class="md-header__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
+    <a href="../../../.." title="HEMY MOTES" class="md-header__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -155,7 +155,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              导读
+              goroutine和channel
             
           </span>
         </div>
@@ -262,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../010-%E8%AE%A1%E7%AE%97%E6%9C%BA/000_%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../010-%E8%AE%A1%E7%AE%97%E6%9C%BA/000_%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../020-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../020-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../030-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../030-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -344,7 +344,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../050-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../050-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../060-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../060-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../500-%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../500-%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -404,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../600-%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-tabs__link">
+        <a href="../../../../600-%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-tabs__link">
           
   
     
@@ -424,7 +424,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../550-%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+        <a href="../../../../550-%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
           
   
     
@@ -493,7 +493,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="HEMY MOTES" class="md-nav__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
+    <a href="../../../.." title="HEMY MOTES" class="md-nav__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -589,7 +589,7 @@
         
   
   
-    <a href="../../../010-%E8%AE%A1%E7%AE%97%E6%9C%BA/000_%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../010-%E8%AE%A1%E7%AE%97%E6%9C%BA/000_%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -641,7 +641,7 @@
         
   
   
-    <a href="../../../020-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../020-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -689,7 +689,7 @@
         
   
   
-    <a href="../../../030-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../030-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -788,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      <a href="../../../000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,7 +835,7 @@
         
   
   
-    <a href="../../C%E5%92%8CC%2B%2B/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../C%E5%92%8CC%2B%2B/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -909,30 +909,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    导读
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,35 +921,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#golang" class="md-nav__link">
-    <span class="md-ellipsis">
-      Golang学习资源整理
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1014,7 +965,7 @@
         
   
   
-    <a href="../001-Go%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/00-Golang%E5%AE%89%E8%A3%85/" class="md-nav__link">
+    <a href="../../001-Go%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/00-Golang%E5%AE%89%E8%A3%85/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1038,73 +989,465 @@
                 
   
   
+    
   
   
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
-  
-    <a href="../010-Go%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    
+    
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Go编程学习笔记
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Go编程学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    导读
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001-Golang%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Golang概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002-Go%E5%8F%98%E9%87%8F%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go变量和运算符
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003-Go%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go程序流程控制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../004-%E5%87%BD%E6%95%B0%E5%8C%85%E5%92%8C%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    函数包和错误处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../005-%E6%95%B0%E7%BB%84%E5%92%8C%E5%88%87%E7%89%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数组和切片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../006-%E6%8E%92%E5%BA%8F%E5%92%8C%E6%9F%A5%E6%89%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    排序和查找
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../007-Go%E8%AF%AD%E8%A8%80MAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go语言MAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../008-Go%E8%AF%AD%E8%A8%80%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go语言面向对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../010-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文件操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../011-Go%20Test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    goroutine和channel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    goroutine和channel
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、GPM模型
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../013-%E5%8F%8D%E5%B0%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    反射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../014-TCP%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TCP编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../015-REDIS%E7%9A%84%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REDIS的使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../016-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1146,7 +1489,7 @@
         
   
   
-    <a href="../../Html%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Html%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1193,7 +1536,7 @@
         
   
   
-    <a href="../../JavaScript%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../JavaScript%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1240,7 +1583,7 @@
         
   
   
-    <a href="../../Java%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Java%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1287,7 +1630,7 @@
         
   
   
-    <a href="../../Lua%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Lua%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1338,7 +1681,7 @@
         
   
   
-    <a href="../../NodeJs%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../NodeJs%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1385,7 +1728,7 @@
         
   
   
-    <a href="../../Pascal%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Pascal%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1434,7 +1777,7 @@
         
   
   
-    <a href="../../Python%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Python%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1481,7 +1824,7 @@
         
   
   
-    <a href="../../Ruby%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Ruby%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1528,7 +1871,7 @@
         
   
   
-    <a href="../../Rust%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Rust%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1575,7 +1918,7 @@
         
   
   
-    <a href="../../Vue%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../Vue%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1645,7 +1988,7 @@
         
   
   
-    <a href="../../../050-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../050-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1695,7 +2038,7 @@
         
   
   
-    <a href="../../../060-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../060-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1757,7 +2100,7 @@
         
   
   
-    <a href="../../../500-%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../500-%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1817,7 +2160,7 @@
         
   
   
-    <a href="../../../600-%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-nav__link">
+    <a href="../../../../600-%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1875,7 +2218,7 @@
         
   
   
-    <a href="../../../550-%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+    <a href="../../../../550-%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1961,9 +2304,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#golang" class="md-nav__link">
+  <a href="#gpm" class="md-nav__link">
     <span class="md-ellipsis">
-      Golang学习资源整理
+      一、GPM模型
     </span>
   </a>
   
@@ -1987,29 +2330,40 @@
   
 
 
-<h1 id="_1">导读<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="golang">Golang学习资源整理<a class="headerlink" href="#golang" title="Permanent link">&para;</a></h2>
+<h1 id="goroutinechannel">goroutine和channel<a class="headerlink" href="#goroutinechannel" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://studygolang.com/">Go语言中文网  https://studygolang.com/</a> </li>
-<li><a href="https://pkg.go.dev/">Go 语言库查询（英文官方） https://pkg.go.dev/</a> </li>
-<li><a href="https://go-zh.org/doc/">Go编程语言 https://go-zh.org/doc/</a> </li>
-<li><a href="https://go.dev/">Go Dev https://go.dev/</a> </li>
-<li><a href="https://github.com/Unknwon/the-way-to-go_ZH_CN">Go入门指南 https://github.com/Unknwon/the-way-to-go_ZH_CN</a> </li>
-<li><a href="https://tour.go-zh.org/list">Go语言之旅 https://tour.go-zh.org/list</a> </li>
-<li><a href="https://studygolang.com/pkgdoc">Golang标准库文档  https://studygolang.com/pkgdoc</a> </li>
-<li><a href="http://docscn.studygolang.com/doc/">GO Documentation 英文 http://docscn.studygolang.com/doc/</a> </li>
-<li><a href="https://books.studygolang.com/gobyexample/">Go by Example 中文  https://books.studygolang.com/gobyexample/</a> </li>
-<li><a href="https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/directory.md">Go入门指南中文  https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/directory.md</a> </li>
-<li><a href="https://draveness.me/golang/">Go 语言设计与实现  https://draveness.me/golang/</a> </li>
-<li><a href="https://www.topgoer.com/">Go语言中文文档  https://www.topgoer.com/</a> </li>
-<li><a href="https://www.tizi365.com/">golang基础教程 - 梯子教程网  https://www.tizi365.com/</a> </li>
-<li><a href="https://openx.huawei.com/gitbook/project/494/CoreGoDoc/_book/">内源基金会 CoreGo https://openx.huawei.com/gitbook/project/494/CoreGoDoc/_book/</a> </li>
-<li><a href="https://beego.me/">beego  https://beego.me/</a> </li>
-<li><a href="https://www.kancloud.cn/hello123/beego/126086">beego开发文档  https://www.kancloud.cn/hello123/beego/126086</a> </li>
-<li><a href="http://3ms.huawei.com/km/groups/1503825/blogs/details/5597871?l=zh-cn">beego简介（3MS） http://3ms.huawei.com/km/groups/1503825/blogs/details/5597871?l=zh-cn</a> </li>
-<li><a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/preface.md">Go Web 编程  https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/preface.md</a> </li>
-<li><a href="http://3ms.huawei.com/hi/group/2033815/file_10889001.html?for_statistic_from=my_group_file">Go_Web编程.pdf  http://3ms.huawei.com/hi/group/2033815/file_10889001.html?for_statistic_from=my_group_file</a> </li>
-<li><a href="https://c.biancheng.net/golang/">Go语言入门教程，Golang入门教程（非常详细）</a></li>
+<li><a href="https://blog.csdn.net/weixin_41335923/article/details/124483409">深入理解 Go 调度模型 GPM CSDN博客（csdn.net）</a></li>
+<li><a href="https://blog.csdn.net/flynetcn/article/details/126628952">Golang调度器GPM原理与调度全分析 CSDN博客（csdn.net）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/688644598">Golang的GPM调度模型 知乎(zhihu.com)</a></li>
+<li><a href="https://www.yuque.com/aceld/golang/srxd6d#d41f9625">Golang的协程调度器原理及GMP设计思想 https://github.com/aceld</a></li>
+<li><a href="https://zboya.github.io/post/go_scheduler/">深入golang runtime的调度</a></li>
+</ul>
+<p>并发和并行最开始都是操作系统中的概念，表示的是CPU执行多个任务的方式，但这是两个不同的概念</p>
+<p>并发：在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个处理机上运行</p>
+<p>并行：当系统有一个以上CPU时，当一个CPU执行一个进程时，另一个CPU可以执行另一个进程，两个进程互不抢占CPU资源，可以同时进行，这种方式我们称之为并行(Parallel)</p>
+<p><strong>并发其实是一段时间内宏观上多个程序同时运行，而并行是指同一时刻，多个任务真的在同时运行</strong>。</p>
+<h2 id="gpm">一、GPM模型<a class="headerlink" href="#gpm" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.jianshu.com/p/504d9eaf0fd1">Go语言的GPM模型 简书_(jianshu.com)</a></li>
+</ul>
+<p><img alt="" src="https://upload-images.jianshu.io/upload_images/13145841-5d7777384d1fff65.png" /></p>
+<p><strong>(G)oroutine</strong></p>
+<p>每个 Goroutine 对应一个 G 结构体，G 存储 Goroutine 的运行堆栈、状态以及任务函数，可重用。G 并非执行体，每个 G 需要绑定到 P 才能被调度执行。</p>
+<p>Goroutine是Golang并发执行的轻量级线程。它由Golang运行时管理，而不是操作系统内核。每个Goroutine对应一个G结构体，该结构体存储了Goroutine的状态、栈信息以及待执行的任务函数。Goroutine的栈空间动态伸缩，初始时2KB，随着需要可以增长到1GB。</p>
+<p><strong>(P)rocessor</strong></p>
+<p>表示逻辑处理器， 对 G 来说，P 相当于 CPU 核，G 只有绑定到 P(在 P 的 local runq 中)才能被调度。对 M 来说，P 提供了相关的执行环境(Context)，如内存分配状态(mcache)，任务队列(G)等，P 的数量决定了系统内最大可并行的 G 的数量（前提：物理 CPU 核数 &gt;= P 的数量），P 的数量由用户设置的 GOMAXPROCS 决定，但是不论 GOMAXPROCS 设置为多大，P 的数量最大为 256。</p>
+<p>Processor是对处理器（CPU核心）的抽象，表示逻辑处理器。它的主要作用是作为Goroutine和Machine Thread之间的中介，负责调度Goroutines。每个P都维护了一个本地的Goroutine队列，存储着等待执行的Goroutine。每一个P都维护着M的执行上下文，包括内存分配缓存、一些同步原语等。每个M都会与一个P关联起来，并执行该P的任务队列中的Goroutine。Golang运行时在程序启动时可以创建多个P对象，数量通常默认为物理核心数，但可以通过环境变量GOMAXPROCS进行调整。这里的P虽然表示逻辑处理器，但P并不执行任何代码，对G来说，P相当于CPU核，G需要被分配一个P才能被调度。 对M来说，P提供了相关的执行环境(Context)，如内存分配状态(mcache)，任务队列(G)等，只有将P和M绑定才能让P中G得以真实运行起来。</p>
+<p><strong>(M)achine</strong></p>
+<p>OS 线程抽象，代表着真正执行计算的资源，在绑定有效的 P 后，进入 schedule 循环；而 schedule 循环的机制大致是从 Global 队列、P 的 Local 队列以及 wait 队列中获取 G，切换到 G 的执行栈上并执行 G 的函数，调用 goexit 做清理工作并回到 M，如此反复。M 并不保留 G 状态，这是 G 可以跨 M 调度的基础，M 的数量是不定的，由 Go Runtime 调整，为了防止创建过多 OS 线程导致系统调度不过来，目前默认最大限制为 10000 个。</p>
+<p>Machine Thread是与操作系统线程直接对应的实体。在Linux上，它对应于pthread。它是实际执行Goroutine的实体。很多人认为GOMAXPROCS可以限制系统线程的数量，但这是错误的，M是按需创建的，和GOMAXPROCS没有直接关系。M在绑定有效的P后，进入调度循环，而且M并不保留G状态，这是G可以跨M调度的基础。当M因为系统调用或锁竞争而阻塞时，它会与P分离，运行时可能会创建新的M（如果系统资源允许）来继续执行其他P的Goroutine队列。</p>
+<p><strong>调度流程</strong></p>
+<ul>
+<li>当一个G被创建时，它会被放入P的本地队列，如果P的本地队列已满，则放入全局队列中。</li>
+<li>调度器选择一个P，并将其与一个M关联（如果M因为阻塞操作而释放了P，运行时会创建新的M或者从M缓存中获取）。</li>
+<li>M执行P的本地队列中的G。如果P的本地队列为空，优先从全局队列获取G，如果全局队列为空时则通过work stealing机制从其他P的本地队列偷取G。</li>
+<li>当一个G开始执行时，它会使用关联的M执行，直到它执行完成或被阻塞或被sysmon抢占。</li>
+<li>如果G被阻塞在某个system call操作上，那么不光G会阻塞，执行该G的M也会解绑P(实质是被sysmon抢走了)，与G一起进入sleep状态。如果此时有空闲的M，则P与其绑定继续执行其他G；如果没有空闲M，但仍然有其他G要去执行，那么就会创建一个新M。当阻塞在syscall上的G完成syscall调用后，G会尝试获取一个空闲的P执行，并放入到这个P的本地队列。如果获取不到P，那么这个线程M变成休眠状态，加入到空闲线程中，然后这个G会被放入全局队列中。</li>
+<li>如果G被阻塞在某个channel操作或I/O操作上时，G会被放置到某个wait队列中，而M会尝试运行下一个runnable的G；如果此时没有runnable的G供M运行，那么M将解绑P，并进入sleep状态。当channel操作完成或I/O available，在wait队列中的G会被唤醒，标记为runnable，放入到某P的队列中，绑定一个M继续执行。</li>
 </ul>
 
 
@@ -2124,24 +2478,24 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "content.tabs.link", "navigation.tracking", "navigation.indexes", "navigation.prune", "navigation.top", "navigation.tabs", "toc.follow", "header.autohide", "search.share", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "content.tabs.link", "navigation.tracking", "navigation.indexes", "navigation.prune", "navigation.top", "navigation.tabs", "toc.follow", "header.autohide", "search.share", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
       
-        <script src="../../../themes/js/custom.js"></script>
+        <script src="../../../../themes/js/custom.js"></script>
       
-        <script src="../../../themes/js/simpleLightbox.min.js"></script>
+        <script src="../../../../themes/js/simpleLightbox.min.js"></script>
       
-        <script src="../../../themes/js/optionalConfig.js"></script>
+        <script src="../../../../themes/js/optionalConfig.js"></script>
       
-        <script src="../../../themes/js/mermaidloader.js"></script>
+        <script src="../../../../themes/js/mermaidloader.js"></script>
       
-        <script src="../../../themes/js/umlconvert.js"></script>
+        <script src="../../../../themes/js/umlconvert.js"></script>
       
-        <script src="../../../themes/js/mathjax.js"></script>
+        <script src="../../../../themes/js/mathjax.js"></script>
       
-        <script src="../../../themes/js/katex.js"></script>
+        <script src="../../../../themes/js/katex.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
       
