@@ -491,5 +491,8 @@ nav:
       - 导读: 550-技术探索/110-云计算技术/000-导读.md
     - 大数据分析与处理:
       - 导读: 550-技术探索/120-大数据分析与处理/000-导读.md
+  - 个人项目:
+    - electron+vue构建HemyEditor:
+      - 项目概览: 900-个人项目/010-electron+vue构建HemyEditor/000-项目概览.md
   - 百度: https://www.baidu.com
   - 评论: https://github.com/hemy08/hemynotes/issues

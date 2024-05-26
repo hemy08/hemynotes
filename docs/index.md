@@ -10,6 +10,7 @@
     .Purple {color:rgb(128,0,128);font-weight:bold;}
     table th {background-color:#2195f3;font-size:13pt}
     table th:nth-of-type(1) {width:80pt}
+    .md-typeset .grid.cards>ol>li,.md-typeset .grid.cards>ul>li {BACKGROUND: lightgoldenrodyellow;}
 </style>
 
 -----------------
@@ -23,7 +24,26 @@ https://hemy08.github.io/hemynotes/
 
 [署名-非商业性使用-禁止演绎 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans)
 
+
+----------------
+
+# 网站直达
+
+<div class="grid cards" markdown>
+
+- [腾讯云 开发者社区](https://cloud.tencent.com/developer)
+- [华为云 开发者联盟](https://developer.huawei.com/)
+- [HarmonyOS 开发者社区](https://developer.huawei.com/consumer/cn/forum/communityHome)
+- [OpenHarmony 社区](https://www.openharmony.cn/mainPlay)
+- [国家高等教育智慧教育平台](https://higher.smartedu.cn/)
+- [力扣官网](https://leetcode.cn/)
+- [nvm 一个nodejs版本管理工具！](https://nvm.uihtm.com/)
+
+</div> 
+
 -----------------
+
+# 站内连接
 
 === "计算机" 
 
@@ -113,6 +133,10 @@ https://hemy08.github.io/hemynotes/
     - []()
 
 -----------------
+
+
+
+---------------------
 
 ## 一、配置pages\_config.json
 
