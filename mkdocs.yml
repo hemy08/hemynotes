@@ -494,5 +494,9 @@ nav:
   - 个人项目:
     - electron+vue构建HemyEditor:
       - 项目概览: 900-个人项目/010-electron+vue构建HemyEditor/000-项目概览.md
+      - 开发环境准备: 900-个人项目/010-electron+vue构建HemyEditor/001-开发环境准备.md
+      - 空项目创建: 900-个人项目/010-electron+vue构建HemyEditor/002-空项目创建.md
+      - 工具栏配置: 900-个人项目/010-electron+vue构建HemyEditor/003-工具栏配置.md
+      - FAQ: 900-个人项目/010-electron+vue构建HemyEditor/999-FAQ.md
   - 百度: https://www.baidu.com
   - 评论: https://github.com/hemy08/hemynotes/issues
