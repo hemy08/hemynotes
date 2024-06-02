@@ -34,3 +34,47 @@ npm install --registry=https://registry.npmmirror.com --loglevel verbose commonm
 
 
 ## 二、markdown-it解析器
+
+这里的解析器使用的是markdown-it，在MdPreview组件中进行渲染，从外部传入content内容。
+
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">MdPreview 参考</summary>
+<blockcode><pre><code>
+```vue
+<template>
+  <div v-html="renderedMarkdownContent"></div>
+</template>
+<script setup lang="ts">
+import { ref, onMounted, defineProps, watchEffect } from 'vue'
+import MarkdownIt from 'markdown-it'
+const props = defineProps({
+  code: {
+    type: String,
+    default: ''
+  }
+})
+const renderedMarkdownContent = ref('')
+const md = MarkdownIt()
+// 组件挂载时，进行初始渲染
+onMounted(() => {
+  updateMarkdown()
+})
+// 监听 props.code 的变化，并在变化时更新 Markdown
+watchEffect(() => {
+  updateMarkdown()
+})
+// 定义一个函数来更新 Markdown 的渲染
+function updateMarkdown() {
+  renderedMarkdownContent.value = md.render(props.code)
+}
+</script>
+<style scoped></style>
+```
+</code></pre></blockcode></details>
+
+
+### 三、效果
+
+![](images/20240530225549.png)
+
+解析器还不是很完善，可能需要加载一些其他的js，这个后续再慢慢研究，先把框架搞出来。

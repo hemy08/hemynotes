@@ -17,6 +17,10 @@
 
 https://hemy08.github.io/hemynotes/
 
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">pages_config.json 参考</summary>
+<blockcode><pre><code>
+</code></pre></blockcode></details>
 
 # 版权声明
 
@@ -247,7 +251,6 @@ extra_javascript 扩展js脚本，比如配置支持mermaid
 markdown_extensions markdown扩展配置，比如支持emoji、mermaid
 
 如果实在不会，可以参考本案例实现。
-
 
 ## 二、pages_config.json 参考
 
