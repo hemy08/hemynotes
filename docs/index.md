@@ -139,14 +139,13 @@ https://hemy08.github.io/hemynotes/
 -----------------
 
 
-
 ---------------------
 
 ## 一、配置pages\_config.json
 
 这个是自定义的配置文件，在python脚本中会读取，文件名不可更改。
 
-**<font color="red">注意文件必须是UTF-8编码的。</font>**
+<font color="red" size=5px background-color="RGB(255,0,0)"><b><I><U>注意文件必须是UTF-8编码的。</u></i></b></font>
 
 ![2024508211853](images/572411821264901.png)
 
