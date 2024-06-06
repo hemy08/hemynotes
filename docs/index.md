@@ -138,6 +138,7 @@ https://hemy08.github.io/hemynotes/
 
 -----------------
 
+https://www.jsdelivr.com/globalping
 
 ---------------------
 
