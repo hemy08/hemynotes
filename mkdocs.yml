@@ -515,6 +515,7 @@ nav:
         - 插入写作模板: 900-个人项目/010-electron+vue构建HemyEditor/130-工具栏插入菜单/010-插入写作模板.md
         - 插入特殊文字: 900-个人项目/010-electron+vue构建HemyEditor/130-工具栏插入菜单/015-插入特殊文字.md
         - 插入数学公式: 900-个人项目/010-electron+vue构建HemyEditor/130-工具栏插入菜单/020-插入数学公式.md
+        - 插入Material样式: 900-个人项目/010-electron+vue构建HemyEditor/130-工具栏插入菜单/024-插入Material样式.md
         - 插入Mermaid绘图: 900-个人项目/010-electron+vue构建HemyEditor/130-工具栏插入菜单/025-插入Mermaid绘图.md
         - 插入PlantUml绘图: 900-个人项目/010-electron+vue构建HemyEditor/130-工具栏插入菜单/030-插入PlantUml绘图.md
       - 工具栏设置菜单:
@@ -525,6 +526,11 @@ nav:
         - 工具栏插件菜单: 900-个人项目/010-electron+vue构建HemyEditor/160-工具栏插件菜单/000-工具栏插件菜单.md
       - 工具栏帮助菜单:
         - 工具栏帮助菜单: 900-个人项目/010-electron+vue构建HemyEditor/170-工具栏帮助菜单/000-工具栏帮助菜单.md
+      - 编辑器工具栏:
+        - 编辑器工具栏: 900-个人项目/010-electron+vue构建HemyEditor/180-编辑器工具栏/000-编辑器工具栏.md
+        - 工具栏按钮配置: 900-个人项目/010-electron+vue构建HemyEditor/180-编辑器工具栏/010-工具栏按钮配置.md
+      - 文件资源管理器:
+        - 文件资源管理器: 900-个人项目/010-electron+vue构建HemyEditor/190-文件资源管理器/000-文件资源管理器.md
       - FAQ: 900-个人项目/010-electron+vue构建HemyEditor/999-FAQ.md
     - 个人模板:
       - Emoji: 900-个人项目/个人模板/Emoji.md
