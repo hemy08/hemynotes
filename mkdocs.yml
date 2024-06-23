@@ -529,8 +529,13 @@ nav:
       - 编辑器工具栏:
         - 编辑器工具栏: 900-个人项目/010-electron+vue构建HemyEditor/180-编辑器工具栏/000-编辑器工具栏.md
         - 工具栏按钮配置: 900-个人项目/010-electron+vue构建HemyEditor/180-编辑器工具栏/010-工具栏按钮配置.md
+        - 支持Emoji输入: 900-个人项目/010-electron+vue构建HemyEditor/180-编辑器工具栏/020-支持Emoji输入.md
+        - 支持特殊字符: 900-个人项目/010-electron+vue构建HemyEditor/180-编辑器工具栏/021-支持特殊字符.md
       - 文件资源管理器:
         - 文件资源管理器: 900-个人项目/010-electron+vue构建HemyEditor/190-文件资源管理器/000-文件资源管理器.md
+      - markdown-it渲染:
+        - 解决图片渲染问题: 900-个人项目/010-electron+vue构建HemyEditor/200-markdown-it渲染/010-解决图片渲染问题.md
+        - 解决链接跳转问题: 900-个人项目/010-electron+vue构建HemyEditor/200-markdown-it渲染/020-解决链接跳转问题.md
       - FAQ: 900-个人项目/010-electron+vue构建HemyEditor/999-FAQ.md
     - 个人模板:
       - Emoji: 900-个人项目/个人模板/Emoji.md
