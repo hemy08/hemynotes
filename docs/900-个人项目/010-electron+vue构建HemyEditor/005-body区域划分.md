@@ -31,7 +31,7 @@ body区域准备划分两部分，左侧做出文件管理器页面，右侧是�
 <details>
 <summary style="color:rgb(0,0,255);font-weight:bold">app.vue 参考</summary>
 <blockcode><pre><code>
-```vue
+```typescript
 <template>
   <div id="editor-container">
     <!-- 应用工具栏和下发区域分割部分，2px高度，宽度与app一致 -->
@@ -55,7 +55,7 @@ import StatusBar from './components/StatusBar.vue'
 
 状态栏，这里就不多说了，先简单划分下，后续再慢慢补齐功能
 
-```vue
+```typescript
 <template>
   <div id="status-bar-file-path">F:\GOPATH\src\github.com\hemy08\hemynotes</div>
   <div id="status-bar-file-type">Markdown</div>
@@ -73,7 +73,7 @@ import StatusBar from './components/StatusBar.vue'
 <details>
 <summary style="color:rgb(0,0,255);font-weight:bold">WorkSpace.vue 参考</summary>
 <blockcode><pre><code>
-```vue
+```typescript
 <template>
   <!-- 左侧区域导航，固定宽度，放置图标，鼠标悬停显示详细信息 -->
   <div id="navi-tab" class="navi-tab" :style="naviTabStyle">
@@ -138,7 +138,7 @@ function startResizerMainResize() {}
 
 在最上面做一个编辑器工具栏，支持常见的插入命令
 
-```vue
+```typescript
 <template>
   <div id="md-tools-bar" class="md-tools-bar"><MdEditTools /></div>
   <div id="md-container" class="md-container"><MdEditComp /></div>
@@ -151,7 +151,7 @@ function startResizerMainResize() {}
 
 目前实现是，编辑区域和预览区域各占编辑区域的50%，并且需要窗口区域大小跟随应用的大小变化。
 
-```vue
+```typescript
 <template>
   <div id="md-edit-component" class="md-edit-component" :style="mdEditComponetStyle">
     <MdMonacoEdit
@@ -213,7 +213,7 @@ const mdPreviewComponentStyle = computed(() => {
 
 预览区域设置，支持动态刷新，区域大小跟随窗口大小变化，支持自动换行
 
-```vue
+```typescript
 <template>
   <div class="markdown-content" v-html="renderedMarkdownContent"></div>
 </template>

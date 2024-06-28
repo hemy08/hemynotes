@@ -2,6 +2,10 @@
 
 <span style="color:rgb(100,180,246);font-size:11pt">最后更新：2023-08-29</span>
 
+
+- [C语言哈希.md](010_Hash/C语言哈希.md)
+- [Go实现简单HashMap.md](010_Hash/Go实现简单HashMap.md)
+
 !!! Example "脚本语言实现Hello world"
 
     === "NodeJs"
