@@ -1,9 +1,12 @@
 # 插入Material样式
 
 ## 菜单栏
+
 菜单栏的实现比较简单，就是向编辑区域插入文本块，文本块的内容就是对应样式表。
 
 ![](images/insertadmonition.PNG)
+
+![](images/20241127205123.png)
 
 ## 预览
 

@@ -13,7 +13,8 @@
         "数据结构与算法": "\\docs\\030-数据结构与算法",
         "编程语言": "\\docs\\040-编程语言",
         "软件工程": "\\docs\\050-软件工程",
-        "实用技能": "\\docs\\060-实用技能",
+        "编程学习": "\\docs\\060-实用技能",
+		"实用技能": "\\docs\\070-编程学习",
         "力扣题解": "\\docs\\500-力扣题解",
         "代码库": "\\docs\\600-代码库",
         "技术探索": "\\docs\\550-技术探索",
@@ -26,6 +27,7 @@
         "040-编程语言": "编程语言",
         "050-软件工程": "软件工程",
         "060-实用技能": "实用技能",
+		"070-编程学习": "编程学习",
         "500-力扣题解": "力扣题解",
         "550-技术探索": "技术探索",
         "600-代码库": "代码库",
@@ -191,8 +193,8 @@
         },
         {
             "pymdownx.emoji": {
-                "emoji_generator": "!!python/name:materialx.emoji.to_svg",
-                "emoji_index": "!!python/name:materialx.emoji.twemoji"
+                "emoji_generator": "!!python/name:material.extensions.emoji.to_svg",
+                "emoji_index": "!!python/name:material.extensions.emoji.twemoji"
             }
         },
         {

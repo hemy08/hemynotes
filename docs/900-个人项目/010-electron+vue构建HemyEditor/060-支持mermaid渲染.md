@@ -66,4 +66,74 @@ async function preRenderMermaidProc(text: string) {
 }
 ```
 
-子组件MermaidRender是为了给主进程的对话框进行实时渲染使用，通过IPC通信，将渲染结果发送到主进程，由主进程显示在对话框中。 这部分目前还未实现
+子组件MermaidRender是为了给主进程的对话框进行实时渲染使用，通过IPC通信，将渲染结果发送到主进程，由主进程显示在对话框中。 
+
+## 三、效果示例
+
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">mermaid 基本流程图源码示例</summary>
+<blockcode><pre><code>
+```
+graph TB
+    sq[Square shape] --> ci((Circle shape))
+
+    subgraph A
+        od>Odd shape]-- Two line<br/>edge comment --> ro
+        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+        di==>ro2(Rounded square shape)
+    end
+
+    %% Notice that no text in shape are added here instead that is appended further down
+    e --> od3>Really long text with linebreak<br>in an Odd shape]
+
+    %% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+
+    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+```
+</code></pre></blockcode></details>
+
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">mermaid 类图源码示例</summary>
+<blockcode><pre><code>
+```
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+```
+</code></pre></blockcode></details>
+
+
+效果如图：
+
+![](images/20241119210047.png)
+
+
