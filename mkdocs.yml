@@ -499,12 +499,13 @@ nav:
     - 导读: 900-个人项目/000-导读.md
     - electron+vue构建HemyEditor:
       - 项目概览: 900-个人项目/010-electron+vue构建HemyEditor/000-项目概览.md
-      - 开发环境准备: 900-个人项目/010-electron+vue构建HemyEditor/001-开发环境准备.md
-      - 空项目创建: 900-个人项目/010-electron+vue构建HemyEditor/002-空项目创建.md
-      - 工具栏配置: 900-个人项目/010-electron+vue构建HemyEditor/003-工具栏配置.md
-      - body区域划分: 900-个人项目/010-electron+vue构建HemyEditor/005-body区域划分.md
-      - 增加资源管理器: 900-个人项目/010-electron+vue构建HemyEditor/010-增加资源管理器.md
+      - 语法说明: 900-个人项目/010-electron+vue构建HemyEditor/001-语法说明.md
+      - 开发环境准备: 900-个人项目/010-electron+vue构建HemyEditor/011-开发环境准备.md
+      - 空项目创建: 900-个人项目/010-electron+vue构建HemyEditor/012-空项目创建.md
+      - 工具栏配置: 900-个人项目/010-electron+vue构建HemyEditor/018-工具栏配置.md
+      - body区域划分: 900-个人项目/010-electron+vue构建HemyEditor/019-body区域划分.md
       - 构建编辑器工具栏: 900-个人项目/010-electron+vue构建HemyEditor/020-构建编辑器工具栏.md
+      - 增加资源管理器: 900-个人项目/010-electron+vue构建HemyEditor/021-增加资源管理器.md
       - 编辑器和预览区域: 900-个人项目/010-electron+vue构建HemyEditor/030-编辑器和预览区域.md
       - 引入markdown解析器: 900-个人项目/010-electron+vue构建HemyEditor/050-引入markdown解析器.md
       - 支持mermaid渲染: 900-个人项目/010-electron+vue构建HemyEditor/060-支持mermaid渲染.md
