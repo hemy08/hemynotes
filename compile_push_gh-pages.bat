@@ -6,6 +6,8 @@ git branch -D gh-pages
 
 git push
 
+pause
+
 mkdocs gh-deploy -f mkdocs.yml
 
 pause
