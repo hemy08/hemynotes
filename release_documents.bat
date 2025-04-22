@@ -1,10 +1,10 @@
 python make_mkdocs_yml.py
 
-git add *
+REM git add *
 
-git commit -m "更新发布文档"
+REM git commit -m "更新发布文档"
 
-git push
+REM git push
 
 xcopy /E /I /Y "themes" "docs\\themes"
 
