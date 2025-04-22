@@ -16,4 +16,12 @@ pause
 
 mkdocs gh-deploy -f mkdocs.yml
 
+git checkout gh-pages
+
+git add *
+
+git commit -m "更新发布文档"
+
+git push
+
 pause
