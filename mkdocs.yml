@@ -440,6 +440,12 @@ nav:
         - 导读: 080-开发IDE/003-Qt系列/113-PyQt/000-导读.md
       - QtExample:
         - 导读: 080-开发IDE/003-Qt系列/200-QtExample/000-导读.md
+        - QtCreator项目:
+          - 创建Qml项目: 080-开发IDE/003-Qt系列/200-QtExample/100-QtCreator项目/100-创建Qml项目.md
+        - Clion项目:
+          - 创建Qml项目: 080-开发IDE/003-Qt系列/200-QtExample/200-Clion项目/100-创建Qml项目.md
+        - VisualStudio项目:
+          - 创建Qml项目: 080-开发IDE/003-Qt系列/200-QtExample/300-VisualStudio项目/100-创建Qml项目.md
   - 力扣题解:
     - 导读: 500-力扣题解/000-导读.md
     - 动态规划:
