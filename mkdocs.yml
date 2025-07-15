@@ -596,6 +596,17 @@ nav:
       - 优化改进:
         - 优化类问题: 900-个人项目/010-electron+vue构建HemyEditor/998-优化改进/001-优化类问题.md
       - FAQ: 900-个人项目/010-electron+vue构建HemyEditor/999-FAQ.md
+    - 基于Qt的Markdown编辑器:
+      - 项目概览: 900-个人项目/011-基于Qt的Markdown编辑器/000-项目概览.md
+      - 语法说明: 900-个人项目/011-基于Qt的Markdown编辑器/001-语法说明.md
+      - 空项目创建: 900-个人项目/011-基于Qt的Markdown编辑器/012-空项目创建.md
+      - 工具栏配置: 900-个人项目/011-基于Qt的Markdown编辑器/018-工具栏配置.md
+      - 工具布局: 900-个人项目/011-基于Qt的Markdown编辑器/019-工具布局.md
+      - 增加资源管理器: 900-个人项目/011-基于Qt的Markdown编辑器/021-增加资源管理器.md
+      - 编辑器和预览区域: 900-个人项目/011-基于Qt的Markdown编辑器/030-编辑器和预览区域.md
+      - 引入markdown解析器: 900-个人项目/011-基于Qt的Markdown编辑器/050-引入markdown解析器.md
+      - 支持mermaid渲染: 900-个人项目/011-基于Qt的Markdown编辑器/060-支持mermaid渲染.md
+      - FAQ: 900-个人项目/011-基于Qt的Markdown编辑器/999-FAQ.md
     - 个人模板:
       - Emoji: 900-个人项目/个人模板/Emoji.md
       - 文章封面: 900-个人项目/个人模板/文章封面.md
