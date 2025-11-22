@@ -89,6 +89,52 @@ void *new_break = sbrk(size); // 移动program break
 
 ![](./images/1763707524552_image.png)
 
+```mermaid
+flowchart TD
+    subgraph app [应用层]
+        A1[应用程序/Windows] --> B1[malloc<span>size</span>]
+        A2[应用程序/Linux] --> B2[malloc<span>size</span>]
+    end
+
+    subgraph crt [CRT层/glibc层]
+        B1-->C1
+        C1[CRT内存分配器]
+        D1{大小判断}
+        E1[HeapAlloc]
+        
+        C1 --> D1
+        D1 -->|小内存 <512KB| E1
+        D1 -->|大内存 ≥512KB| F1
+
+        B2 --> C2[glibc ptmalloc]
+        C2 --> D2{大小判断}
+        D2 -->|≤64B| E2[fastbin]
+        D2 -->|small| F2[smallbin]
+        D2 -->|large| G2[largebin]
+        D2 -->|≥128KB| H2[mmap]
+    end
+
+    subgraph sys [系统层]
+        F1[VirtualAlloc]
+        G1[进程堆管理<br/>- LFH优化<br/>- 堆块分配]
+        H1[虚拟内存管理<br/>- 保留地址空间<br/>- 提交物理页]
+        I1[返回虚拟地址指针]
+        
+        F1 --> H1
+        E1 --> G1
+        G1 --> I1
+        H1 --> I1
+
+        E2 --> I2[brk扩展堆<br/>移动program break]
+        F2 --> I2
+        G2 --> I2
+        H2 --> J2[mmap系统调用<br/>创建内存映射<br/>匿名映射]
+        I2 --> K2[返回虚拟地址指针]
+        J2 --> K2
+    end
+```
+
+
 Windows和Linux下Malloc时，内存的管理，系统层返回的是虚拟地址的指针，系统内存管理虚拟内存和物理内存之间存在映射关系。这个时候，物理内存还没有分配，只有在内存使用的时候，才会分配物理帧
 
 ### 3.2 应用程序访问内存
