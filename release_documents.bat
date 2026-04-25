@@ -10,6 +10,8 @@ xcopy /E /I /Y "themes" "docs\\themes"
 
 git branch -D gh-pages
 
+git pull
+
 git push
 
 pause
