@@ -16,7 +16,7 @@ npm install --registry=https://registry.npmmirror.com --loglevel verbose commonm
 
 安装完毕之后，`package.json`的`dependencies`会增加如下项目：
 
-![](./images/1717032943720_image.png)
+<!-- 图片缺失: ./images/1717032943720_image.png -->
 
 ### 1）安装--save-dev（建议）
 
@@ -30,7 +30,7 @@ npm install --registry=https://registry.npmmirror.com --loglevel verbose commonm
 
 安装完毕之后，`package.json`的`devDependencies`会增加如下项目：
 
-![](./images/1717033140779_image.png)
+<!-- 图片缺失: ./images/1717033140779_image.png -->
 
 
 ## 二、markdown-it解析器
@@ -75,6 +75,6 @@ function updateMarkdown() {
 
 ### 三、效果
 
-![](images/20240530225549.png)
+<!-- 图片缺失: images/20240530225549.png -->
 
 解析器还不是很完善，可能需要加载一些其他的js，这个后续再慢慢研究，先把框架搞出来。
