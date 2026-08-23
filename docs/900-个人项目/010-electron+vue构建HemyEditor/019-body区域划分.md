@@ -2,261 +2,246 @@
 
 ## 一、预览
 
-body区域准备划分两部分，左侧做出文件管理器页面，右侧是编辑区域，对于Markdown编辑来说，可以平方做预览区域。
+body区域准备划分两部分，左侧做出文件管理器页面，右侧是编辑区域，对于Markdown编辑来说，可以平分做预览区域。
 
 ![](images/20240529193806.png)
 
 ## 二、实现思路
 
-在app.vue中进行处理，利用template，以及html相关的语言配置，先上学分为两部分，上面部分作为工作区域，下面部分作为状态栏。
+应用界面分为以下几个层次：
 
-工作区域划分两部分，文件管理器页面和编辑区域。
+```
+App.vue（根组件）
+├── WelcomeScreen.vue（欢迎界面，初始显示）
+└── BaiZeNotes.vue（主应用界面）
+    ├── 标题栏（title-bar，支持拖动、最小化/最大化/关闭）
+    ├── 菜单栏（menu-bar，MenuBar.vue）
+    ├── 工作区域（workspace-area，WorkSpace.vue）
+    ├── 状态栏（status-bar，StatusBar.vue）
+    └── 对话框组件（dialogs）
+```
 
-项目栏：包含文件资源管理器、文章大纲、绘图工具、PlantUML、Mermaid
+工作区域划分三部分：
 
-- 文件资源管理器，中间区域显示文档信息，文件列表tree，编辑区域嵌入Markdown编辑器，并增加预览功能（可选）
-- 文章大纲，中间区域显示Markdown-toc
-- 绘图工具，中间区域显示简单的绘图工具，这个看看有没有比较成熟的绘图插件，右侧区域作为绘图区域
-- PlantUML，中间区域显示PlantUML支持的绘图，点击后，在右侧区域显示语言原码，并且增加预览区域（可选）
-- Mermaid，同上
+- **左侧导航栏（navi-tab）**：固定宽度，放置图标，包含文件资源管理器、文章大纲、绘图工具、PlantUML、Mermaid 等入口
+- **中间资源管理区域（resource-manager）**：宽度可调节，根据左侧导航选择显示不同内容
+    - 文件资源管理器：文件列表 tree
+    - 文章大纲：Markdown-toc
+- **右侧工作区域**：根据导航切换不同容器
+    - Markdown 编辑器（MarkdownContainer）
+    - 插件工具（PluginTools）
+    - Hemy 工具（HemyTools）
+    - HTML 查看（ShowHtmlView）
+    - PDF 编辑器（ShowPdfEditor）
 
-状态栏暂时没想好显示啥，先保留：文件绝对路径、字数等信息
+状态栏显示：文件绝对路径、文件类型、编码、文件大小、保存状态等信息
 
 ## 三、实现
 
-### 3.1 app.vue
+### 3.1 App.vue
 
-在app.vue中进行处理，利用template，以及html相关的语言配置，先上学分为两部分，上面部分作为工作区域，下面部分作为状态栏。
+`App.vue` 是根组件，负责在欢迎界面和主应用界面之间切换：
 
 <details>
-<summary style="color:rgb(0,0,255);font-weight:bold">app.vue 参考</summary>
+<summary style="color:rgb(0,0,255);font-weight:bold">App.vue 参考</summary>
 <blockcode><pre><code>
-```typescript
+```vue
 <template>
-  <div id="editor-container">
-    <!-- 应用工具栏和下发区域分割部分，2px高度，宽度与app一致 -->
-    <div id="file-bar"></div>
-    <!-- 整个工作区域 -->
-    <div id="workspace-area" class="workspace-area"><WorkSpace /></div>
-    <!-- 状态栏区域，高度10px，宽度与app一致 -->
-    <div id="status-bar" class="status-bar"><StatusBar /></div>
-  </div>
+    <div id="app-root">
+        <!-- 欢迎界面 -->
+        <WelcomeScreen 
+            v-if="showWelcome"
+            @openFile="handleOpenFile"
+            @openFolder="handleOpenFolder"
+            @openRecentFolder="handleOpenRecentFolder"
+        />
+        <!-- 主应用界面 -->
+        <BaiZeNotes v-else />
+    </div>
 </template>
 <script setup lang="ts">
-import WorkSpace from './components/WorkSpaceArea/WorkSpace.vue'
-import StatusBar from './components/StatusBar.vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import WelcomeScreen from './components/WelcomeScreen.vue'
+import BaiZeNotes from './components/BaiZeNotes.vue'
+
+const showWelcome = ref(true)
+
+// 处理打开文件/文件夹，通过 IPC 通知主进程
+function handleOpenFile() {
+    window.electron.ipcRenderer.send('baize:notes:welcome:open-file')
+}
+function handleOpenFolder() {
+    window.electron.ipcRenderer.send('baize:notes:welcome:open-directory')
+}
 </script>
 ```
 </code></pre></blockcode></details>
 
-区域的大小调节，可以自己根据需要进行调节。
+### 3.2 BaiZeNotes.vue
 
-### 3.2 StatusBar.vue
+`BaiZeNotes.vue` 是主应用组件，包含标题栏、菜单栏、工作区域、状态栏和所有对话框：
 
-状态栏，这里就不多说了，先简单划分下，后续再慢慢补齐功能
-
-```typescript
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">BaiZeNotes.vue 结构参考</summary>
+<blockcode><pre><code>
+```vue
 <template>
-  <div id="status-bar-file-path">F:\GOPATH\src\github.com\hemy08\hemynotes</div>
-  <div id="status-bar-file-type">Markdown</div>
-  <div id="status-bar-file-type">utf-8</div>
-  <div id="status-bar-file-size">0字节</div>
+    <div id="editor-container" :style="containerStyles">
+        <!-- 标题栏区域，高度30px，支持拖动移动窗口 -->
+        <div v-show="electronMenu" id="title-bar" class="title-bar"
+            @mousedown="onTitleBarMouseDown"
+            @dblclick="onTitleBarDblClick">
+            <div class="title-left">
+                <img :src="logoSrc" alt="Baize Logo" width="24" height="24">
+                <span class="title-text">白泽笔记 - Markdown Editor</span>
+            </div>
+            <div class="window-controls">
+                <button class="window-btn minimize" @click="minimizeWindow"></button>
+                <button class="window-btn maximize" @click="maximizeWindow"></button>
+                <button class="window-btn close" @click="closeWindow"></button>
+            </div>
+        </div>
+        <!-- 菜单栏区域 -->
+        <div v-show="electronMenu" id="menu-bar" class="menu-bar"><MenuBar /></div>
+        <!-- 工作区域 -->
+        <div id="workspace-area" class="workspace-area"><WorkSpace /></div>
+        <!-- 状态栏 -->
+        <div id="status-bar" class="status-bar" :style="statusBarStyles"><StatusBar /></div>
+        <!-- 对话框组件（主题设置、字体选择、编辑器设置等） -->
+        <BaiZeDialogs.ThemeSettingDialog ... />
+        <BaiZeDialogs.EditorSettingDialog ... />
+        <!-- ... 其他对话框 -->
+    </div>
 </template>
 ```
+</code></pre></blockcode></details>
 
-### 3.2 WorkSpace.vue
+### 3.3 WorkSpace.vue
 
-工作区域，将工作区域分为三部分，并且增加了中间的宽度调节，内容后面补充
-
-利用ref特性，完成窗口的动态变化，在窗口被拖动或者最大化最小化时，窗口大小随着刷新
+`WorkSpace.vue` 是工作区域，分为左侧导航、资源管理器、右侧工作容器，支持多种容器切换：
 
 <details>
 <summary style="color:rgb(0,0,255);font-weight:bold">WorkSpace.vue 参考</summary>
 <blockcode><pre><code>
-```typescript
+```vue
 <template>
-  <!-- 左侧区域导航，固定宽度，放置图标，鼠标悬停显示详细信息 -->
-  <div id="navi-tab" class="navi-tab" :style="naviTabStyle">
-    <NaviTab />
-  </div>
-  <!-- 中间资源管理显示区域，宽度可以调节 -->
-  <div id="resource-manager" class="resource-manager" :style="resMgrStyle">
-    <ResManager />
-  </div>
-  <!-- 资源管理器和编辑区域的宽度调节条 -->
-  <div
-    id="resizer-main"
-    class="resizer-main"
-    :style="resizerMainStyle"
-    @mousedown="startResizerMainResize()"
-  >
-    1
-  </div>
-  <!-- 右侧编辑区域 -->
-  <div id="edit-area" class="edit-area" :style="editAreaStyle">
-    <EditArea />
-  </div>
+    <!-- 左侧导航栏，固定宽度 -->
+    <div id="left-navi" class="navi-tab" :style="{ width: naviTabWidth, float: 'left' }">
+        <NaviTab position="left" @update:navi:tab="onSwitchRightNaviTab" />
+    </div>
+    <!-- 中间资源管理区域，宽度可调节 -->
+    <div v-show="isShowResourceMgrArea" id="resource-manager" class="resource-manager"
+        :style="{ width: resMgrWidth }">
+        <ResManager :navi-show="naviResManagerShow" />
+    </div>
+    <!-- 宽度调节条 -->
+    <div id="resizer-main" class="resizer-main" :style="{ left: resizerLeft }"
+        @mousedown="startCursorPosition($event)"></div>
+    <!-- 右侧工作区域，根据导航切换不同容器 -->
+    <div v-show="isShowMdContainer" id="md-container" class="md-container"
+        :style="{ width: workAreaWidth, marginRight: naviTabWidth }">
+        <MdContainer :md-container-width="workAreaWidth" />
+    </div>
+    <div v-show="isShowPluginsContainer" id="plugin-containers" ...>
+        <PluginTools :plugins-area-width="workAreaWidth" />
+    </div>
+    <div v-show="isShowToolsContainer" id="tool-containers" ...>
+        <HemyTools :tools-area-width="workAreaWidth" />
+    </div>
+    <div v-show="isShowHtmlContainer" id="html-containers" ...>
+        <ShowHtmlView :html-area-width="workAreaWidth" />
+    </div>
+    <div v-show="isShowPdfContainer" id="pdf-containers" ...>
+        <ShowPdfEditor :pds-area-width="workAreaWidth" />
+    </div>
+    <!-- 最右侧导航栏 -->
+    <div id="right-navi" class="navi-tab" :style="{ width: naviTabWidth, float: 'right' }">
+        <NaviTab position="right" @update:navi:tab="onSwitchLeftNaviTab" />
+    </div>
 </template>
 <script setup lang="ts">
-import NaviTab from './NaviTab.vue'
-import ResManager from './ResourceManager.vue'
-import EditArea from './EditArea.vue'
-import { computed, ref } from 'vue'
-// 使用 ref 来创建响应式引用
-const resMgrWidth = ref('300px')
-const naviTabWidth = ref('40px')
-const naviTabStyle = computed(() => ({
-  width: naviTabWidth.value, // 视窗宽度
-  height: '100%' // 视窗高度
-}))
-// 拖动区域
-const resMgrStyle = computed(() => ({
-  width: resMgrWidth.value, // 视窗宽度
-  height: '100%' // 视窗高度
-  //marginLeft: naviTabWidth.value // 左侧遗留navi-tab宽度
-}))
-// 拖动区域
-const resizerMainStyle = computed(() => ({
-  width: '2px', // 视窗宽度
-  height: '100% - 20px - 2px' // 视窗高度
-  // marginLeft: naviTabWidth.value + resMgrWidth.value // 左侧遗留navi-tab宽度
-}))
-// 预览区域样式设置
-const editAreaStyle = computed(() => ({
-  width: `calc(100vw - ${naviTabWidth.value} - ${resMgrWidth.value} - 2px)`, // 视窗宽度
-  height: '100%' // 视窗高度
-  // marginLeft: 'naviTabWidth.value + resMgrWidth.value + 2px' // 左侧遗留navi-tab宽度
-}))
-function startResizerMainResize() {}
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import EventBus from "@renderer/common/event_bus/event-bus"
+import NaviTab from "@renderer/components/WorkSpaceArea/NaviTab.vue"
+import ResManager from "@renderer/components/ResourceManager/ResourceManager.vue"
+import MdContainer from "@renderer/components/Markdown/MarkdownContainer.vue"
+import PluginTools from "@renderer/components/PluginTools/PluginTools.vue"
+import HemyTools from "@renderer/components/HemyTools/HemyTools.vue"
+import ShowHtmlView from "@renderer/components/HemyTools/ShowHtmlVIew.vue"
+import ShowPdfEditor from "@renderer/components/HemyTools/ShowPdfEditor.vue"
+// ...
 </script>
 ```
 </code></pre></blockcode></details>
 
-### 3.3 MarkdownContainer.vue
+利用 `ref` 特性完成窗口的动态变化，在窗口被拖动或者最大化最小化时，窗口大小随着刷新。各容器通过 `v-show` 控制显示，切换时保留组件状态。
 
-这个是编辑区域，因为是做markdown，所以分工具栏、编辑器和预览区域
+### 3.4 MarkdownContainer.vue
 
-在最上面做一个编辑器工具栏，支持常见的插入命令
+Markdown 编辑区域，分为编辑器工具栏、编辑器和预览区域：
 
-```typescript
+```vue
 <template>
-  <div id="md-tools-bar" class="md-tools-bar"><MdEditTools /></div>
-  <div id="md-container" class="md-container"><MdEditComp /></div>
+  <div id="md-edit-tools-bar" class="md-edit-tools-bar">
+    <MdEditTools :tool-bar-width="props.mdContainerWidth" />
+  </div>
+  <div id="md-edit-component" class="md-edit-component">
+    <MdEditComp :editor-preview-width="props.mdContainerWidth" />
+  </div>
 </template>
 ```
 
-### 3.4 MarkdownEditComponent.vue
+### 3.5 MarkdownEditComponent.vue
 
-编辑区域和预览区域，
+编辑区域和预览区域，使用 Monaco Editor 编辑，markdown-it 实时渲染预览：
 
-目前实现是，编辑区域和预览区域各占编辑区域的50%，并且需要窗口区域大小跟随应用的大小变化。
-
-```typescript
+```vue
 <template>
   <div id="md-edit-component" class="md-edit-component" :style="mdEditComponetStyle">
-    <MdMonacoEdit
-        v-model="markdownEditorCode"
-        :code="initialCodeContent"
-        @update:code="handleMarkdownCodeUpdate"
-    />
+    <MdMonacoEdit v-model="markdownEditorCode" :code="initialCodeContent"
+        @update:code="handleMarkdownCodeUpdate" />
   </div>
-  <div id="resizer-md" class="resizer-md">1</div>
+  <div id="resizer-md" class="resizer-md"></div>
   <div id="md-preview" class="md-preview" :style="mdPreviewComponentStyle">
     <MdPreview :code="markdownEditorCode" />
   </div>
 </template>
 ```
 
-窗口区域大小跟随应用的大小变化
+中间有分割条，可以鼠标拖动调整编辑区和预览区的显示比例。视图菜单支持三种模式切换：编辑模式、预览模式、编辑/预览模式。
+
+### 3.6 MarkdownPreviewComponent.vue
+
+预览区域，使用 markdown-it 及其插件链进行渲染，支持防抖优化：
+
 <details>
-<summary style="color:rgb(0,0,255);font-weight:bold">窗口大小动态设置</summary>
+<summary style="color:rgb(0,0,255);font-weight:bold">MarkdownPreviewComponent.vue 渲染管线</summary>
 <blockcode><pre><code>
 ```typescript
-import { computed, onUnmounted, ref } from 'vue'
-import MdMonacoEdit from './MarkdownMonacoEditor.vue'
-import MdPreview from './MarkdownPreviewComponent.vue'
-// 使用 ref 来创建响应式引用
-const markdownEditorCode = ref('')
-let initialCodeContent = 'Hello world'
-// 存储窗口宽度
-const windowWidth = ref(window.innerWidth)
-onUnmounted(() => {
-  window.removeEventListener('resize', updateWindowWidth)
+import MarkdownIt from 'markdown-it'
+import highlightjs from 'markdown-it-highlightjs'
+import { full as emoji } from 'markdown-it-emoji'
+import plantuml from 'markdown-it-plantuml'
+
+const md = MarkdownIt({
+    html: true, xhtmlOut: true, linkify: true,
+    langPrefix: 'language-', breaks: true, typographer: false
 })
-// 监听窗口宽度变化
-function updateWindowWidth() {
-  windowWidth.value = window.innerWidth
-}
-window.addEventListener('resize', updateWindowWidth)
-// 编辑区域大小计算
-const mdEditComponetStyle = computed(() => {
-  const editWidth = `${windowWidth.value * 0.5}px`
-  console.log('editWidth', editWidth)
-  return {
-    width: editWidth,
-    height: `100%` // 视窗高度
-  }
-})
-// 预览区域样式设置
-const mdPreviewComponentStyle = computed(() => {
-  const previewWidth = `${windowWidth.value * 0.5}px`
-  console.log('previewWidth', previewWidth)
-  return {
-    width: previewWidth,
-    height: '100%' // 视窗高度
-  }
-})
+    .use(highlightjs, { inline: true, hljs: hljs, ... })
+    .use(plantuml)
+    .use(emoji)
+
+// 监听编辑器内容变化，带防抖优化
+watch(() => props.editorContent, () => {
+    if (renderDebounceTimer) clearTimeout(renderDebounceTimer)
+    renderDebounceTimer = setTimeout(() => {
+        updateMarkdownPreRender()
+        renderDebounceTimer = null
+    }, 150)  // 150ms 防抖延迟
+}, { immediate: true })
 ```
 </code></pre></blockcode></details>
-
-### 3.5 MarkdownPreviewComponent.vue
-
-预览区域设置，支持动态刷新，区域大小跟随窗口大小变化，支持自动换行
-
-```typescript
-<template>
-  <div class="markdown-content" v-html="renderedMarkdownContent"></div>
-</template>
-
-<script setup lang="ts">
-import { ref, onMounted, defineProps, watchEffect } from 'vue'
-import MarkdownIt from 'markdown-it'
-
-const props = defineProps({
-  code: {
-    type: String,
-    default: ''
-  }
-})
-
-const renderedMarkdownContent = ref('')
-
-const md = MarkdownIt()
-
-md.options.html = true
-md.options.linkify = true
-md.options.langPrefix = 'language-'
-md.options.breaks = true
-md.options.typographer = true
-
-// 组件挂载时，进行初始渲染
-onMounted(() => {
-  updateMarkdown()
-})
-
-// 监听 props.code 的变化，并在变化时更新 Markdown
-watchEffect(() => {
-  updateMarkdown()
-})
-
-// 定义一个函数来更新 Markdown 的渲染
-function updateMarkdown() {
-  renderedMarkdownContent.value = md.render(props.code)
-}
-</script>
-```
 
 ## 四、效果
 
 ![](images/20240530225057.png)
-

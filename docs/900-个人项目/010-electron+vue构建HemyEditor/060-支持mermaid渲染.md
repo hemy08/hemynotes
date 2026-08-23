@@ -1,40 +1,36 @@
 # 支持mermaid渲染
 
-## 一、markdown-it-mermaid
+## 一、实现方案
 
-markdown-it-mermaid 这个是js开发的markdown-it插件，支持mermaid渲染。
+项目没有使用现成的 markdown-it-mermaid 插件（因为兼容性问题），而是自行实现 Mermaid 渲染逻辑，集成在预渲染阶段。
 
-试用了下，好像并不能进行渲染，因为本人使用的是Electron + Vue + Typescript开发的工具，发现并没有现成的支持markdown-it的插件。
+### 实现思路
 
-个人的想法是：从编辑器获取mermaid部分字符，然后先渲染成html脚本，取其中的svg部分，再拿给markdown-it进行渲染。
+1. 从编辑器内容中提取 ` ```mermaid ` 代码块
+2. 调用 mermaid 库将代码块渲染为 SVG
+3. 将 SVG 替换回原文，再交给 markdown-it 渲染
 
-或者可以直接自己开发一个内部的支持mermaid渲染的markdown-it的插件。
+## 二、Mermaid 渲染实现
 
-## 二、实现
+### 2.1 渲染流程
 
-在preview组件中，增加mermaid的渲染组件，不显示
+Mermaid 渲染在预渲染阶段处理，代码位于 `src/main/renders/HemyRender.ts`：
 
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">Mermaid 渲染核心逻辑</summary>
+<blockcode><pre><code>
 ```typescript
-<template xmlns="http://www.w3.org/1999/html">
-    <div class="markdown-content" v-html="renderedMarkdownContent"></div>
-    <div v-show="isShowMermaidContainer" ref="mermaidContainer" class="mermaid"></div>
-    <MermaidRender v-show="isShowMermaidComponent" /> 
-</template>
-```
-
-在编辑器文字变化时，进行渲染，渲染的时候先获取对应的文本块，然后进行渲染，这里进行异步渲染，直接在preview组件进行渲染
-
-```typescript
+// 生成随机 ID
 function generateRandomNumberString(length: number): string {
     let result = ''
     const characters = '0123456789'
-    const charactersLength = characters.length
     for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength))
+        result += characters.charAt(Math.floor(Math.random() * characters.length))
     }
     return result
 }
 
+// 渲染 Mermaid 图表为 SVG
 async function mermaidRender(graphDefinition: string): Promise<string> {
     try {
         const mermaidId = 'mermaid' + generateRandomNumberString(10)
@@ -47,28 +43,61 @@ async function mermaidRender(graphDefinition: string): Promise<string> {
     } catch (error) {
         console.log('mermaidRender error', error)
     }
-
     return ''
 }
 
+// 预渲染：处理所有 mermaid 代码块
 async function preRenderMermaidProc(text: string) {
-    // 正则表达式匹配以 $ 开头和结尾的文本（简单版本，不处理转义字符或嵌套）
     let renderResult = text
     let match: RegExpExecArray | null = null
     const regex = /```mermaid([\s\S]*?)```/g
-    // 使用全局搜索来查找所有匹配项
+    // 使用全局搜索查找所有 mermaid 代码块
     while ((match = regex.exec(text)) !== null) {
         const renderedSvg = await mermaidRender(match[1])
         renderResult = renderResult.replace(match[0], renderedSvg)
     }
-
     return renderResult
 }
 ```
+</code></pre></blockcode></details>
 
-子组件MermaidRender是为了给主进程的对话框进行实时渲染使用，通过IPC通信，将渲染结果发送到主进程，由主进程显示在对话框中。 
+### 2.2 预览组件中的调用
 
-## 三、效果示例
+在 `MarkdownPreviewComponent.vue` 中，编辑器内容变化时触发预渲染：
+
+```typescript
+// 预渲染：发送到主进程处理 mermaid、公式等
+async function updateMarkdownPreRender() {
+    window.electron.ipcRenderer.send('pre-render-monaco-editor-content', props.editorContent)
+}
+
+// 预渲染结果 -> markdown-it 渲染 -> 后渲染
+window.electron.ipcRenderer.on('pre-render-monaco-editor-content-result',
+    async (_, context) => {
+        const result = await editor.Render.PreMarkdownRender(context)
+        updateMarkdownPostRender(md.render(result))
+    })
+```
+
+### 2.3 独立 Mermaid 编辑窗口
+
+项目还提供了独立的 Mermaid 编辑预览窗口（通过工具菜单 -> Mermaid 绘图打开），支持实时编辑和预览：
+
+- `src/main/dialogs/OpenMermaidRenderFrame.ts`：主进程创建 Mermaid 渲染窗口
+- `src/renderer/src/components/Markdown/MermaidRender.vue`：渲染进程的 Mermaid 渲染组件
+
+子组件 `MermaidRender.vue` 是为了给主进程的对话框进行实时渲染使用，通过 IPC 通信，将渲染结果发送到主进程，由主进程显示在对话框中。
+
+## 三、Mermaid 模板插入
+
+编辑器工具栏提供 Mermaid 模板快速插入功能，模板定义在 `src/renderer/src/common/templates.ts` 中：
+
+- **Mermaid Part1**：流程图、时序图等基础模板
+- **Mermaid Part2**：类图、状态图、甘特图等高级模板
+
+通过插入菜单 -> Mermaid -> 选择模板，将模板代码插入到编辑器当前光标位置。
+
+## 四、效果示例
 
 <details>
 <summary style="color:rgb(0,0,255);font-weight:bold">mermaid 基本流程图源码示例</summary>
@@ -131,9 +160,43 @@ classDiagram
 ```
 </code></pre></blockcode></details>
 
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">mermaid 时序图源码示例</summary>
+<blockcode><pre><code>
+```
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hello Bob, how are you?
+    Bob-->>Alice: Great!
+    Alice->>Bob: Where do you want to go?
+    Bob-->>Alice: Let's go to the cinema
+    Bob->>Alice: See you at 7pm
+```
+</code></pre></blockcode></details>
+
+<details>
+<summary style="color:rgb(0,0,255);font-weight:bold">mermaid 甘特图源码示例</summary>
+<blockcode><pre><code>
+```
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task    : 24d
+```
+</code></pre></blockcode></details>
 
 效果如图：
 
 ![](images/20241119210047.png)
 
+## 五、相关文档
 
+- [Mermaid 官方文档](https://mermaid.js.org/)
+- [Mermaid Live Editor](https://mermaid.live/edit)
+- [mermaid GitHub](https://github.com/mermaid-js/mermaid)
