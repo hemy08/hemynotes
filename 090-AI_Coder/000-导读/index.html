@@ -1,0 +1,4185 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HEMY's Personal Notes">
+      
+      
+      
+      
+        <link rel="prev" href="../../080-%E5%BC%80%E5%8F%91IDE/003-Qt%E7%B3%BB%E5%88%97/200-QtExample/300-VisualStudio%E9%A1%B9%E7%9B%AE/100-%E5%88%9B%E5%BB%BAQml%E9%A1%B9%E7%9B%AE/">
+      
+      
+        <link rel="next" href="../010-Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%94%9F%E6%80%81/000-%E6%A6%82%E8%A7%88/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../themes/images/lvye.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>导读 - HEMY MOTES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../themes/css/custom.css">
+    
+      <link rel="stylesheet" href="../../themes/css/simpleLightbox.min.css">
+    
+      <link rel="stylesheet" href="../../themes/css/pied_piper.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="HEMY MOTES" class="md-header__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEMY MOTES
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              导读
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hemy08/hemynotes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://hemy08.github.io/hemynotes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../010-%E8%AE%A1%E7%AE%97%E6%9C%BA/000_%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算机
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../020-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/000_%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../030-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构与算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../040-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  编程语言
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../050-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  软件工程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../060-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  实用技能
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../070-%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  编程学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../080-%E5%BC%80%E5%8F%91IDE/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  开发IDE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI_Coder
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../500-%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  力扣题解
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../600-%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  代码库
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../550-%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  技术探索
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../900-%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/000-%E5%AF%BC%E8%AF%BB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  个人项目
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://www.baidu.com" class="md-tabs__link">
+        
+  
+  
+    
+  
+  百度
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/hemy08/hemynotes/issues" class="md-tabs__link">
+        
+  
+  
+    
+  
+  评论
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HEMY MOTES" class="md-nav__button md-logo" aria-label="HEMY MOTES" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HEMY MOTES
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hemy08/hemynotes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://hemy08.github.io/hemynotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOME
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../010-%E8%AE%A1%E7%AE%97%E6%9C%BA/000_%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../020-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/000_%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作系统
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../030-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构与算法
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../040-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编程语言
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../050-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件工程
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../060-%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实用技能
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../070-%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编程学习
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../080-%E5%BC%80%E5%8F%91IDE/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发IDE
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI_Coder
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI_Coder
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导读
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导读
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 总体策略
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 阶段目录
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-0-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一阶段：Python 数据科学生态（0 → 2 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一阶段：Python 数据科学生态（0 → 2 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 必学内容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 实践项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二阶段：机器学习核心（3 → 5 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二阶段：机器学习核心（3 → 5 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 核心理论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 实践项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三阶段：深度学习基础（4 → 6 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三阶段：深度学习基础（4 → 6 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 核心内容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 实践项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformer-llm6-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四阶段：Transformer 与大语言模型 (LLM)（6 → 8 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四阶段：Transformer 与大语言模型 (LLM)（6 → 8 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 核心内容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 核心项目（三选二）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五阶段：系统部署与高性能推理（持续，可并行）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五阶段：系统部署与高性能推理（持续，可并行）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 关键领域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 终极项目（简历亮点）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第六阶段：国产大模型生态与前沿（持续关注）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六阶段：国产大模型生态与前沿（持续关注）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🇨🇳 国产大模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ 国产云平台
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 前沿方向
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 综合资源清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 综合资源清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 免费课程 / 视频
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 必读论文清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📕 推荐书籍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 关键 GitHub 仓库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 社区与资讯
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 第一周行动计划（快速启动）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💎 最后建议
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../010-Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%94%9F%E6%80%81/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python数据科学生态
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../010-%E5%A4%A7%E6%A8%A1%E5%9E%8B/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大模型
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../020-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A0%B8%E5%BF%83/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    机器学习核心
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../030-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    深度学习基础
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../040-Transformer%E4%B8%8E%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transformer与大语言模型
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../050-%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8E%A8%E7%90%86/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    系统部署与推理
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../060-%E5%9B%BD%E4%BA%A7%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%89%8D%E6%B2%BF/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    国产大模型与前沿
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../070-%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/000-%E6%A6%82%E8%A7%88/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本地大模型部署
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../500-%E5%8A%9B%E6%89%A3%E9%A2%98%E8%A7%A3/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    力扣题解
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../600-%E4%BB%A3%E7%A0%81%E5%BA%93/00-HelloWorld/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代码库
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../550-%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    技术探索
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../900-%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/000-%E5%AF%BC%E8%AF%BB/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    个人项目
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.baidu.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    百度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/hemy08/hemynotes/issues" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    评论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 总体策略
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 阶段目录
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-0-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一阶段：Python 数据科学生态（0 → 2 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一阶段：Python 数据科学生态（0 → 2 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 必学内容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 实践项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二阶段：机器学习核心（3 → 5 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二阶段：机器学习核心（3 → 5 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 核心理论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 实践项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三阶段：深度学习基础（4 → 6 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三阶段：深度学习基础（4 → 6 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 核心内容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 实践项目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformer-llm6-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四阶段：Transformer 与大语言模型 (LLM)（6 → 8 周）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四阶段：Transformer 与大语言模型 (LLM)（6 → 8 周）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 核心内容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 核心项目（三选二）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五阶段：系统部署与高性能推理（持续，可并行）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五阶段：系统部署与高性能推理（持续，可并行）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 关键领域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 推荐资源路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 终极项目（简历亮点）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第六阶段：国产大模型生态与前沿（持续关注）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第六阶段：国产大模型生态与前沿（持续关注）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🇨🇳 国产大模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ☁️ 国产云平台
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 前沿方向
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 综合资源清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 综合资源清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 免费课程 / 视频
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 必读论文清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📕 推荐书籍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 关键 GitHub 仓库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 社区与资讯
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 第一周行动计划（快速启动）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💎 最后建议
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ai">AI 学习路径<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
+<h2 id="_1">📌 总体策略<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>主力语言</strong>：Python（快速原型 + 生态） + C++（底层算子 / 推理引擎） + Go（线上推理服务 / 微服务）</li>
+<li><strong>学习方式</strong>：<strong>代码驱动</strong> → 直接运行/修改经典项目 → 阅读核心论文 → 实现简化版框架</li>
+<li><strong>时间预估</strong>：若每周投入 12-15 小时，4~5 个月可达到独立开发 LLM 智能体 / 部署生产级模型的能力。</li>
+</ul>
+<h2 id="_2">📂 阶段目录<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一阶段</td>
+<td><a href="../010-Python%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%94%9F%E6%80%81/000-%E6%A6%82%E8%A7%88/">010-Python数据科学生态</a></td>
+<td>NumPy / Pandas / 可视化</td>
+</tr>
+<tr>
+<td>第二阶段</td>
+<td><a href="../020-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A0%B8%E5%BF%83/000-%E6%A6%82%E8%A7%88/">020-机器学习核心</a></td>
+<td>监督学习 / 无监督学习 / 评估与调优</td>
+</tr>
+<tr>
+<td>第三阶段</td>
+<td><a href="../030-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/000-%E6%A6%82%E8%A7%88/">030-深度学习基础</a></td>
+<td>神经网络 / PyTorch / CNN / 训练技巧</td>
+</tr>
+<tr>
+<td>第四阶段</td>
+<td><a href="../040-Transformer%E4%B8%8E%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/000-%E6%A6%82%E8%A7%88/">040-Transformer与大语言模型</a></td>
+<td>Transformer / 微调 / Prompt / RAG / Agent</td>
+</tr>
+<tr>
+<td>第五阶段</td>
+<td><a href="../050-%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2%E4%B8%8E%E6%8E%A8%E7%90%86/000-%E6%A6%82%E8%A7%88/">050-系统部署与推理</a></td>
+<td>模型优化 / 推理引擎 / 本地部署 / 服务化</td>
+</tr>
+<tr>
+<td>第六阶段</td>
+<td><a href="../060-%E5%9B%BD%E4%BA%A7%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%89%8D%E6%B2%BF/000-%E6%A6%82%E8%A7%88/">060-国产大模型与前沿</a></td>
+<td>国产模型 / 云平台 / 多模态 / AI编程 / 前沿</td>
+</tr>
+<tr>
+<td>独立专题</td>
+<td><a href="本地大模型部署/000-概览.md">本地大模型部署</a></td>
+<td>Ollama / llama.cpp / vLLM / LM Studio / 硬件配置</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="python-0-2">第一阶段：Python 数据科学生态（0 → 2 周）<a class="headerlink" href="#python-0-2" title="Permanent link">&para;</a></h2>
+<p>虽然您熟悉 Python，但 AI 领域特有的库需要快速上手。</p>
+<h3 id="_3">📚 必学内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NumPy</strong>：向量化计算、广播机制、内存布局（ndarray 与 C++ 数组交互）</li>
+<li>核心：<code>np.dot</code>、<code>np.matmul</code>、广播规则、<code>np.einsum</code> 爱因斯坦求和</li>
+<li>进阶：<code>np.lib.stride_tricks</code> 内存视图、与 C++ 的 <code>pybind11</code> 交互</li>
+<li><strong>Pandas</strong>：数据清洗、分组聚合、时间序列</li>
+<li>核心：<code>DataFrame</code> / <code>Series</code>、<code>groupby</code> + <code>agg</code>、<code>merge</code> / <code>join</code>、<code>pivot_table</code></li>
+<li>进阶：<code>apply</code> 性能陷阱、向量化替代方案、<code>swifter</code> 加速</li>
+<li><strong>Matplotlib / Seaborn</strong>：快速可视化</li>
+<li>核心：<code>plt.subplots</code>、<code>sns.heatmap</code>、<code>sns.pairplot</code></li>
+<li>进阶：动画 <code>FuncAnimation</code>、交互式 <code>plotly</code></li>
+</ul>
+<h3 id="_4">🎯 推荐资源路径<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kaggle Pandas 微课程</td>
+<td><a href="https://www.kaggle.com/learn/pandas">kaggle.com/learn/pandas</a></td>
+<td>4小时速通，交互式练习</td>
+</tr>
+<tr>
+<td>Kaggle 数据可视化</td>
+<td><a href="https://www.kaggle.com/learn/data-visualization">kaggle.com/learn/data-visualization</a></td>
+<td>配合 Pandas 学画图</td>
+</tr>
+<tr>
+<td>《Python for Data Analysis》第3版</td>
+<td><a href="https://wesmckinney.com/book/">wesmckinney.com/book</a></td>
+<td>Pandas 作者亲写，在线免费</td>
+</tr>
+<tr>
+<td>NumPy 官方教程</td>
+<td><a href="https://numpy.org/learn/">numpy.org/learn</a></td>
+<td>从入门到高级索引</td>
+</tr>
+<tr>
+<td>100 NumPy Exercises</td>
+<td><a href="https://github.com/rougier/numpy-100">github.com/rougier/numpy-100</a></td>
+<td>刷题巩固</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">🛠️ 实践项目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在 Kaggle <a href="https://www.kaggle.com/c/titanic">Titanic</a> 比赛中用 Pandas 完成数据清洗与特征工程</li>
+<li>用 NumPy 实现矩阵乘法，对比 C++ Eigen 库的效率</li>
+</ol>
+<blockquote>
+<p>✅ 检验标准：用 NumPy 实现一个简单的矩阵乘法（对比 C++ 效率），并画出损失曲线。</p>
+</blockquote>
+<hr />
+<h2 id="3-5">第二阶段：机器学习核心（3 → 5 周）<a class="headerlink" href="#3-5" title="Permanent link">&para;</a></h2>
+<p>利用您对算法和数据结构的深刻理解，直接深入**统计学习视角**。</p>
+<h3 id="_6">📚 核心理论<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>监督学习</strong></li>
+<li>线性回归：最小二乘法、梯度下降、正规方程</li>
+<li>逻辑回归：Sigmoid、交叉熵损失、最大似然估计</li>
+<li>决策树 / 随机森林 / XGBoost / LightGBM：信息增益、树剪枝、集成策略（Bagging vs Boosting）</li>
+<li>SVM：核函数、对偶问题、硬间隔与软间隔</li>
+<li><strong>无监督</strong>：K-Means / K-Medoids、PCA / ICA、t-SNE / UMAP</li>
+<li><strong>评估与调优</strong>：交叉验证 (K-Fold / Stratified)、偏差-方差权衡、正则化 (L1/L2/ElasticNet)、Grid Search / Bayesian Optimization</li>
+</ul>
+<h3 id="_7">🎯 推荐资源路径<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>资源类型</th>
+<th>推荐内容</th>
+<th>链接</th>
+<th>为何适合您</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>课程</strong></td>
+<td>吴恩达《Machine Learning Specialization》</td>
+<td><a href="https://www.coursera.org/specializations/machine-learning-introduction">coursera.org/specializations/machine-learning-introduction</a></td>
+<td>代码驱动，直接看作业</td>
+</tr>
+<tr>
+<td><strong>中文课程</strong></td>
+<td>李宏毅机器学习2021</td>
+<td><a href="https://www.youtube.com/playlist?list=PLJV_el3wAVMkihU9kzPR1mMhEMIMb-1G3">youtube.com/playlist</a> / <a href="https://www.bilibili.com/video/BV1JE411G7XG">B站</a></td>
+<td>幽默讲解，中文友好</td>
+</tr>
+<tr>
+<td><strong>书籍</strong></td>
+<td>《Hands-On ML》第3版 (Aurélien Géron)</td>
+<td><a href="https://homl3.info/">homl.info</a></td>
+<td>代码为主，边读边改</td>
+</tr>
+<tr>
+<td><strong>书籍</strong></td>
+<td>《统计学习方法》李航</td>
+<td>—</td>
+<td>理论简洁严谨，适合深挖数学</td>
+</tr>
+<tr>
+<td><strong>交互式</strong></td>
+<td>Google ML Crash Course</td>
+<td><a href="https://developers.google.com/machine-learning/crash-course">developers.google.com/machine-learning/crash-course</a></td>
+<td>极速入门，15小时</td>
+</tr>
+<tr>
+<td><strong>底层挑战</strong></td>
+<td>用 <strong>C++</strong> 实现线性回归</td>
+<td>—</td>
+<td>发挥 C++ 优势，加深理解</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">🛠️ 实践项目<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ol>
+<li>用 Scikit-learn 完成 <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">Kaggle 房价预测</a>（特征工程 + 模型比较 + 集成）</li>
+<li>用 <strong>C++ (Eigen库) 手写 Logistic 回归</strong>，并在同一数据集上与 sklearn 对比结果</li>
+<li>实现一个简单的 XGBoost 预测流程，理解 <code>objective</code> 和 <code>eval_metric</code> 参数</li>
+</ol>
+<blockquote>
+<p>✅ 检验标准：能解释 L1 与 L2 正则化的区别，并用 C++ 实现 mini-batch 梯度下降。</p>
+</blockquote>
+<hr />
+<h2 id="4-6">第三阶段：深度学习基础（4 → 6 周）<a class="headerlink" href="#4-6" title="Permanent link">&para;</a></h2>
+<p>有了 ML 基础后，直接进入 PyTorch（与 C++ 后端天然集成）。</p>
+<h3 id="_9">📚 核心内容<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>神经网络原理</strong>：反向传播链式法则、激活函数（ReLU/GELU/SiLU/Swish）、权重初始化（Xavier/He）、优化器 (SGD/Adam/AdamW/Lion)</li>
+<li><strong>PyTorch 核心</strong>：Tensor, autograd, Module, DataLoader, <code>torch.nn</code>, <code>torch.optim</code>, 分布式 (DDP/FSDP)</li>
+<li><strong>经典 CNN</strong>：LeNet → AlexNet → VGG → GoogLeNet → ResNet (重点：残差连接) → DenseNet → EfficientNet</li>
+<li><strong>训练技巧</strong>：BatchNorm / LayerNorm / GroupNorm, Dropout, 学习率调度 (CosineAnnealing/OneCycleLR), 混合精度 (<code>torch.cuda.amp</code>), 梯度裁剪</li>
+</ul>
+<h3 id="_10">🎯 推荐资源路径<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>《动手学深度学习》PyTorch版</td>
+<td><a href="https://d2l.ai/">d2l.ai</a> / <a href="https://github.com/d2l-ai/d2l-zh">github.com/d2l-ai/d2l-zh</a></td>
+<td><strong>强烈推荐</strong>：代码 + 理论 + 重新实现</td>
+</tr>
+<tr>
+<td>李沐 B站视频</td>
+<td><a href="https://space.bilibili.com/1567748478">space.bilibili.com/1567748478</a></td>
+<td>边看边敲代码</td>
+</tr>
+<tr>
+<td>PyTorch 官方教程</td>
+<td><a href="https://pytorch.org/tutorials/">pytorch.org/tutorials</a></td>
+<td>从入门到分布式训练</td>
+</tr>
+<tr>
+<td>3Blue1Brown 神经网络</td>
+<td><a href="https://www.3blue1brown.com/topics/neural-networks">3b1b.neural-networks</a></td>
+<td>可视化直觉，强烈推荐</td>
+</tr>
+<tr>
+<td>Fast.ai 实用深度学习</td>
+<td><a href="https://course.fast.ai/">course.fast.ai</a></td>
+<td>顶-down 教学，先跑通再理解</td>
+</tr>
+<tr>
+<td>ResNet 论文精读</td>
+<td><a href="https://www.bilibili.com/video/BV1xb4y1m7Gi">bilibili.com/video/BV1xb4y1m7Gi</a></td>
+<td>李沐论文精读系列</td>
+</tr>
+<tr>
+<td>PyTorch C++ API (LibTorch)</td>
+<td><a href="https://pytorch.org/cppdocs/">pytorch.org/cppdocs</a></td>
+<td>用 C++ 加载模型并推理</td>
+</tr>
+<tr>
+<td>Karpathy nanoGPT</td>
+<td><a href="https://github.com/karpathy/nanoGPT">github.com/karpathy/nanoGPT</a></td>
+<td>最简 GPT 训练实现</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">🛠️ 实践项目<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ol>
+<li>从零训练一个 ResNet-18 分类 CIFAR-10（达到 &gt;90% 准确率）</li>
+<li>使用 <strong>LibTorch</strong> 将上述模型导出为 <code>TorchScript</code>，编写 C++ 推理服务（与 Go 的 RPC 服务集成）</li>
+<li>实现混合精度训练，观察速度提升与精度变化</li>
+</ol>
+<blockquote>
+<p>✅ 检验标准：手动推导三层神经网络的梯度，并用 C++ 实现一次前向-反向的数值梯度检查。</p>
+</blockquote>
+<hr />
+<h2 id="transformer-llm6-8">第四阶段：Transformer 与大语言模型 (LLM)（6 → 8 周）<a class="headerlink" href="#transformer-llm6-8" title="Permanent link">&para;</a></h2>
+<p>结合您对智能体的兴趣，此阶段是重点。利用 Rust 的内存安全特性可开发高性能 tokenizer / 推理组件。</p>
+<h3 id="_12">📚 核心内容<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>从 Seq2Seq + Attention → Transformer 架构</strong></li>
+<li>Seq2Seq + Attention：编码器-解码器、注意力对齐</li>
+<li>Self-Attention：Q/K/V 矩阵、缩放点积、多头注意力</li>
+<li>位置编码：正弦余弦 → RoPE → ALiBi</li>
+<li>Transformer Block：Attention → Add&amp;Norm → FFN → Add&amp;Norm</li>
+<li><strong>BERT (预训练 + Fine-tuning)</strong>：MLM + NSP 预训练任务、下游任务适配</li>
+<li><strong>GPT 系列 (自回归生成)</strong>：自回归解码、KV Cache、贪心/采样解码</li>
+<li><strong>LLM 高效微调</strong>：LoRA / QLoRA / P-Tuning v2 / IA3 / DoRA</li>
+<li><strong>应用层</strong></li>
+<li>Prompt Engineering：Zero-shot / Few-shot / CoT / ToT</li>
+<li>RAG：文档分块 → 向量化 → 检索 → 生成</li>
+<li>Function Calling / Tool Use</li>
+<li>Agent：ReAct / Plan-and-Solve / Reflexion / AutoGPT 模式</li>
+</ul>
+<h3 id="_13">🎯 推荐资源路径<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>链接</th>
+<th>适配您的技术栈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Attention Is All You Need 原论文</strong></td>
+<td><a href="https://arxiv.org/abs/1706.03762">arxiv.org/abs/1706.03762</a></td>
+<td>手推多头注意力公式</td>
+</tr>
+<tr>
+<td><strong>Annotated Transformer</strong></td>
+<td><a href="http://nlp.seas.harvard.edu/annotated-transformer/">nlp.seas.harvard.edu/annotated-transformer</a></td>
+<td>Harvard NLP 经典逐行实现</td>
+</tr>
+<tr>
+<td><strong>Karpathy nanoGPT</strong></td>
+<td><a href="https://github.com/karpathy/nanoGPT">github.com/karpathy/nanoGPT</a></td>
+<td>极简 GPT-2 训练，强烈推荐</td>
+</tr>
+<tr>
+<td><strong>Karpathy makemore</strong></td>
+<td><a href="https://github.com/karpathy/makemore">github.com/karpathy/makemore</a></td>
+<td>从零构建语言模型系列</td>
+</tr>
+<tr>
+<td><strong>HuggingFace Transformers</strong></td>
+<td><a href="https://huggingface.co/docs/transformers">huggingface.co/docs/transformers</a></td>
+<td>主流 LLM 库，必学</td>
+</tr>
+<tr>
+<td><strong>HuggingFace NLP Course</strong></td>
+<td><a href="https://huggingface.co/learn/nlp-course">huggingface.co/learn/nlp-course</a></td>
+<td>从 Tokenizer 到模型全链路</td>
+</tr>
+<tr>
+<td><strong>Unsloth (快速微调)</strong></td>
+<td><a href="https://github.com/unslothai/unsloth">github.com/unslothai/unsloth</a></td>
+<td>2x 更快微调，适合本地</td>
+</tr>
+<tr>
+<td><strong>LLaMA-Factory</strong></td>
+<td><a href="https://github.com/hiyouga/LLaMA-Factory">github.com/hiyouga/LLaMA-Factory</a></td>
+<td>一站式微调平台，国产</td>
+</tr>
+<tr>
+<td><strong>LangChain</strong></td>
+<td><a href="https://python.langchain.com/docs/">python.langchain.com/docs</a></td>
+<td>智能体编排框架</td>
+</tr>
+<tr>
+<td><strong>LlamaIndex</strong></td>
+<td><a href="https://docs.llamaindex.ai/">docs.llamaindex.ai</a></td>
+<td>RAG 专用框架</td>
+</tr>
+<tr>
+<td><strong>LoRA 原论文</strong></td>
+<td><a href="https://arxiv.org/abs/2106.09685">arxiv.org/abs/2106.09685</a></td>
+<td>低秩适配原理</td>
+</tr>
+<tr>
+<td><strong>ReAct 论文</strong></td>
+<td><a href="https://arxiv.org/abs/2210.03629">arxiv.org/abs/2210.03629</a></td>
+<td>推理+行动范式</td>
+</tr>
+<tr>
+<td><strong>Lilianweng 博客</strong></td>
+<td><a href="https://lilianweng.github.io/">lilianweng.github.io</a></td>
+<td>优质 AI 技术博客汇总</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_14">🛠️ 核心项目（三选二）<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>从零实现 GPT-2 (124M)</strong>：参考 Karpathy 的 <code>nanoGPT</code>，用 PyTorch + C++ 混合编程</li>
+<li><strong>RAG 问答系统</strong>：用 Qwen + ChromaDB + LangChain，嵌入 Go 实现的 API 网关</li>
+<li><strong>自定义 Agent</strong>：让你的 Agent 能调用 C++ 写的高效数学库（如矩阵乘法），完成复杂任务</li>
+</ol>
+<blockquote>
+<p>✅ 检验标准：能讲清楚 Flash Attention 的原理，并部署一个本地 LLM (7B 量化) 提供 HTTP 服务。</p>
+</blockquote>
+<hr />
+<h2 id="_15">第五阶段：系统部署与高性能推理（持续，可并行）<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p>这是您的 <strong>主场</strong>：将 C++/Go 的性能优势发挥到极致。</p>
+<h3 id="_16">📚 关键领域<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>模型优化</strong>：量化 (INT8/INT4/GPTQ/AWQ/GGUF)、剪枝、蒸馏、稀疏化</li>
+<li><strong>推理引擎</strong>：ONNX Runtime、TensorRT、vLLM、llama.cpp、TGI</li>
+<li><strong>服务化</strong>：Go 实现高并发推理网关 (负载均衡、流式输出、缓存、请求合并)</li>
+<li><strong>分布式推理</strong>：Ray Serve、vLLM 分布式、TGI (Text Generation Inference)</li>
+</ul>
+<h3 id="_17">🎯 推荐资源路径<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>llama.cpp</strong></td>
+<td><a href="https://github.com/ggerganov/llama.cpp">github.com/ggerganov/llama.cpp</a></td>
+<td>纯 C++ 高效推理，必读源码</td>
+</tr>
+<tr>
+<td><strong>vLLM</strong></td>
+<td><a href="https://github.com/vllm-project/vllm">github.com/vllm-project/vllm</a></td>
+<td>PagedAttention，高吞吐推理</td>
+</tr>
+<tr>
+<td><strong>Ollama</strong></td>
+<td><a href="https://github.com/ollama/ollama">github.com/ollama/ollama</a></td>
+<td>本地模型运行，Go 实现</td>
+</tr>
+<tr>
+<td><strong>TGI (HuggingFace)</strong></td>
+<td><a href="https://github.com/huggingface/text-generation-inference">github.com/huggingface/text-generation-inference</a></td>
+<td>Rust + Python 生产级推理</td>
+</tr>
+<tr>
+<td><strong>go-onnxruntime</strong></td>
+<td><a href="https://github.com/yalue/onnxruntime_go">github.com/yalue/onnxruntime_go</a></td>
+<td>Go 调用 ONNX Runtime</td>
+</tr>
+<tr>
+<td><strong>TensorRT 开发者指南</strong></td>
+<td><a href="https://docs.nvidia.com/deeplearning/tensorrt/">docs.nvidia.com/deeplearning/tensorrt</a></td>
+<td>C++ API 部署加速</td>
+</tr>
+<tr>
+<td><strong>FlashAttention</strong></td>
+<td><a href="https://arxiv.org/abs/2205.14135">arxiv.org/abs/2205.14135</a></td>
+<td>IO-aware 注意力加速</td>
+</tr>
+<tr>
+<td><strong>PagedAttention (vLLM)</strong></td>
+<td><a href="https://arxiv.org/abs/2309.06680">arxiv.org/abs/2309.06680</a></td>
+<td>KV Cache 内存管理</td>
+</tr>
+<tr>
+<td><strong>AutoGPTQ</strong></td>
+<td><a href="https://github.com/AutoGPTQ/AutoGPTQ">github.com/AutoGPTQ/AutoGPTQ</a></td>
+<td>GPTQ 量化工具</td>
+</tr>
+<tr>
+<td><strong>AutoAWQ</strong></td>
+<td><a href="https://github.com/casper-hansen/AutoAWQ">github.com/casper-hansen/AutoAWQ</a></td>
+<td>AWQ 量化工具</td>
+</tr>
+<tr>
+<td><strong>SGLang</strong></td>
+<td><a href="https://github.com/sgl-project/sglang">github.com/sgl-project/sglang</a></td>
+<td>结构化生成语言，高性能推理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_18">🛠️ 终极项目（简历亮点）<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>"基于 C++/Go 的本地 LLM 服务集群"</strong>
+- 前端 Vue 提供对话界面
+- Go 网关负责限流、请求合并、流式代理
+- 后端 C++ 推理实例（基于 llama.cpp 或 TensorRT-LLM）
+- 支持连续对话、RAG 检索和函数调用
+- Prometheus + Grafana 监控 QPS / 延迟 / Token 吞</p>
+</blockquote>
+<hr />
+<h2 id="_19">第六阶段：国产大模型生态与前沿（持续关注）<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h3 id="_20">🇨🇳 国产大模型<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Qwen2.5</strong></td>
+<td><a href="https://github.com/QwenLM/Qwen2.5">github.com/QwenLM/Qwen2.5</a> / <a href="https://huggingface.co/Qwen">huggingface.co/Qwen</a></td>
+<td>阿里通义千问，多尺寸，中英强</td>
+</tr>
+<tr>
+<td><strong>DeepSeek-V3/R1</strong></td>
+<td><a href="https://github.com/deepseek-ai">github.com/deepseek-ai</a> / <a href="https://huggingface.co/deepseek-ai">huggingface.co/deepseek-ai</a></td>
+<td>深度求索，MoE 架构，推理能力强</td>
+</tr>
+<tr>
+<td><strong>GLM-4</strong></td>
+<td><a href="https://github.com/THUDM/GLM-4">github.com/THUDM/GLM-4</a> / <a href="https://bigmodel.cn/">bigmodel.cn</a></td>
+<td>智谱 AI，ChatGLM 系列</td>
+</tr>
+<tr>
+<td><strong>Yi</strong></td>
+<td><a href="https://github.com/01-ai/Yi">github.com/01-ai/Yi</a></td>
+<td>零一万物，李开复团队</td>
+</tr>
+<tr>
+<td><strong>Baichuan</strong></td>
+<td><a href="https://github.com/baichuan-inc/Baichuan2">github.com/baichuan-inc/Baichuan2</a></td>
+<td>百川智能</td>
+</tr>
+<tr>
+<td><strong>InternLM</strong></td>
+<td><a href="https://github.com/InternLM">github.com/InternLM</a></td>
+<td>上海 AI 实验室，书生浦语</td>
+</tr>
+<tr>
+<td><strong>MiniCPM</strong></td>
+<td><a href="https://github.com/OpenBMB/MiniCPM-V">github.com/OpenBMB/MiniCPM-V</a></td>
+<td>面壁智能，端侧小模型</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_21">☁️ 国产云平台<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>华为云 ModelArts</strong></td>
+<td><a href="https://support.huaweicloud.com/productdesc-modelarts/modelarts_01_000000.html">support.huaweicloud.com/modelarts</a></td>
+<td>一站式 AI 开发平台</td>
+</tr>
+<tr>
+<td><strong>华为云 CodeArts</strong></td>
+<td><a href="https://www.huaweicloud.com/product/codearts.html">huaweicloud.com/product/codearts</a></td>
+<td>AI 辅助软件开发</td>
+</tr>
+<tr>
+<td><strong>魔搭社区 ModelScope</strong></td>
+<td><a href="https://modelscope.cn/">modelscope.cn</a></td>
+<td>阿里达摩院，模型 + 数据集 + Demo</td>
+</tr>
+<tr>
+<td><strong>智谱 AI 开放平台</strong></td>
+<td><a href="https://open.bigmodel.cn/">open.bigmodel.cn</a></td>
+<td>GLM-4 API 服务</td>
+</tr>
+<tr>
+<td><strong>百度千帆</strong></td>
+<td><a href="https://cloud.baidu.com/product/wenxinworkshop">cloud.baidu.com/product/wenxinworkshop</a></td>
+<td>文心一言 + 模型精调</td>
+</tr>
+<tr>
+<td><strong>阿里云百炼</strong></td>
+<td><a href="https://bailian.console.aliyun.com/">bailian.console.aliyun.com</a></td>
+<td>通义系列 API + Agent 开发</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_22">🔮 前沿方向<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>多模态</strong></li>
+<li>视觉理解：LLaVA / Qwen-VL / InternVL / MiniCPM-V</li>
+<li>语音：Whisper / ChatTTS / CosyVoice</li>
+<li>视频：Sora / CogVideo / Open-Sora</li>
+<li><strong>AI 编程深化</strong></li>
+<li>代码生成模型：DeepSeek-Coder / Qwen2.5-Coder / StarCoder2 / CodeLlama</li>
+<li>自动编程：SWE-Agent / OpenDevin / Aider</li>
+<li>AI Code Review：CodeRabbit / Amazon CodeGuru</li>
+<li><strong>值得关注</strong></li>
+<li>小模型蒸馏：Phi-3 / Gemma-2 / MiniCPM 端侧部署</li>
+<li>长上下文：RoPE 外推 / YaRN / NTK-aware 缩放（128K+ Token）</li>
+<li>结构化输出：JSON Mode / Constrained Decoding / Outlines</li>
+<li>AI 安全与对齐：RLHF / DPO / ORPO / Constitutional AI</li>
+<li>推理优化：Speculative Decoding / Medusa / Eagle</li>
+</ul>
+<hr />
+<h2 id="_23">📖 综合资源清单<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<h3 id="_24">📚 免费课程 / 视频<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>李沐《动手学深度学习》</td>
+<td><a href="https://d2l.ai/">d2l.ai</a> / <a href="https://space.bilibili.com/1567748478">B站</a></td>
+<td>代码 + 教材，中文最佳</td>
+</tr>
+<tr>
+<td>吴恩达 ML Specialization</td>
+<td><a href="https://www.coursera.org/specializations/machine-learning-introduction">coursera.org/specializations/machine-learning-introduction</a></td>
+<td>经典入门</td>
+</tr>
+<tr>
+<td>吴恩达 DL Specialization</td>
+<td><a href="https://www.coursera.org/specializations/deep-learning">coursera.org/specializations/deep-learning</a></td>
+<td>深度学习五门课</td>
+</tr>
+<tr>
+<td>吴恩达 AI for Everyone</td>
+<td><a href="https://www.coursera.org/learn/ai-for-everyone">coursera.org/learn/ai-for-everyone</a></td>
+<td>非技术视角，理解 AI 全貌</td>
+</tr>
+<tr>
+<td>李宏毅机器学习</td>
+<td><a href="https://www.bilibili.com/video/BV1JE411G7XG">B站</a></td>
+<td>幽默深入，中文天花板</td>
+</tr>
+<tr>
+<td>HuggingFace NLP Course</td>
+<td><a href="https://huggingface.co/learn/nlp-course">huggingface.co/learn/nlp-course</a></td>
+<td>从 Tokenizer 到模型</td>
+</tr>
+<tr>
+<td>HuggingFace Agents Course</td>
+<td><a href="https://huggingface.co/learn/agents-course">huggingface.co/learn/agents-course</a></td>
+<td>Agent 开发入门</td>
+</tr>
+<tr>
+<td>Karpathy Zero to Hero</td>
+<td><a href="https://karpathy.ai/zero-to-hero.html">karpathy.ai/zero-to-hero</a> / <a href="https://www.youtube.com/playlist?list=PLAqhIrEZwxS6z3zCz0KzF9GnRnMTQn5E1">YouTube</a></td>
+<td>从零构建神经网络</td>
+</tr>
+<tr>
+<td>Fast.ai 实用深度学习</td>
+<td><a href="https://course.fast.ai/">course.fast.ai</a></td>
+<td>实践优先，快速出活</td>
+</tr>
+<tr>
+<td>3Blue1Brown 神经网络</td>
+<td><a href="https://www.3blue1brown.com/topics/neural-networks">3b1b.neural-networks</a></td>
+<td>可视化直觉</td>
+</tr>
+<tr>
+<td>斯坦福 CS229</td>
+<td><a href="https://cs229.stanford.edu/">cs229.stanford.edu</a></td>
+<td>ML 理论深度</td>
+</tr>
+<tr>
+<td>斯坦福 CS224N</td>
+<td><a href="https://web.stanford.edu/class/cs224n/">web.stanford.edu/class/cs224n</a></td>
+<td>NLP 深度课程</td>
+</tr>
+<tr>
+<td>Andrej Karpathy LLM 讲座</td>
+<td><a href="https://www.youtube.com/watch?v=zjkBMFhNj_g">youtube.com/watch?v=zjkBMFhNj_g</a></td>
+<td>"Let's build GPT"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_25">📄 必读论文清单<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>论文</th>
+<th>链接</th>
+<th>精读资源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attention Is All You Need</td>
+<td><a href="https://arxiv.org/abs/1706.03762">arxiv.org/abs/1706.03762</a></td>
+<td><a href="https://www.bilibili.com/video/BV1pu411o7BE">李沐精读</a></td>
+</tr>
+<tr>
+<td>BERT</td>
+<td><a href="https://arxiv.org/abs/1810.04805">arxiv.org/abs/1810.04805</a></td>
+<td><a href="https://www.bilibili.com/video/BV1PL411M7eQ">李沐精读</a></td>
+</tr>
+<tr>
+<td>GPT-3</td>
+<td><a href="https://arxiv.org/abs/2005.14165">arxiv.org/abs/2005.14165</a></td>
+<td>In-context learning 范式</td>
+</tr>
+<tr>
+<td>InstructGPT (RLHF)</td>
+<td><a href="https://arxiv.org/abs/2203.02155">arxiv.org/abs/2203.02155</a></td>
+<td>对齐人类偏好</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td><a href="https://arxiv.org/abs/2106.09685">arxiv.org/abs/2106.09685</a></td>
+<td>低秩微调，必读</td>
+</tr>
+<tr>
+<td>QLoRA</td>
+<td><a href="https://arxiv.org/abs/2305.14314">arxiv.org/abs/2305.14314</a></td>
+<td>量化 + LoRA</td>
+</tr>
+<tr>
+<td>FlashAttention</td>
+<td><a href="https://arxiv.org/abs/2205.14135">arxiv.org/abs/2205.14135</a></td>
+<td>IO-aware 注意力</td>
+</tr>
+<tr>
+<td>PagedAttention</td>
+<td><a href="https://arxiv.org/abs/2309.06680">arxiv.org/abs/2309.06680</a></td>
+<td>vLLM 核心创新</td>
+</tr>
+<tr>
+<td>ReAct</td>
+<td><a href="https://arxiv.org/abs/2210.03629">arxiv.org/abs/2210.03629</a></td>
+<td>推理+行动 Agent</td>
+</tr>
+<tr>
+<td>LLaMA</td>
+<td><a href="https://arxiv.org/abs/2302.13971">arxiv.org/abs/2302.13971</a></td>
+<td>开放权重模型</td>
+</tr>
+<tr>
+<td>DPO</td>
+<td><a href="https://arxiv.org/abs/2305.18290">arxiv.org/abs/2305.18290</a></td>
+<td>无需 RL 的对齐方法</td>
+</tr>
+<tr>
+<td>Mamba (SSM)</td>
+<td><a href="https://arxiv.org/abs/2312.00752">arxiv.org/abs/2312.00752</a></td>
+<td>Transformer 替代架构</td>
+</tr>
+<tr>
+<td>MoE (Mixtral)</td>
+<td><a href="https://arxiv.org/abs/2401.04088">arxiv.org/abs/2401.04088</a></td>
+<td>稀疏混合专家</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td><a href="https://arxiv.org/abs/2005.11401">arxiv.org/abs/2005.11401</a></td>
+<td>检索增强生成</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_26">📕 推荐书籍<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>书名</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>《动手学深度学习》PyTorch版</td>
+<td><a href="https://d2l.ai/">d2l.ai</a></td>
+<td>在线免费，代码驱动</td>
+</tr>
+<tr>
+<td>《深度学习》花书</td>
+<td><a href="http://www.deeplearningbook.org/">deeplearningbook.org</a></td>
+<td>理论圣经，在线免费</td>
+</tr>
+<tr>
+<td>《Hands-On ML》第3版</td>
+<td><a href="https://homl3.info/">homl3.info</a></td>
+<td>实践首选</td>
+</tr>
+<tr>
+<td>《Python for Data Analysis》</td>
+<td><a href="https://wesmckinney.com/book/">wesmckinney.com/book</a></td>
+<td>Pandas 权威</td>
+</tr>
+<tr>
+<td>《大语言模型》赵鑫等</td>
+<td><a href="https://github.com/LLMBook/LLMBook">github.com/LLMBook/LLMBook</a></td>
+<td>中文 LLM 教材</td>
+</tr>
+<tr>
+<td>《统计学习方法》李航</td>
+<td>—</td>
+<td>ML 理论精炼</td>
+</tr>
+<tr>
+<td>《Designing Machine Learning Systems》</td>
+<td>—</td>
+<td>ML 系统设计，生产实践</td>
+</tr>
+</tbody>
+</table>
+<h3 id="github">🛠️ 关键 GitHub 仓库<a class="headerlink" href="#github" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>仓库</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nanoGPT</td>
+<td><a href="https://github.com/karpathy/nanoGPT">github.com/karpathy/nanoGPT</a></td>
+<td>极简 GPT 训练实现</td>
+</tr>
+<tr>
+<td>llama.cpp</td>
+<td><a href="https://github.com/ggerganov/llama.cpp">github.com/ggerganov/llama.cpp</a></td>
+<td>纯 C++ 高效推理</td>
+</tr>
+<tr>
+<td>vLLM</td>
+<td><a href="https://github.com/vllm-project/vllm">github.com/vllm-project/vllm</a></td>
+<td>高吞吐推理引擎</td>
+</tr>
+<tr>
+<td>Ollama</td>
+<td><a href="https://github.com/ollama/ollama">github.com/ollama/ollama</a></td>
+<td>本地模型运行</td>
+</tr>
+<tr>
+<td>Unsloth</td>
+<td><a href="https://github.com/unslothai/unsloth">github.com/unslothai/unsloth</a></td>
+<td>快速 LLM 微调</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td><a href="https://github.com/langchain-ai/langchain">github.com/langchain-ai/langchain</a></td>
+<td>智能体编排</td>
+</tr>
+<tr>
+<td>LlamaIndex</td>
+<td><a href="https://github.com/run-llama/llama_index">github.com/run-llama/llama_index</a></td>
+<td>RAG 框架</td>
+</tr>
+<tr>
+<td>Transformers</td>
+<td><a href="https://github.com/huggingface/transformers">github.com/huggingface/transformers</a></td>
+<td>HF 核心库</td>
+</tr>
+<tr>
+<td>LLaMA-Factory</td>
+<td><a href="https://github.com/hiyouga/LLaMA-Factory">github.com/hiyouga/LLaMA-Factory</a></td>
+<td>一站式微调</td>
+</tr>
+<tr>
+<td>AutoGPTQ</td>
+<td><a href="https://github.com/AutoGPTQ/AutoGPTQ">github.com/AutoGPTQ/AutoGPTQ</a></td>
+<td>GPTQ 量化</td>
+</tr>
+<tr>
+<td>CrewAI</td>
+<td><a href="https://github.com/crewAIInc/crewAI">github.com/crewAIInc/crewAI</a></td>
+<td>多 Agent 协作</td>
+</tr>
+<tr>
+<td>AutoGen</td>
+<td><a href="https://github.com/microsoft/autogen">github.com/microsoft/autogen</a></td>
+<td>微软多 Agent 框架</td>
+</tr>
+<tr>
+<td>SGLang</td>
+<td><a href="https://github.com/sgl-project/sglang">github.com/sgl-project/sglang</a></td>
+<td>结构化生成 + 高性能推理</td>
+</tr>
+<tr>
+<td>Aider</td>
+<td><a href="https://github.com/paul-gauthier/aider">github.com/paul-gauthier/aider</a></td>
+<td>AI 终端编程助手</td>
+</tr>
+<tr>
+<td>Open Interpreter</td>
+<td><a href="https://github.com/OpenInterpreter/openinterpreter">github.com/OpenInterpreter/openinterpreter</a></td>
+<td>本地代码解释器 Agent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_27">🌐 社区与资讯<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>社区</th>
+<th>链接</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HuggingFace</td>
+<td><a href="https://huggingface.co/">huggingface.co</a></td>
+<td>模型 + 数据集 + Spaces</td>
+</tr>
+<tr>
+<td>Papers with Code</td>
+<td><a href="https://paperswithcode.com/">paperswithcode.com</a></td>
+<td>论文 + 代码 + 榜单</td>
+</tr>
+<tr>
+<td>魔搭 ModelScope</td>
+<td><a href="https://modelscope.cn/">modelscope.cn</a></td>
+<td>国产模型社区</td>
+</tr>
+<tr>
+<td>ArXiv Sanity</td>
+<td><a href="http://www.arxiv-sanity.com/">arxiv-sanity.com</a></td>
+<td>论文筛选器</td>
+</tr>
+<tr>
+<td>AI 新闻日报</td>
+<td><a href="https://news.ycombinator.com/">news.ycombinator.com</a></td>
+<td>HN 技术热点</td>
+</tr>
+<tr>
+<td>机器之心</td>
+<td><a href="https://www.jiqizhixin.com/">jiqizhixin.com</a></td>
+<td>中文 AI 资讯</td>
+</tr>
+<tr>
+<td>AI 工程化</td>
+<td><a href="https://github.com/aialchemy-dev/AI-Engineering-Cookbook">github.com/aialchemy-dev/AI-Engineering-Cookbook</a></td>
+<td>AI 工程实践指南</td>
+</tr>
+<tr>
+<td>Lilian Weng 博客</td>
+<td><a href="https://lilianweng.github.io/">lilianweng.github.io</a></td>
+<td>高质量 AI 技术博客</td>
+</tr>
+<tr>
+<td>Jay Alammar 博客</td>
+<td><a href="https://jalammar.github.io/">jalammar.github.io</a></td>
+<td>可视化 LLM 解读</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_28">🚀 第一周行动计划（快速启动）<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>环境准备</strong>：安装 PyTorch (CUDA 版)、Jupyter、Ollama + qwen2.5:7b</li>
+<li><strong>快速练习</strong>：在 Kaggle 完成 Pandas 和可视化两个微课程（2 天）</li>
+<li><strong>实现一个 C++ 版本的 KNN</strong>：用 Eigen 库，在 MNIST 子集上分类</li>
+<li><strong>跑通第一个 PyTorch 模型</strong>：训练一个两层网络拟合 <code>y = x^2</code></li>
+<li><strong>阅读</strong>：《动手学深度学习》第 1~3 章，亲手敲完代码</li>
+<li><strong>尝试 AI 编程工具</strong>：安装 Cursor 或 Copilot，用 AI 辅助完成上述练习</li>
+</ol>
+<hr />
+<h2 id="_29">💎 最后建议<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>不要畏惧数学</strong>：手推公式 + 代码实现是最快理解方式，C++ 实现反向传播会让您豁然开朗</li>
+<li><strong>利用 LLM 作为学习伙伴</strong>：用本地模型解释论文、生成代码片段、纠错</li>
+<li><strong>持续输出</strong>：将您实现的 C++ 算子库 / Go 推理服务开源，这是最有价值的作品</li>
+<li><strong>先会用，再会造</strong>：先用 AI 工具提效，再深入原理，最后才是造轮子</li>
+<li><strong>关注国产生态</strong>：国内模型 API 成本低、合规便利、中文能力强，优先尝试</li>
+<li><strong>每月留时间跟进</strong>：AI 领域变化极快，关注 ArXiv 热门论文和 GitHub Trending</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021-2029 HEMY08
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.w3cschool.cn/" target="_blank" rel="noopener" title="编程狮W3C" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 64c-35.3 0-64 28.7-64 64v256c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32V128c0-35.3-28.7-64-64-64zm384 320h-64v-32c0-17.7-14.3-32-32-32h-96c-17.7 0-32 14.3-32 32v32H96V128h384z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.runoob.com/" target="_blank" rel="noopener" title="菜鸟教程" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M496 64c13.2 0 20.7 15.1 12.8 25.6L480 128v176c0 79.5-64.5 144-144 144H224l-46.3 46.3c-10.4 10.4-26.5 12.4-39.1 4.8l-97.1-58.2c-17-10.2-15-35.5 3.4-42.9L160 352C23.8 311.1 7.5 169.8 22 95.7c3.6-17.8 23.3-24.3 39.3-15.5L320 224v-80c0-44.2 35.8-80 80-80zm-96 56a24 24 0 1 0 0 48 24 24 0 1 0 0-48M182.5-9.6c12.4-13.7 33.3-8.9 42.5 7.1l56.4 98.3c-5.8 14.4-9.2 30.1-9.4 46.5L138.1 68c10.1-31.6 27-58.4 44.4-77.6"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://leetcode.cn/" target="_blank" rel="noopener" title="力扣" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v240h-64V96H128v240H64zM0 403.2C0 392.6 8.6 384 19.2 384h601.6c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2M281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="http://www.verysource.com/" target="_blank" rel="noopener" title="源码查询" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0h149.5c17 0 33.3 6.7 45.3 18.7l106.5 106.6c12 12 18.7 28.3 18.7 45.3V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm208-5.5V152c0 13.3 10.7 24 24 24h93.5zm-53.8 237.1c8.6-10.1 7.5-25.2-2.6-33.8s-25.2-7.5-33.8 2.6l-48 56c-7.7 9-7.7 22.2 0 31.2l48 56c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8L119.6 336zm112-31.2c-8.6-10.1-23.8-11.2-33.8-2.6s-11.2 23.8-2.6 33.8l34.6 40.4-34.6 40.4c-8.6 10.1-7.5 25.2 2.6 33.8s25.2 7.5 33.8-2.6l48-56c7.7-9 7.7-22.2 0-31.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://c.runoob.com/" target="_blank" rel="noopener" title="菜鸟工具" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M176 56v40h160V56c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8m-48 40V56c0-30.9 25.1-56 56-56h144c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V272H376v-16c0-13.3-10.7-24-24-24s-24 10.7-24 24v16H184v-16c0-13.3-10.7-24-24-24s-24 10.7-24 24v16H0v-76.1C0 183.2 5.1 171 14.1 162L66 110.1c9-9 21.2-14.1 33.9-14.1zM0 416v-96h136v16c0 13.3 10.7 24 24 24s24-10.7 24-24v-16h144v16c0 13.3 10.7 24 24 24s24-10.7 24-24v-16h136v96c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/hemy08/hemynotes/issues" target="_blank" rel="noopener" title="issues" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m368.5 18.3-50.1 50.1 125.3 125.3 50.1-50.1c21.9-21.9 21.9-57.3 0-79.2l-46.1-46.1c-21.9-21.9-57.3-21.9-79.2 0m-89.2 78.9-.5.1-144.1 43.2c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-2.9 8.7-1.9 18.2 2.5 26l155.4-155.4c-1.1-4-1.6-8.1-1.6-12.4 0-26.5 21.5-48 48-48s48 21.5 48 48-21.5 48-48 48c-4.3 0-8.5-.6-12.4-1.6L40.3 505.7c7.8 4.4 17.2 5.4 26 2.5l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1.1-.5L279.4 97.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<zhaojunwei008@yeah.net>" target="_blank" rel="noopener" title="Email" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0s256 114.6 256 256v32c0 53-43 96-96 96-29.3 0-55.6-13.2-73.2-33.9-22.8 21-53.3 33.9-86.8 33.9-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1 5.7-5 13.1-8.1 21.3-8.1 17.7 0 32 14.3 32 32v112c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-106-86-192-192-192m64 192a64 64 0 1 0-128 0 64 64 0 1 0 128 0"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "content.tabs.link", "navigation.tracking", "navigation.indexes", "navigation.prune", "navigation.top", "navigation.tabs", "toc.follow", "header.autohide", "search.share", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../themes/js/custom.js"></script>
+      
+        <script src="../../themes/js/simpleLightbox.min.js"></script>
+      
+        <script src="../../themes/js/optionalConfig.js"></script>
+      
+        <script src="../../themes/js/mermaidloader.js"></script>
+      
+        <script src="../../themes/js/umlconvert.js"></script>
+      
+        <script src="../../themes/js/mathjax.js"></script>
+      
+        <script src="../../themes/js/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
