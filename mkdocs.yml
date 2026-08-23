@@ -761,6 +761,86 @@ nav:
           - 创建Qml项目: 080-开发IDE/003-Qt系列/200-QtExample/200-Clion项目/100-创建Qml项目.md
         - VisualStudio项目:
           - 创建Qml项目: 080-开发IDE/003-Qt系列/200-QtExample/300-VisualStudio项目/100-创建Qml项目.md
+  - AI_Coder:
+    - 导读: 090-AI_Coder/000-导读.md
+    - Python数据科学生态:
+      - 概览: 090-AI_Coder/010-Python数据科学生态/000-概览.md
+      - NumPy:
+        - 概览: 090-AI_Coder/010-Python数据科学生态/NumPy/000-概览.md
+      - Pandas:
+        - 概览: 090-AI_Coder/010-Python数据科学生态/Pandas/000-概览.md
+      - 可视化:
+        - 概览: 090-AI_Coder/010-Python数据科学生态/可视化/000-概览.md
+    - 大模型:
+      - 导读: 090-AI_Coder/010-大模型/000-导读.md
+    - 机器学习核心:
+      - 概览: 090-AI_Coder/020-机器学习核心/000-概览.md
+      - 无监督学习:
+        - 概览: 090-AI_Coder/020-机器学习核心/无监督学习/000-概览.md
+      - 监督学习:
+        - 概览: 090-AI_Coder/020-机器学习核心/监督学习/000-概览.md
+      - 评估与调优:
+        - 概览: 090-AI_Coder/020-机器学习核心/评估与调优/000-概览.md
+    - 深度学习基础:
+      - 概览: 090-AI_Coder/030-深度学习基础/000-概览.md
+      - PyTorch实战:
+        - 概览: 090-AI_Coder/030-深度学习基础/PyTorch实战/000-概览.md
+      - 神经网络原理:
+        - 概览: 090-AI_Coder/030-深度学习基础/神经网络原理/000-概览.md
+      - 经典CNN:
+        - 概览: 090-AI_Coder/030-深度学习基础/经典CNN/000-概览.md
+      - 训练技巧:
+        - 概览: 090-AI_Coder/030-深度学习基础/训练技巧/000-概览.md
+    - Transformer与大语言模型:
+      - 概览: 090-AI_Coder/040-Transformer与大语言模型/000-概览.md
+      - Agent:
+        - 概览: 090-AI_Coder/040-Transformer与大语言模型/Agent/000-概览.md
+      - LLM微调:
+        - 概览: 090-AI_Coder/040-Transformer与大语言模型/LLM微调/000-概览.md
+      - Prompt工程:
+        - 概览: 090-AI_Coder/040-Transformer与大语言模型/Prompt工程/000-概览.md
+      - RAG:
+        - 概览: 090-AI_Coder/040-Transformer与大语言模型/RAG/000-概览.md
+      - Transformer架构:
+        - 概览: 090-AI_Coder/040-Transformer与大语言模型/Transformer架构/000-概览.md
+    - 系统部署与推理:
+      - 概览: 090-AI_Coder/050-系统部署与推理/000-概览.md
+      - 推理引擎:
+        - 概览: 090-AI_Coder/050-系统部署与推理/推理引擎/000-概览.md
+      - 服务化:
+        - 概览: 090-AI_Coder/050-系统部署与推理/服务化/000-概览.md
+      - 模型优化:
+        - 概览: 090-AI_Coder/050-系统部署与推理/模型优化/000-概览.md
+    - 国产大模型与前沿:
+      - 概览: 090-AI_Coder/060-国产大模型与前沿/000-概览.md
+      - AI编程:
+        - 概览: 090-AI_Coder/060-国产大模型与前沿/AI编程/000-概览.md
+      - 前沿方向:
+        - 概览: 090-AI_Coder/060-国产大模型与前沿/前沿方向/000-概览.md
+      - 国产云平台:
+        - 概览: 090-AI_Coder/060-国产大模型与前沿/国产云平台/000-概览.md
+      - 国产模型:
+        - 概览: 090-AI_Coder/060-国产大模型与前沿/国产模型/000-概览.md
+      - 多模态:
+        - 概览: 090-AI_Coder/060-国产大模型与前沿/多模态/000-概览.md
+    - 本地大模型部署:
+      - 概览: 090-AI_Coder/070-本地大模型部署/000-概览.md
+      - GPT4All:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/GPT4All/000-配置指南.md
+      - llama.cpp:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/llama.cpp/000-配置指南.md
+      - LM-Studio:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/LM-Studio/000-配置指南.md
+      - LocalAI:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/LocalAI/000-配置指南.md
+      - MLC-LLM:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/MLC-LLM/000-配置指南.md
+      - Ollama:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/Ollama/000-配置指南.md
+      - text-generation-webui:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/text-generation-webui/000-配置指南.md
+      - vLLM:
+        - 配置指南: 090-AI_Coder/070-本地大模型部署/vLLM/000-配置指南.md
   - 力扣题解:
     - 导读: 500-力扣题解/000-导读.md
     - 动态规划:
